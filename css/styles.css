@@ -1149,6 +1149,23 @@ svg {
   font-size: var(--fs-sm);
 }
 
+.scenario-feedback p {
+  margin: 0;
+}
+
+.scenario-item-reflection {
+  margin-top: var(--space-2);
+}
+
+.scenario-item-reflection span {
+  font-weight: 600;
+}
+
+.scenario-score {
+  margin: 0 0 var(--space-2);
+  font-weight: 600;
+}
+
 /* Routine slider (3A) */
 .routine-slider-label {
   display: block;

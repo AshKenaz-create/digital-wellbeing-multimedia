@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m4aFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m4aFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+    <circle cx="330" cy="150" r="100" fill="#2f7d8c" opacity="0.10"/>
+
+    <g fill="#245e6b">
+      <circle cx="250" cy="126" r="17"/>
+      <path d="M224 208v-44a26 26 0 0 1 52 0v44z"/>
+    </g>
+    <rect x="292" y="150" width="74" height="48" rx="5" fill="#437a55"/>
+    <rect x="299" y="157" width="60" height="34" rx="3" fill="#e3eef0"/>
+    <rect x="286" y="198" width="88" height="8" rx="4" fill="#245e6b"/>
+    <rect x="404" y="164" width="26" height="40" rx="5" fill="#5a9e70"/>
+    <rect x="409" y="170" width="16" height="24" rx="2" fill="#e3eef0"/>
+
+    <path d="M470 70l26 10v18c0 16-11 27-26 32-15-5-26-16-26-32V80z" fill="#5a9e70" opacity="0.85"/>
+    <path d="M462 100l6 6 12-13" stroke="#e3eef0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="140" y="70" width="42" height="30" rx="6" fill="none" stroke="#245e6b" stroke-width="4"/>
+    <path d="M140 78l21 14 21-14" fill="none" stroke="#245e6b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="150" cy="200" r="18" fill="none" stroke="#2f7d8c" stroke-width="4"/>
+    <path d="M150 190v10h9" stroke="#2f7d8c" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <path d="M0 250C130 224 220 250 330 244 440 238 520 222 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>

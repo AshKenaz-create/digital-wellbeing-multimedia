@@ -675,6 +675,189 @@ export const content = {
           ],
         },
       },
+      m4a: {
+        intro: [
+          "Como estudiante usas cuentas en línea para las plataformas de la universidad, el correo, el almacenamiento en la nube, las redes sociales, los pagos y la comunicación. La seguridad de esas cuentas y tu privacidad forman parte de tus hábitos digitales cotidianos.",
+          "La seguridad en línea no consiste en evitar internet, sino en tomar decisiones informadas sobre la autenticación, los mensajes que recibes, la información personal que compartes, la configuración de privacidad y la actividad inesperada en tus cuentas.",
+        ],
+        main: {
+          lead: "Cuatro ideas prácticas para el día a día:",
+          dimensions: [
+            { name: "Protege tus cuentas", text: "Usa contraseñas o frases de contraseña largas y distintas para cada cuenta, y evita reutilizarlas. Un gestor de contraseñas ayuda a manejar credenciales únicas; la longitud importa más que mezclar tipos de caracteres." },
+            { name: "Añade otra capa", text: "La verificación en dos pasos pide una segunda comprobación además de la contraseña. Añade protección, aunque no hace que una cuenta sea imposible de comprometer." },
+            { name: "Haz una pausa antes de hacer clic", text: "Los mensajes, enlaces, archivos adjuntos y solicitudes de información inesperados conviene verificarlos antes de actuar, sobre todo si transmiten urgencia." },
+            { name: "Controla lo que compartes", text: "Revisar la configuración de privacidad y compartir de forma intencionada ayuda a limitar la exposición innecesaria de tu información personal." },
+          ],
+          extra: [
+            "Las contraseñas por sí solas no protegen frente al phishing: si alguien te engaña para escribirla en un sitio falso, la longitud no ayuda. Por eso la verificación en dos pasos es un apoyo útil.",
+          ],
+          note: "Son categorías educativas, no una certificación de seguridad.",
+        },
+        example: {
+          text: "Sofía recibe un correo que dice que su cuenta de la universidad será suspendida si no la verifica de inmediato mediante un enlace. El correo lleva el logo de la universidad y parece creíble.",
+          note: "En lugar de decidir solo por la apariencia, Sofía revisa el remitente, no usa el enlace y comprueba la solicitud entrando al servicio de la universidad por una ruta oficial que ya conoce. Verificar es más seguro que reaccionar a la urgencia o a la apariencia.",
+        },
+        visual: {
+          file: "m4a-online-safety.svg",
+          alt: "Ilustración de una persona estudiante con un portátil y un teléfono, rodeada de símbolos sencillos de cuenta, escudo, mensaje, privacidad y verificación.",
+          caption: "La seguridad en línea se construye con decisiones cotidianas: autenticación, verificación de mensajes y control de la información.",
+        },
+        interaction: {
+          type: "scenarios",
+          storageKey: "dw_m4a_quiz",
+          instructions: "En cada situación, elige la acción que probarías. Después verás una explicación de por qué es más segura o menos aconsejable.",
+          savedNote: "Tus respuestas se guardan solo en este navegador; puedes borrarlas con «Reiniciar».",
+          progressLabel: "{n} de {total} situaciones respondidas",
+          resetLabel: "Reiniciar",
+          scenarios: [
+            {
+              situation: "Recibes un correo con aspecto oficial de la universidad que pide iniciar sesión de inmediato a través de un enlace incluido en el mensaje.",
+              options: [
+                { recommended: true, text: "Entro al sitio oficial de la universidad que ya conozco, o verifico la solicitud por un canal de confianza, en lugar de usar el enlace.", feedback: "Verificar por una ruta que ya conoces evita los enlaces falsos. La Comisión Federal de Comercio de EE. UU. (FTC) recomienda contactar a la organización con un sitio o un número que sepas que es real, no con los datos del mensaje." },
+                { recommended: false, text: "Hago clic en el enlace y, si la página se ve como la de la universidad, inicio sesión.", feedback: "Las páginas falsas pueden imitar muy bien el aspecto real. La apariencia no confirma que un enlace sea legítimo; una página de inicio de sesión copiada puede capturar tu contraseña." },
+                { recommended: false, text: "Respondo al correo preguntando si es auténtico.", feedback: "Si el correo lo envía quien intenta engañarte, la respuesta llega a esa misma persona. Es mejor verificar por un canal independiente." },
+              ],
+            },
+            {
+              situation: "Vas a crear otra cuenta en línea y piensas usar la misma contraseña que usas para el correo de la universidad.",
+              options: [
+                { recommended: true, text: "Creo una contraseña o frase de contraseña distinta, o la genero con un gestor de contraseñas.", feedback: "Usar contraseñas distintas reduce el riesgo de reutilización: si una filtración expone una cuenta, las demás no quedan abiertas. Las guías actuales del NIST recomiendan permitir contraseñas largas y el uso de gestores." },
+                { recommended: false, text: "Uso la misma contraseña; es larga y me la sé de memoria.", feedback: "Aunque sea larga, reutilizarla significa que una sola filtración puede afectar a varias cuentas a la vez, incluida la del correo." },
+                { recommended: false, text: "Uso la misma contraseña pero le cambio un número al final.", feedback: "Las variaciones pequeñas son fáciles de deducir a partir de una contraseña filtrada. En la práctica sigue siendo una contraseña reutilizada." },
+              ],
+            },
+            {
+              situation: "Una cuenta importante ofrece verificación en dos pasos, pero no la tienes activada.",
+              options: [
+                { recommended: true, text: "La activo, empezando por las cuentas más sensibles como el correo y el banco.", feedback: "Un segundo factor añade una capa: según la FTC, aunque alguien conozca tu usuario y contraseña, no puede entrar sin la segunda comprobación. No la vuelve imposible de comprometer, pero sí más difícil." },
+                { recommended: false, text: "No la activo para no complicar el inicio de sesión.", feedback: "Es una decisión personal, pero deja la cuenta dependiendo solo de la contraseña. En cuentas importantes, el paso extra suele compensar." },
+                { recommended: false, text: "La activo solo si me obligan.", feedback: "Esperar a que sea obligatorio deja un tiempo en el que la cuenta está menos protegida, justo en las cuentas que más te importan." },
+              ],
+            },
+            {
+              situation: "Recibes una solicitud de aprobación de verificación en dos pasos que tú no iniciaste.",
+              options: [
+                { recommended: true, text: "No la apruebo y reviso qué está pasando; cambio la contraseña si sospecho que alguien la tiene.", feedback: "Una solicitud que no iniciaste puede significar que alguien intenta entrar con tu contraseña. Aprobarla le daría acceso; verificar y cambiar la contraseña es lo prudente." },
+                { recommended: false, text: "La apruebo para que deje de aparecer.", feedback: "Aprobar una solicitud que no iniciaste puede dar acceso a otra persona. Las solicitudes inesperadas conviene tratarlas como algo que verificar, no que aceptar." },
+                { recommended: false, text: "La ignoro y no hago nada más.", feedback: "Ignorarla evita el acceso inmediato, pero no resuelve que quizá alguien tenga tu contraseña. Conviene revisarla y cambiarla." },
+              ],
+            },
+            {
+              situation: "Una aplicación social te pide acceso a tu ubicación, o estás a punto de publicar información personal para todo el mundo.",
+              options: [
+                { recommended: true, text: "Reviso si ese acceso es necesario, quién puede ver la información y qué configuración de privacidad tiene sentido.", feedback: "La FTC sugiere revisar los permisos de las aplicaciones y ajustar la configuración de la cuenta a tus preferencias, y desactivar los permisos que no hacen falta para que la app funcione." },
+                { recommended: false, text: "Doy todos los permisos para que la aplicación funcione sin avisos.", feedback: "Muchas apps funcionan sin todos los permisos que piden. Conceder acceso a la ubicación o a los contactos sin necesidad amplía la exposición de tu información." },
+                { recommended: false, text: "Publico ahora y ajusto la privacidad después si hace falta.", feedback: "Una vez publicada, la información puede haberse visto o copiado. Decidir la audiencia antes de publicar te da más control." },
+              ],
+            },
+          ],
+          summaryTitle: "Resumen",
+          scoreLabel: "Identificaste {n} de {total} acciones recomendadas.",
+          summary: "La seguridad en línea se construye con decisiones pequeñas que puedes repetir. Cuando falla una respuesta, la explicación ya describe la práctica más segura.",
+          reflectionLabel: "Para reflexionar",
+          reflectionPrompt: "De las cinco situaciones, ¿cuál se parece más a algo que te podría pasar esta semana?",
+        },
+        reflection: {
+          prompt: "¿Qué medida de seguridad podrías revisar hoy en una de tus cuentas más importantes?",
+        },
+        support: {
+          text: "Este contenido se apoya en las guías de identidad digital del NIST (autenticación) y en las recomendaciones de la Comisión Federal de Comercio de EE. UU. (FTC) sobre phishing, verificación en dos pasos y privacidad. Son orientaciones generales; los servicios y las plataformas cambian con el tiempo.",
+          refs: [
+            "NIST. Digital Identity Guidelines (SP 800-63B-4, 2025).",
+            "FTC. How to recognize and avoid phishing scams.",
+            "FTC. Use two-factor authentication to protect your accounts.",
+          ],
+        },
+      },
+      m4b: {
+        intro: [
+          "Las redes sociales pueden apoyar la comunicación, la amistad, la colaboración académica, el acceso a información, la creatividad y el sentido de comunidad. El objetivo de esta pantalla no es «dejar de usar redes sociales».",
+          "La investigación no respalda una conclusión simple de que todo uso de redes sociales tenga el mismo efecto en el bienestar. Cómo, por qué y en qué contexto se usa una plataforma puede importar más que una sola cifra de tiempo.",
+        ],
+        main: {
+          lead: "Cuatro preguntas para usar las redes de forma más intencional:",
+          dimensions: [
+            { name: "Intención", text: "¿Por qué abrí la plataforma?" },
+            { name: "Atención", text: "¿Sigo haciendo lo que quería, o la actividad cambió sin que me diera cuenta?" },
+            { name: "Conexión", text: "¿Esta interacción me ayuda a comunicarme, colaborar o conectar de una forma que me resulta útil?" },
+            { name: "Límites y lo que comparto", text: "¿Quiero seguir usando la plataforma ahora mismo? ¿Con qué audiencia estoy compartiendo? ¿Es esta información algo que quiero que sea público?" },
+          ],
+          extra: [
+            "En los estudios, el uso elevado por sí solo no mostró el mismo patrón que las medidas descritas como «uso problemático». Además, factores como el apoyo social percibido y la autoestima se relacionan con el bienestar más que los indicadores básicos de uso. En resumen: cómo se usa una plataforma puede importar más que cuánto.",
+          ],
+          note: "Son preguntas para reflexionar, no una escala de bienestar validada.",
+        },
+        example: {
+          text: "Mateo abre una red social para responder un mensaje del grupo de una asignatura. Después de responder, empieza a ver publicaciones que no tienen que ver con eso y, un rato más tarde, se da cuenta de que ha estado bastante más tiempo del que había pensado.",
+          note: "La lección no es «las redes sociales son malas». Es que el propósito inicial cambió sin que Mateo lo notara. Reconocer ese cambio le da la opción de seguir de forma intencional o volver a lo que había planeado.",
+        },
+        visual: {
+          file: "m4b-social-media.svg",
+          alt: "Ilustración de una persona estudiante usando el teléfono, con elementos equilibrados de mensajes, personas y conexiones, contenido, pausa y privacidad.",
+          caption: "No hay una única forma correcta de usar las redes: ayuda notar cuándo eliges cómo participar y cuándo la actividad sigue sola.",
+        },
+        interaction: {
+          type: "scenarios",
+          storageKey: "dw_m4b_cards",
+          instructions: "En cada situación, elige la respuesta que probarías. Verás una explicación y una pregunta para pensar. No hay una única forma correcta.",
+          savedNote: "Tus respuestas se guardan solo en este navegador; puedes borrarlas con «Reiniciar».",
+          progressLabel: "{n} de {total} decisiones tomadas",
+          resetLabel: "Reiniciar",
+          scenarios: [
+            {
+              situation: "Abriste la app para responder un mensaje del grupo de clase, pero después de responder llevas varios minutos viendo contenido que no tiene relación.",
+              options: [
+                { text: "Sigo un rato más porque quiero de verdad una pausa.", feedback: "Tomarte una pausa a propósito puede ser razonable. Lo importante es que sea una elección consciente y no algo que simplemente pasó." },
+                { text: "Cierro la app y vuelvo a la tarea.", feedback: "Volver a la tarea a propósito también es razonable. El punto es el mismo: notar que el propósito había cambiado." },
+                { text: "Sigo desplazándome sin pensarlo.", feedback: "Aquí la actividad continúa por inercia. Darte cuenta es lo que te permite decidir si quieres seguir o parar." },
+              ],
+              reflection: "¿Qué suele hacer que te quedes en la app más tiempo del previsto?",
+            },
+            {
+              situation: "Ves varias publicaciones sobre logros de tus compañeros y notas que empiezas a comparar tu progreso con lo que aparece en el feed.",
+              options: [
+                { text: "Recuerdo que las publicaciones muestran solo una parte de la experiencia de otras personas.", feedback: "Tener presente que un feed es una selección ayuda a poner en contexto lo que ves. No todo el mundo publica lo mismo ni con la misma frecuencia." },
+                { text: "Sigo comparando hasta sentir que me he puesto al día.", feedback: "Comparar de forma continua puede alargarse sin un punto final claro. Si notas que no te aporta, puedes cambiar lo que estás viendo." },
+                { text: "Hago una pausa o cambio lo que estoy mirando.", feedback: "Cambiar el contenido o hacer una pausa es una opción cuando algo no te sienta bien. Ver publicaciones de logros no daña la salud mental por sí mismo, pero tú decides a qué dedicas tu atención." },
+              ],
+              reflection: "¿En qué momentos las redes te ayudan a sentirte conectado y en cuáles no tanto?",
+            },
+            {
+              situation: "Un chat de grupo se vuelve muy activo mientras trabajas en una entrega.",
+              options: [
+                { text: "Mantengo todas las alertas activas.", feedback: "Mantener todas las alertas hace que cada mensaje compita con la tarea. Puede tener sentido si esperas algo urgente, pero no siempre." },
+                { text: "Silencio temporalmente las alertas no esenciales y decido cuándo revisar.", feedback: "Los límites pueden ser temporales y según el contexto: silenciar durante un rato no es dejar el grupo, es elegir cuándo atenderlo." },
+                { text: "Dejo el grupo para siempre.", feedback: "Salir del todo es una opción, pero para una situación puntual suele bastar con un límite temporal." },
+              ],
+              reflection: "¿Qué límite temporal con las notificaciones te funcionaría durante una sesión de estudio?",
+            },
+            {
+              situation: "Vas a publicar algo que incluye información personal, tu ubicación o algo que quizá no quieras que vea todo el mundo.",
+              options: [
+                { text: "Reviso la audiencia y la configuración de privacidad antes de publicar.", feedback: "Decidir quién puede verlo antes de publicar te da más control. La FTC sugiere ajustar la configuración de la cuenta a tus preferencias." },
+                { text: "Publico primero y decido después.", feedback: "Una vez publicado, el contenido puede haberse visto o guardado aunque lo borres luego. Elegir la audiencia antes evita esa situación." },
+                { text: "Decido no compartir esa información.", feedback: "También es una opción válida. La idea no es no compartir nunca nada, sino elegir de forma intencional la audiencia y lo que haces público." },
+              ],
+              reflection: "¿Qué tipo de información prefieres mantener fuera de tus publicaciones públicas?",
+            },
+          ],
+          summaryTitle: "Para terminar",
+          summary: "No existe una única forma correcta de usar las redes sociales. Lo importante es reconocer cuándo estás eligiendo cómo participar y cuándo la actividad simplemente continúa por inercia.",
+          reflectionLabel: "Para reflexionar",
+          reflectionPrompt: "De las cuatro situaciones, ¿cuál se parece más a algo que te pasa a menudo?",
+        },
+        reflection: {
+          prompt: "¿En qué momento del día utilizas las redes sociales de una manera más intencional y en cuál más automática?",
+        },
+        support: {
+          text: "Este contenido se apoya en revisiones y metaanálisis recientes sobre redes sociales y bienestar, que describen una relación compleja e inconsistente y señalan que el patrón de uso puede importar más que la cantidad. Para la parte de privacidad se usan recomendaciones de la FTC.",
+          refs: [
+            "Ansari et al. (2024). Cyberpsychology, Behavior, and Social Networking.",
+            "Yang y Feng (2024). Heliyon.",
+            "FTC. How websites and apps collect and use your information.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Documentación del proyecto",
@@ -687,6 +870,7 @@ export const content = {
           title: "Fuentes académicas",
           items: [
             "Albulescu, P., Macsinga, I., Rusu, A., Sulea, C., Bodnaru, A. y Tulbure, B. T. (2022). “Give me a break!” A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance. <em>PLOS ONE, 17</em>(8), Artículo e0272460. https://doi.org/10.1371/journal.pone.0272460",
+            "Ansari, S., Iqbal, N., Asif, R., Hashim, M., Farooqi, S. R. y Alimoradi, Z. (2024). Social media use and well-being: A systematic review and meta-analysis. <em>Cyberpsychology, Behavior, and Social Networking, 27</em>(10), 704–719. https://doi.org/10.1089/cyber.2024.0001",
             "Appianing, J., Quansah, F. y Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Artículo 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
             "Biedermann, D., Schneider, J. y Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
             "Martin, F., Long, S., Haywood, K. y Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
@@ -695,6 +879,7 @@ export const content = {
             "Vézina-Im, L.-A., Morin, C. M., Chen, S., Ivers, H., Carney, C. E., Chaput, J.-P., Dang-Vu, T. T., Davidson, J. R., Robillard, R. y Canadian Sleep Research Consortium. (2025). The complex association between bedtime screen use and adult sleep health. <em>Sleep Health, 11</em>(5), 572–578. https://doi.org/10.1016/j.sleh.2025.06.010",
             "Wang, J., Ishak, I., Mazri, F. H., Siau, C. S., Xin, F., Wang, X. y Mat Ludin, A. F. (2025). Sleep quality and related risk factors among college students in China: A systematic review and meta-analysis. <em>American Journal of Translational Research, 17</em>(12), 10111–10128. https://doi.org/10.62347/bpae1262",
             "Wu, Y., Van Gerven, P. W. M., de Groot, R. H. M., Eijnde, B. O., Winkens, B. y Savelberg, H. H. C. M. (2023). Effects of breaking up sitting with light-intensity physical activity on cognition and mood in university students. <em>Scandinavian Journal of Medicine &amp; Science in Sports, 33</em>(3), 257–266. https://doi.org/10.1111/sms.14277",
+            "Yang, Q. y Feng, Y. (2024). Relationships between social networking sites use and subjective well-being: A meta-analysis and meta-analytic structural equation model. <em>Heliyon, 10</em>(12), Artículo e32463. https://doi.org/10.1016/j.heliyon.2024.e32463",
           ],
         },
         {
@@ -702,14 +887,18 @@ export const content = {
           title: "Fuentes institucionales",
           items: [
             "American Academy of Ophthalmology. (2023). <em>Eye strain and sleepy eyes: How to prevent eye discomfort</em>. Recuperado el 2 de septiembre de 2026, de https://www.aao.org/eye-health/diseases/what-is-eye-strain",
+            "Federal Trade Commission. (2022). <em>How to recognize and avoid phishing scams</em>. Consumer Advice. Recuperado el 2 de septiembre de 2026, de https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+            "Federal Trade Commission. (2022). <em>Use two-factor authentication to protect your accounts</em>. Consumer Advice. Recuperado el 2 de septiembre de 2026, de https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts",
+            "Federal Trade Commission. (2023). <em>How websites and apps collect and use your information</em>. Consumer Advice. Recuperado el 2 de septiembre de 2026, de https://consumer.ftc.gov/articles/how-websites-and-apps-collect-and-use-your-information",
             "Jisc. (s. f.). <em>Digital wellbeing</em>. Building digital capability. Recuperado el 2 de septiembre de 2026, de https://digitalcapability.jisc.ac.uk/what-is-digital-capability/digital-wellbeing/",
+            "National Institute of Standards and Technology. (2025). <em>Digital identity guidelines: Authentication and authenticator management</em> (NIST Special Publication 800-63B-4). https://doi.org/10.6028/NIST.SP.800-63b-4",
           ],
         },
         {
           id: "images",
           title: "Fuentes de imágenes e ilustraciones",
           items: [
-            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em> y <em>m3b-breaks.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
+            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em> y <em>m4b-social-media.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
           ],
         },
         {
@@ -1409,6 +1598,189 @@ export const content = {
           ],
         },
       },
+      m4a: {
+        intro: [
+          "As a university student you use online accounts for university platforms, email, cloud storage, social networks, payments and communication. The security of those accounts and your privacy are part of your everyday digital habits.",
+          "Online safety is not about avoiding the internet. It is about making informed decisions about authentication, the messages you receive, the personal information you share, your privacy settings, and unexpected activity on your accounts.",
+        ],
+        main: {
+          lead: "Four practical ideas for everyday use:",
+          dimensions: [
+            { name: "Protect your accounts", text: "Use long, unique passwords or passphrases for each account, and avoid reusing them. A password manager helps handle unique credentials; length matters more than mixing character types." },
+            { name: "Add another layer", text: "Two-step verification asks for a second check in addition to your password. It adds protection, though it does not make an account impossible to compromise." },
+            { name: "Pause before you click", text: "Unexpected messages, links, attachments and requests for information are worth verifying before you act, especially if they convey urgency." },
+            { name: "Control what you share", text: "Reviewing privacy settings and sharing intentionally helps limit unnecessary exposure of your personal information." },
+          ],
+          extra: [
+            "Passwords on their own do not protect against phishing: if someone tricks you into typing yours on a fake site, length does not help. That is why two-step verification is a useful support.",
+          ],
+          note: "These are educational categories, not a security certification.",
+        },
+        example: {
+          text: "Sofía receives an email saying her university account will be suspended unless she verifies it immediately through a link. The email carries the university logo and looks believable.",
+          note: "Instead of deciding from appearance alone, Sofía checks the sender, avoids the link, and verifies the request by going to the university service through an official route she already knows. Verifying is safer than reacting to urgency or appearance.",
+        },
+        visual: {
+          file: "m4a-online-safety.svg",
+          alt: "Illustration of a student with a laptop and a phone, surrounded by simple symbols for account, shield, message, privacy and verification.",
+          caption: "Online safety is built from everyday decisions: authentication, verifying messages, and controlling your information.",
+        },
+        interaction: {
+          type: "scenarios",
+          storageKey: "dw_m4a_quiz",
+          instructions: "In each situation, choose the action you would try. You will then see an explanation of why it is safer or less advisable.",
+          savedNote: "Your answers are saved only in this browser; you can clear them with “Reset”.",
+          progressLabel: "{n} of {total} situations answered",
+          resetLabel: "Reset",
+          scenarios: [
+            {
+              situation: "You receive an official-looking university email asking you to log in immediately through a link included in the message.",
+              options: [
+                { recommended: true, text: "I go to the official university site I already know, or verify the request through a trusted channel, instead of using the link.", feedback: "Verifying through a route you already know avoids fake links. The U.S. Federal Trade Commission (FTC) recommends contacting the organisation using a site or number you know is real, not the details in the message." },
+                { recommended: false, text: "I click the link and, if the page looks like the university's, I log in.", feedback: "Fake pages can imitate the real look very well. Appearance does not confirm that a link is legitimate; a copied login page can capture your password." },
+                { recommended: false, text: "I reply to the email asking whether it is genuine.", feedback: "If the email is sent by whoever is trying to trick you, the reply reaches that same person. It is better to verify through an independent channel." },
+              ],
+            },
+            {
+              situation: "You are creating another online account and think about using the same password you use for your university email.",
+              options: [
+                { recommended: true, text: "I create a different password or passphrase, or generate one with a password manager.", feedback: "Using different passwords reduces reuse risk: if a breach exposes one account, the others are not left open. Current NIST guidance recommends allowing long passwords and the use of password managers." },
+                { recommended: false, text: "I use the same password; it is long and I know it by heart.", feedback: "Even if it is long, reusing it means a single breach can affect several accounts at once, including your email." },
+                { recommended: false, text: "I use the same password but change one number at the end.", feedback: "Small variations are easy to guess from a leaked password. In practice it is still a reused password." },
+              ],
+            },
+            {
+              situation: "An important account offers two-step verification, but you do not have it enabled.",
+              options: [
+                { recommended: true, text: "I enable it, starting with the most sensitive accounts such as email and banking.", feedback: "A second factor adds a layer: according to the FTC, even if someone knows your username and password, they cannot log in without the second check. It does not make the account impossible to compromise, but it makes it harder." },
+                { recommended: false, text: "I do not enable it, to keep logging in simple.", feedback: "It is a personal choice, but it leaves the account depending on the password alone. For important accounts, the extra step usually pays off." },
+                { recommended: false, text: "I only enable it if I am forced to.", feedback: "Waiting until it is mandatory leaves a window where the account is less protected, in exactly the accounts that matter most to you." },
+              ],
+            },
+            {
+              situation: "You receive a two-step verification approval request that you did not start.",
+              options: [
+                { recommended: true, text: "I do not approve it and check what is happening; I change the password if I suspect someone has it.", feedback: "A request you did not start can mean someone is trying to log in with your password. Approving it would give them access; verifying and changing the password is the prudent move." },
+                { recommended: false, text: "I approve it so it stops appearing.", feedback: "Approving a request you did not start can give another person access. Unexpected requests are something to verify, not to accept." },
+                { recommended: false, text: "I ignore it and do nothing else.", feedback: "Ignoring it prevents immediate access, but it does not resolve that someone may have your password. It is worth reviewing it and changing the password." },
+              ],
+            },
+            {
+              situation: "A social app asks for access to your location, or you are about to post personal information for everyone to see.",
+              options: [
+                { recommended: true, text: "I check whether that access is necessary, who can see the information, and what privacy setting makes sense.", feedback: "The FTC suggests reviewing app permissions and adjusting account settings to your preferences, and turning off permissions the app does not need to function." },
+                { recommended: false, text: "I grant every permission so the app works without prompts.", feedback: "Many apps work without all the permissions they request. Granting access to location or contacts unnecessarily widens the exposure of your information." },
+                { recommended: false, text: "I post now and adjust the privacy later if needed.", feedback: "Once posted, the information may have been seen or copied. Deciding the audience before posting gives you more control." },
+              ],
+            },
+          ],
+          summaryTitle: "Summary",
+          scoreLabel: "You identified {n} of {total} recommended actions.",
+          summary: "Online safety is built through small decisions that can be repeated. When an answer is missed, the explanation already describes the safer practice.",
+          reflectionLabel: "To reflect on",
+          reflectionPrompt: "Of the five situations, which one is closest to something that could happen to you this week?",
+        },
+        reflection: {
+          prompt: "Which security measure could you review today on one of your most important accounts?",
+        },
+        support: {
+          text: "This content draws on the NIST digital identity guidelines (authentication) and on U.S. Federal Trade Commission (FTC) recommendations about phishing, two-step verification and privacy. These are general guidance; services and platforms change over time.",
+          refs: [
+            "NIST. Digital Identity Guidelines (SP 800-63B-4, 2025).",
+            "FTC. How to recognize and avoid phishing scams.",
+            "FTC. Use two-factor authentication to protect your accounts.",
+          ],
+        },
+      },
+      m4b: {
+        intro: [
+          "Social media can support communication, friendship, academic collaboration, access to information, creativity and a sense of community. The aim of this screen is not to “stop using social media”.",
+          "Research does not support a simple conclusion that all social-media use has the same effect on wellbeing. How, why and in what context a platform is used may matter more than a single time figure.",
+        ],
+        main: {
+          lead: "Four questions for using social media more intentionally:",
+          dimensions: [
+            { name: "Intention", text: "Why did I open the platform?" },
+            { name: "Attention", text: "Am I still doing what I intended, or did the activity shift without me noticing?" },
+            { name: "Connection", text: "Is this interaction helping me communicate, collaborate or connect in a way that feels useful?" },
+            { name: "Boundaries and sharing", text: "Do I want to keep using the platform right now? What audience am I sharing with? Is this information something I want to be public?" },
+          ],
+          extra: [
+            "In the studies, high use on its own did not show the same pattern as measures described as “problematic use”. Also, factors such as perceived social support and self-esteem relate to wellbeing more than basic use indicators. In short: how a platform is used may matter more than how much.",
+          ],
+          note: "These are prompts for reflection, not a validated wellbeing scale.",
+        },
+        example: {
+          text: "Mateo opens a social network to answer a message in a course group. After replying, he starts looking at unrelated posts and, some time later, realises he has stayed much longer than he had planned.",
+          note: "The lesson is not “social media is bad”. It is that the original purpose changed without Mateo noticing. Recognising that shift gives him the option to continue intentionally or return to what he had planned.",
+        },
+        visual: {
+          file: "m4b-social-media.svg",
+          alt: "Illustration of a student using a phone, with balanced elements for messages, people and connections, content, pause, and privacy.",
+          caption: "There is no single correct way to use social media: it helps to notice when you are choosing how to take part and when the activity just continues.",
+        },
+        interaction: {
+          type: "scenarios",
+          storageKey: "dw_m4b_cards",
+          instructions: "In each situation, choose the response you would try. You will see an explanation and a question to think about. There is no single correct way.",
+          savedNote: "Your answers are saved only in this browser; you can clear them with “Reset”.",
+          progressLabel: "{n} of {total} decisions made",
+          resetLabel: "Reset",
+          scenarios: [
+            {
+              situation: "You opened the app to answer a class-group message, but after replying you have spent several minutes looking at unrelated content.",
+              options: [
+                { text: "I keep going a while longer because I genuinely want a break.", feedback: "Taking a break on purpose can be reasonable. What matters is that it is a conscious choice and not something that just happened." },
+                { text: "I close the app and go back to the task.", feedback: "Going back to the task on purpose is also reasonable. The point is the same: noticing that the purpose had changed." },
+                { text: "I keep scrolling without thinking about it.", feedback: "Here the activity continues by habit. Noticing it is what lets you decide whether to keep going or stop." },
+              ],
+              reflection: "What usually makes you stay in the app longer than you intended?",
+            },
+            {
+              situation: "You see several posts about classmates' achievements and notice yourself starting to compare your progress with what appears in the feed.",
+              options: [
+                { text: "I remember that posts show only part of other people's experiences.", feedback: "Keeping in mind that a feed is a selection helps put what you see in context. Not everyone posts the same things or at the same rate." },
+                { text: "I keep comparing until I feel caught up.", feedback: "Comparing continuously can drag on without a clear end point. If you notice it is not helping, you can change what you are viewing." },
+                { text: "I pause or change what I am looking at.", feedback: "Changing the content or pausing is an option when something does not feel good. Seeing achievement posts does not harm mental health by itself, but you decide what you give your attention to." },
+              ],
+              reflection: "When do social media help you feel connected, and when not so much?",
+            },
+            {
+              situation: "A group chat becomes very active while you are working on an assignment.",
+              options: [
+                { text: "I keep every alert on.", feedback: "Keeping every alert on makes each message compete with the task. It can make sense if you are expecting something urgent, but not always." },
+                { text: "I temporarily mute non-essential alerts and decide when to check.", feedback: "Boundaries can be temporary and context-based: muting for a while is not leaving the group, it is choosing when to attend to it." },
+                { text: "I leave the group for good.", feedback: "Leaving entirely is an option, but for a one-off situation a temporary boundary is usually enough." },
+              ],
+              reflection: "What temporary boundary with notifications would work for you during a study session?",
+            },
+            {
+              situation: "You are about to post something that includes personal information, your location, or something you may not want everyone to see.",
+              options: [
+                { text: "I check the audience and privacy settings before posting.", feedback: "Deciding who can see it before posting gives you more control. The FTC suggests adjusting account settings to your preferences." },
+                { text: "I post first and decide later.", feedback: "Once posted, the content may have been seen or saved even if you delete it afterwards. Choosing the audience first avoids that situation." },
+                { text: "I decide not to share that information.", feedback: "That is also a valid option. The idea is not to never share anything, but to choose the audience and what you make public intentionally." },
+              ],
+              reflection: "What kind of information do you prefer to keep out of your public posts?",
+            },
+          ],
+          summaryTitle: "To finish",
+          summary: "There is no single correct way to use social media. What matters is noticing when you are choosing how to participate and when the activity is simply continuing by habit.",
+          reflectionLabel: "To reflect on",
+          reflectionPrompt: "Of the four situations, which one is closest to something that happens to you often?",
+        },
+        reflection: {
+          prompt: "At what time of day do you use social media most intentionally, and when does it feel more automatic?",
+        },
+        support: {
+          text: "This content draws on recent reviews and meta-analyses of social media and wellbeing, which describe a complex and inconsistent relationship and note that the pattern of use may matter more than the amount. The privacy part uses FTC recommendations.",
+          refs: [
+            "Ansari et al. (2024). Cyberpsychology, Behavior, and Social Networking.",
+            "Yang & Feng (2024). Heliyon.",
+            "FTC. How websites and apps collect and use your information.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Project documentation",
@@ -1421,6 +1793,7 @@ export const content = {
           title: "Academic sources",
           items: [
             "Albulescu, P., Macsinga, I., Rusu, A., Sulea, C., Bodnaru, A., & Tulbure, B. T. (2022). “Give me a break!” A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance. <em>PLOS ONE, 17</em>(8), Article e0272460. https://doi.org/10.1371/journal.pone.0272460",
+            "Ansari, S., Iqbal, N., Asif, R., Hashim, M., Farooqi, S. R., & Alimoradi, Z. (2024). Social media use and well-being: A systematic review and meta-analysis. <em>Cyberpsychology, Behavior, and Social Networking, 27</em>(10), 704–719. https://doi.org/10.1089/cyber.2024.0001",
             "Appianing, J., Quansah, F., & Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Article 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
             "Biedermann, D., Schneider, J., & Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
             "Martin, F., Long, S., Haywood, K., & Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
@@ -1429,6 +1802,7 @@ export const content = {
             "Vézina-Im, L.-A., Morin, C. M., Chen, S., Ivers, H., Carney, C. E., Chaput, J.-P., Dang-Vu, T. T., Davidson, J. R., Robillard, R., & Canadian Sleep Research Consortium. (2025). The complex association between bedtime screen use and adult sleep health. <em>Sleep Health, 11</em>(5), 572–578. https://doi.org/10.1016/j.sleh.2025.06.010",
             "Wang, J., Ishak, I., Mazri, F. H., Siau, C. S., Xin, F., Wang, X., & Mat Ludin, A. F. (2025). Sleep quality and related risk factors among college students in China: A systematic review and meta-analysis. <em>American Journal of Translational Research, 17</em>(12), 10111–10128. https://doi.org/10.62347/bpae1262",
             "Wu, Y., Van Gerven, P. W. M., de Groot, R. H. M., Eijnde, B. O., Winkens, B., & Savelberg, H. H. C. M. (2023). Effects of breaking up sitting with light-intensity physical activity on cognition and mood in university students. <em>Scandinavian Journal of Medicine &amp; Science in Sports, 33</em>(3), 257–266. https://doi.org/10.1111/sms.14277",
+            "Yang, Q., & Feng, Y. (2024). Relationships between social networking sites use and subjective well-being: A meta-analysis and meta-analytic structural equation model. <em>Heliyon, 10</em>(12), Article e32463. https://doi.org/10.1016/j.heliyon.2024.e32463",
           ],
         },
         {
@@ -1436,14 +1810,18 @@ export const content = {
           title: "Institutional sources",
           items: [
             "American Academy of Ophthalmology. (2023). <em>Eye strain and sleepy eyes: How to prevent eye discomfort</em>. Retrieved September 2, 2026, from https://www.aao.org/eye-health/diseases/what-is-eye-strain",
+            "Federal Trade Commission. (2022). <em>How to recognize and avoid phishing scams</em>. Consumer Advice. Retrieved September 2, 2026, from https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+            "Federal Trade Commission. (2022). <em>Use two-factor authentication to protect your accounts</em>. Consumer Advice. Retrieved September 2, 2026, from https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts",
+            "Federal Trade Commission. (2023). <em>How websites and apps collect and use your information</em>. Consumer Advice. Retrieved September 2, 2026, from https://consumer.ftc.gov/articles/how-websites-and-apps-collect-and-use-your-information",
             "Jisc. (n.d.). <em>Digital wellbeing</em>. Building digital capability. Retrieved September 2, 2026, from https://digitalcapability.jisc.ac.uk/what-is-digital-capability/digital-wellbeing/",
+            "National Institute of Standards and Technology. (2025). <em>Digital identity guidelines: Authentication and authenticator management</em> (NIST Special Publication 800-63B-4). https://doi.org/10.6028/NIST.SP.800-63b-4",
           ],
         },
         {
           id: "images",
           title: "Image and illustration sources",
           items: [
-            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em> and <em>m3b-breaks.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
+            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em> and <em>m4b-social-media.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
           ],
         },
         {

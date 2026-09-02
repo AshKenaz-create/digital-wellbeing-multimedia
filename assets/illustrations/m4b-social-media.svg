@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m4bFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m4bFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+    <circle cx="320" cy="150" r="104" fill="#5a9e70" opacity="0.12"/>
+
+    <g fill="#245e6b">
+      <circle cx="250" cy="122" r="18"/>
+      <path d="M222 214v-54a28 28 0 0 1 56 0v54z"/>
+    </g>
+    <path d="M278 168l42-16" stroke="#245e6b" stroke-width="11" stroke-linecap="round"/>
+    <rect x="318" y="138" width="34" height="56" rx="6" fill="#437a55"/>
+    <rect x="325" y="146" width="20" height="34" rx="2" fill="#e3eef0"/>
+
+    <path d="M120 82h48a8 8 0 0 1 8 8v20a8 8 0 0 1-8 8h-30l-14 12v-12h-4a8 8 0 0 1-8-8V90a8 8 0 0 1 8-8z" fill="#2f7d8c" opacity="0.7"/>
+
+    <g fill="#5a9e70">
+      <circle cx="470" cy="86" r="12"/>
+      <circle cx="506" cy="104" r="12"/>
+      <circle cx="470" cy="122" r="12"/>
+    </g>
+    <path d="M470 86l36 18M506 104l-36 18" stroke="#437a55" stroke-width="3"/>
+
+    <g stroke="#245e6b" stroke-width="5" stroke-linecap="round">
+      <path d="M156 206v18M170 206v18"/>
+    </g>
+
+    <rect x="486" y="196" width="24" height="30" rx="4" fill="none" stroke="#2f7d8c" stroke-width="4"/>
+    <path d="M491 196v-6a7 7 0 0 1 14 0v6" fill="none" stroke="#2f7d8c" stroke-width="4"/>
+
+    <path d="M0 252C130 226 230 252 340 246 450 240 520 224 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>

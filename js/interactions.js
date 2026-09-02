@@ -276,8 +276,9 @@ function frequencyQuiz(container, data) {
 }
 
 function scenarios(container, data) {
-  const key = "dw_m2b_scenarios";
+  const key = data.storageKey || "dw_m2b_scenarios";
   const count = data.scenarios.length;
+  const scored = data.scenarios.some((s) => s.options.some((o) => o.recommended !== undefined));
   const stored = storage.get(key);
   const saved = Array.isArray(stored) && stored.length === count ? stored : Array(count).fill(null);
 
@@ -325,8 +326,13 @@ function scenarios(container, data) {
     });
 
   const showFeedback = (i, choice) => {
+    const scenario = data.scenarios[i];
     const feedbackEl = blocks[i].querySelector(".scenario-feedback");
-    feedbackEl.textContent = data.scenarios[i].options[choice].feedback;
+    feedbackEl.innerHTML =
+      `<p>${scenario.options[choice].feedback}</p>` +
+      (scenario.reflection
+        ? `<p class="scenario-item-reflection"><span>${data.reflectionLabel}:</span> ${scenario.reflection}</p>`
+        : "");
     feedbackEl.hidden = false;
   };
 
@@ -335,8 +341,17 @@ function scenarios(container, data) {
     const done = current.filter((a) => a !== null).length;
     progressEl.textContent = data.progressLabel.replace("{n}", done).replace("{total}", count);
     if (done === count) {
+      let scoreLine = "";
+      if (scored && data.scoreLabel) {
+        const recommended = current.reduce(
+          (n, choice, i) => n + (data.scenarios[i].options[choice].recommended ? 1 : 0),
+          0
+        );
+        scoreLine = `<p class="scenario-score">${data.scoreLabel.replace("{n}", recommended).replace("{total}", count)}</p>`;
+      }
       summaryEl.innerHTML = `
         <h3>${data.summaryTitle}</h3>
+        ${scoreLine}
         <p>${data.summary}</p>
         <p class="scenario-reflection"><span>${data.reflectionLabel}:</span> ${data.reflectionPrompt}</p>`;
       summaryEl.hidden = false;
