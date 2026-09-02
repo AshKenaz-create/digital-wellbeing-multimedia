@@ -858,6 +858,148 @@ export const content = {
           ],
         },
       },
+      m5a: {
+        intro: [
+          "El trabajo universitario suele incluir entregas, lecturas, clases o reuniones virtuales, trabajos en grupo, cuestionarios y también responsabilidades personales. Cuando varias tareas compiten por tu atención, tener un plan sencillo facilita decidir en qué trabajar a continuación.",
+          "Un plan es una guía, no un horario estricto que haya que cumplir siempre. Puede cambiar cuando cambian las circunstancias.",
+        ],
+        main: {
+          lead: "Para organizar el tiempo académico puedes hacerte cuatro preguntas:",
+          dimensions: [
+            { name: "Identificar", text: "¿Qué tareas necesitan atención de verdad?" },
+            { name: "Priorizar", text: "¿Cuál necesita atención primero, según su importancia, su fecha de entrega y tu situación actual?" },
+            { name: "Estimar", text: "¿De cuánto tiempo podrías disponer de forma realista?" },
+            { name: "Revisar", text: "¿El plan sigue teniendo sentido a medida que cambia el día o la semana?" },
+          ],
+          extra: [
+            "En la investigación, las prácticas de organización del tiempo se han relacionado, en conjunto, con el rendimiento académico y el bienestar. Esto no significa que un método concreto funcione igual para todo el mundo.",
+          ],
+          note: "Son preguntas para organizar, no un modelo de productividad validado.",
+        },
+        example: {
+          text: "Lucía tiene una participación en un foro con fecha próxima, una lectura de otra asignatura, una parte de un trabajo colaborativo y un compromiso personal más tarde. En lugar de intentar hacerlo todo a la vez, identifica qué tiene la entrega más cercana, qué necesita coordinarse con otras personas y qué puede pasar a otro momento disponible.",
+          note: "El objetivo no es encontrar el orden perfecto, sino hacer visible la carga de trabajo y elegir de forma intencional.",
+        },
+        visual: {
+          file: "m5a-time-planner.svg",
+          alt: "Ilustración de una persona estudiante mirando un plan académico sencillo, con símbolos de tareas, tiempo, prioridad, calendario y actividades pendientes o completadas.",
+          caption: "Un plan sencillo hace visible la carga de trabajo y ayuda a elegir en qué avanzar primero.",
+        },
+        interaction: {
+          type: "taskPlanner",
+          instructions: "Añade tus tareas académicas con una prioridad y, si quieres, un momento del día. Verás un orden sugerido que puedes ajustar.",
+          savedNote: "Tu plan se guarda solo en este navegador; puedes vaciarlo cuando quieras.",
+          nameLabel: "Tarea",
+          priorityLabel: "Prioridad",
+          timeLabel: "Momento (opcional)",
+          timePlaceholder: "p. ej., martes por la tarde",
+          addLabel: "Añadir tarea",
+          editLabel: "Editar",
+          removeLabel: "Quitar",
+          resetLabel: "Vaciar el plan",
+          emptyLabel: "Aún no has añadido tareas. Empieza por la que tengas más presente.",
+          orderNote: "Este es solo un orden sugerido a partir de la prioridad que elegiste. Puedes ajustarlo según tus fechas de entrega y tus circunstancias.",
+          priorities: { high: "Alta", medium: "Media", low: "Baja" },
+          feedback: {
+            one: "Ya has hecho visible una tarea. Piensa en qué momento encaja de forma realista en el tiempo del que dispones.",
+            several: "Tienes tareas en distintos niveles de prioridad. Revisa si el orden sigue reflejando tus fechas y compromisos reales.",
+            manyHigh: "Varias tareas están marcadas como prioridad alta. Puede ser útil revisar si todas necesitan la misma atención ahora mismo.",
+          },
+        },
+        reflection: {
+          prompt: "¿Qué tarea académica necesitas hacer visible y organizar primero esta semana?",
+        },
+        support: {
+          text: "Este contenido se apoya en investigación sobre organización del tiempo y sobre estrategias de aprendizaje autorregulado en la educación superior en línea. Las relaciones observadas son moderadas; ningún método de planificación funciona igual para todas las personas.",
+          refs: [
+            "Aeon et al. (2021). PLOS ONE.",
+            "Broadbent y Poon (2015). The Internet and Higher Education.",
+          ],
+        },
+      },
+      m5b: {
+        intro: [
+          "El bienestar digital no se construye a partir de una regla perfecta. Una rutina puede incluir pequeñas decisiones sobre la atención, el uso de pantallas, el descanso, las pausas, la seguridad de las cuentas, la privacidad, las redes sociales y la organización académica.",
+          "El objetivo no es cambiarlo todo a la vez. Una rutina realista es flexible y personal.",
+        ],
+        main: {
+          lead: "Un resumen breve de los cinco temas del recurso:",
+          dimensions: [
+            { name: "Módulo 1 · Conciencia", text: "Nota qué haces con la tecnología y cómo encaja en tu día." },
+            { name: "Módulo 2 · Atención", text: "Reconoce cuándo las actividades digitales apoyan la tarea y cuándo empiezan a competir por tu atención." },
+            { name: "Módulo 3 · Descanso", text: "Observa tus rutinas de sueño, de mirar pantallas, de estar sentado y de hacer pausas." },
+            { name: "Módulo 4 · Responsabilidad", text: "Protege tus cuentas y tu información, y elige de forma intencional en las redes sociales." },
+            { name: "Módulo 5 · Organización", text: "Haz visibles tus responsabilidades académicas y elige prioridades de forma realista." },
+          ],
+          extra: [
+            "Estas ideas se apoyan en investigación sobre bienestar digital, autorregulación y herramientas de autocontrol digital; las estrategias son opciones para probar, no soluciones garantizadas.",
+          ],
+          note: "Elige las que te resulten útiles ahora; no hace falta adoptarlas todas.",
+        },
+        example: {
+          text: "Al empezar la semana, Tomás revisa sus tareas académicas. Durante los ratos de estudio reduce una distracción que ya conoce. Por la noche se fija en si la actividad digital se está alargando más de lo previsto. Hace pausas cortas cuando las necesita y revisa la configuración de privacidad y seguridad cuando toca.",
+          note: "La idea no es seguir una rutina perfecta cada día. La rutina es algo que se puede ajustar.",
+        },
+        visual: {
+          file: "m5b-digital-routine.svg",
+          alt: "Ilustración de una persona estudiante rodeada de un flujo circular sencillo que conecta el estudio, la concentración, el descanso, la seguridad, la conexión social y la planificación.",
+          caption: "Una rutina digital reúne pequeñas decisiones de los cinco temas y se puede adaptar con el tiempo.",
+        },
+        interaction: {
+          type: "habitsSelfCheck",
+          storageKey: "dw_m5b_checklist",
+          liveResult: true,
+          instructions: "Marca los compromisos que te gustaría practicar con más atención. Son opcionales: no hace falta elegir todos.",
+          savedNote: "Tu selección se guarda solo en este navegador; puedes borrarla con «Reiniciar».",
+          legend: "Compromisos para una rutina digital",
+          statements: [
+            "Notar por qué abro una plataforma digital antes de empezar.",
+            "Observar una distracción digital que suele interrumpir mi estudio.",
+            "Elegir momentos para reducir las notificaciones no esenciales.",
+            "Fijarme en cómo encaja la actividad digital nocturna en mi descanso.",
+            "Usar pausas cortas —visuales, de movimiento o mentales— cuando me parezcan útiles.",
+            "Revisar la seguridad de una cuenta importante.",
+            "Comprobar la configuración de privacidad o de audiencia antes de compartir información.",
+            "Notar cuándo el uso de redes sociales se aleja de mi propósito inicial.",
+            "Hacer visibles las tareas académicas importantes antes de decidir qué hacer primero.",
+            "Revisar mi rutina y ajustarla cuando deje de encajar con mis circunstancias.",
+          ],
+          countLabel: "{n} de {total} seleccionadas",
+          resetLabel: "Reiniciar",
+          reflectionLabel: "Para reflexionar",
+          reflectionPrompt: "¿Cuál de estos compromisos revisarías primero esta semana?",
+          closing: "El bienestar digital no consiste en usar la tecnología de forma perfecta, sino en notar, elegir y ajustar cómo encaja en tu vida.",
+          results: {
+            none: {
+              title: "No hace falta elegir todo ahora",
+              body: "Puedes empezar por revisar qué idea te resultaría más útil en tu rutina actual.",
+            },
+            few: {
+              title: "Elegiste unos pocos hábitos",
+              body: "Empezar con unos pocos hace que la rutina sea más fácil de revisar.",
+            },
+            several: {
+              title: "Elegiste varias ideas",
+              body: "Piensa cuáles dos o tres importan más ahora mismo, para que la rutina siga siendo realista.",
+            },
+            many: {
+              title: "Elegiste muchas ideas",
+              body: "Una rutina digital no necesita cambiar de golpe. Elige las que quieras trabajar primero de forma realista.",
+            },
+          },
+        },
+        reflection: {
+          prompt: "Si solo pudieras comenzar con un cambio pequeño, ¿cuál sería?",
+        },
+        support: {
+          text: "Este contenido reúne ideas de los cinco módulos. Se apoya en investigación sobre bienestar digital y autorregulación en la educación superior, en el marco de bienestar digital de Jisc y en revisiones sobre herramientas de autocontrol digital. Las estrategias son opciones para experimentar, no soluciones garantizadas.",
+          refs: [
+            "Jisc. Digital wellbeing (Building digital capability).",
+            "Mohd Bahar et al. (2026). BMC Medical Education.",
+            "Biedermann et al. (2021). Journal of Computer Assisted Learning.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Documentación del proyecto",
@@ -869,10 +1011,12 @@ export const content = {
           id: "academic",
           title: "Fuentes académicas",
           items: [
+            "Aeon, B., Faber, A. y Panaccio, A. (2021). Does time management work? A meta-analysis. <em>PLOS ONE, 16</em>(1), Artículo e0245066. https://doi.org/10.1371/journal.pone.0245066",
             "Albulescu, P., Macsinga, I., Rusu, A., Sulea, C., Bodnaru, A. y Tulbure, B. T. (2022). “Give me a break!” A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance. <em>PLOS ONE, 17</em>(8), Artículo e0272460. https://doi.org/10.1371/journal.pone.0272460",
             "Ansari, S., Iqbal, N., Asif, R., Hashim, M., Farooqi, S. R. y Alimoradi, Z. (2024). Social media use and well-being: A systematic review and meta-analysis. <em>Cyberpsychology, Behavior, and Social Networking, 27</em>(10), 704–719. https://doi.org/10.1089/cyber.2024.0001",
             "Appianing, J., Quansah, F. y Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Artículo 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
             "Biedermann, D., Schneider, J. y Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
+            "Broadbent, J. y Poon, W. L. (2015). Self-regulated learning strategies &amp; academic achievement in online higher education learning environments: A systematic review. <em>The Internet and Higher Education, 27</em>, 1–13. https://doi.org/10.1016/j.iheduc.2015.04.007",
             "Martin, F., Long, S., Haywood, K. y Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
             "Mohd Bahar, F. H., Roslan, N. S., Ping, N. P. T., Abdul Nasir, N. A., Ibrahim, M. S., Adam, S. K., Ahmad Razali, S. y Yusoff, M. S. B. (2026). The digital well-being among learners in higher education: A scoping review. <em>BMC Medical Education, 26</em>(1), Artículo 1146. https://doi.org/10.1186/s12909-026-09370-w",
             "Stothart, C., Mitchum, A. y Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <em>Journal of Experimental Psychology: Human Perception and Performance, 41</em>(4), 893–897. https://doi.org/10.1037/xhp0000100",
@@ -898,18 +1042,22 @@ export const content = {
           id: "images",
           title: "Fuentes de imágenes e ilustraciones",
           items: [
-            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em> y <em>m4b-social-media.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
+            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> y <em>m5b-digital-routine.svg</em>. Todas fueron creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
           ],
         },
         {
           id: "multimedia",
           title: "Recursos multimedia",
-          items: [],
+          items: [
+            "El recurso no utiliza vídeo ni audio. Los recursos visuales son ilustraciones SVG originales del proyecto (ver «Fuentes de imágenes e ilustraciones»).",
+          ],
         },
         {
           id: "external",
           title: "Recursos y activos externos",
-          items: [],
+          items: [
+            "El recurso no utiliza scripts, fuentes tipográficas, librerías ni activos de terceros. Se desarrolla únicamente con HTML5, CSS3 y JavaScript propios y se publica mediante GitHub Pages.",
+          ],
         },
       ],
       toolsTitle: "Tecnología utilizada",
@@ -1781,6 +1929,148 @@ export const content = {
           ],
         },
       },
+      m5a: {
+        intro: [
+          "University work often includes assignments, readings, online classes or meetings, group work, quizzes and also personal responsibilities. When several tasks compete for your attention, a simple plan makes it easier to decide what to work on next.",
+          "A plan is a guide, not a strict schedule that must always be followed. It can change when circumstances change.",
+        ],
+        main: {
+          lead: "To organise academic time, you can ask yourself four questions:",
+          dimensions: [
+            { name: "Identify", text: "Which tasks actually need attention?" },
+            { name: "Prioritise", text: "Which one needs attention first, based on its importance, its deadline and your current situation?" },
+            { name: "Estimate", text: "How much time might you realistically have available?" },
+            { name: "Review", text: "Does the plan still make sense as the day or the week changes?" },
+          ],
+          extra: [
+            "In the research, time-management practices have been associated, overall, with academic achievement and wellbeing. This does not mean that one specific method works equally well for everyone.",
+          ],
+          note: "These are prompts for organising, not a validated productivity model.",
+        },
+        example: {
+          text: "Lucía has a discussion-forum contribution due soon, a reading for another course, part of a collaborative assignment, and a personal commitment later in the day. Instead of trying to do everything at once, she identifies what has the nearer deadline, what needs coordination with other people, and what can move to another available period.",
+          note: "The point is not to find the perfect order, but to make the workload visible and choose intentionally.",
+        },
+        visual: {
+          file: "m5a-time-planner.svg",
+          alt: "Illustration of a student looking at a simple academic plan, with symbols for tasks, time, priority, calendar, and pending or completed activities.",
+          caption: "A simple plan makes the workload visible and helps you choose what to move forward with first.",
+        },
+        interaction: {
+          type: "taskPlanner",
+          instructions: "Add your academic tasks with a priority and, if you want, a time of day. You will see a suggested order that you can adjust.",
+          savedNote: "Your plan is saved only in this browser; you can clear it whenever you want.",
+          nameLabel: "Task",
+          priorityLabel: "Priority",
+          timeLabel: "Time (optional)",
+          timePlaceholder: "e.g., Tuesday afternoon",
+          addLabel: "Add task",
+          editLabel: "Edit",
+          removeLabel: "Remove",
+          resetLabel: "Clear the plan",
+          emptyLabel: "You have not added any tasks yet. Start with the one that is most on your mind.",
+          orderNote: "This is only a suggested order based on the priority you selected. You can adjust it according to your deadlines and circumstances.",
+          priorities: { high: "High", medium: "Medium", low: "Low" },
+          feedback: {
+            one: "You have made one task visible. Think about when it realistically fits into the time you have.",
+            several: "You have tasks at different priority levels. Check whether the order still reflects your real deadlines and commitments.",
+            manyHigh: "Several tasks are marked as high priority. It may be useful to review whether all of them need the same level of attention right now.",
+          },
+        },
+        reflection: {
+          prompt: "Which academic task do you need to make visible and organise first this week?",
+        },
+        support: {
+          text: "This content draws on research on time management and on self-regulated learning strategies in online higher education. The observed relationships are moderate; no planning method works the same for everyone.",
+          refs: [
+            "Aeon et al. (2021). PLOS ONE.",
+            "Broadbent & Poon (2015). The Internet and Higher Education.",
+          ],
+        },
+      },
+      m5b: {
+        intro: [
+          "Digital wellbeing is not built from one perfect rule. A routine can include small decisions about attention, screen use, rest, breaks, account security, privacy, social media and academic organisation.",
+          "The aim is not to change everything at once. A realistic routine is flexible and personal.",
+        ],
+        main: {
+          lead: "A short recap of the resource's five topics:",
+          dimensions: [
+            { name: "Module 1 · Awareness", text: "Notice what you do with technology and how it fits into your day." },
+            { name: "Module 2 · Attention", text: "Recognise when digital activities support the task and when they start competing for your attention." },
+            { name: "Module 3 · Rest", text: "Notice your routines around sleep, screen viewing, sitting and breaks." },
+            { name: "Module 4 · Responsibility", text: "Protect your accounts and information, and choose intentionally on social media." },
+            { name: "Module 5 · Organisation", text: "Make your academic responsibilities visible and choose priorities realistically." },
+          ],
+          extra: [
+            "These ideas draw on research on digital wellbeing, self-regulation and digital self-control tools; the strategies are options to try, not guaranteed solutions.",
+          ],
+          note: "Choose the ones that are useful to you now; you do not need to adopt them all.",
+        },
+        example: {
+          text: "At the start of the week, Tomás reviews his academic tasks. During study periods he reduces one distraction he already knows about. At night he notices whether digital activity is running later than planned. He takes short breaks when he needs them and reviews privacy and security settings when appropriate.",
+          note: "The point is not to follow a perfect routine every day. The routine is something that can be adjusted.",
+        },
+        visual: {
+          file: "m5b-digital-routine.svg",
+          alt: "Illustration of a student surrounded by a simple circular flow connecting study, focus, rest, safety, social connection and planning.",
+          caption: "A digital routine brings together small decisions from the five topics and can be adapted over time.",
+        },
+        interaction: {
+          type: "habitsSelfCheck",
+          storageKey: "dw_m5b_checklist",
+          liveResult: true,
+          instructions: "Tick the commitments you would like to practise more intentionally. They are optional: you do not need to choose all of them.",
+          savedNote: "Your selection is saved only in this browser; you can clear it with “Reset”.",
+          legend: "Commitments for a digital routine",
+          statements: [
+            "Notice why I am opening a digital platform before I begin.",
+            "Observe one digital distraction that commonly interrupts my study.",
+            "Choose moments when non-essential notifications can be reduced.",
+            "Pay attention to how evening digital activity fits into my rest.",
+            "Use short visual, movement or mental breaks when they seem useful.",
+            "Review the security of an important account.",
+            "Check privacy or audience settings before sharing information.",
+            "Notice when social-media use shifts away from my original purpose.",
+            "Make important academic tasks visible before deciding what to do first.",
+            "Review my routine and adjust it when it stops fitting my circumstances.",
+          ],
+          countLabel: "{n} of {total} selected",
+          resetLabel: "Reset",
+          reflectionLabel: "To reflect on",
+          reflectionPrompt: "Which of these commitments would you review first this week?",
+          closing: "Digital wellbeing is not about using technology perfectly. It is about noticing, choosing and adjusting how technology fits into your life.",
+          results: {
+            none: {
+              title: "You do not need to choose everything now",
+              body: "You could start by reviewing which idea would be most useful in your current routine.",
+            },
+            few: {
+              title: "You chose a few habits",
+              body: "Starting with a few makes the routine easier to review.",
+            },
+            several: {
+              title: "You selected several ideas",
+              body: "Consider which two or three matter most right now, so the routine stays realistic.",
+            },
+            many: {
+              title: "You selected many ideas",
+              body: "A digital routine does not need to change all at once. Choose the ones you realistically want to focus on first.",
+            },
+          },
+        },
+        reflection: {
+          prompt: "If you could begin with only one small change, what would it be?",
+        },
+        support: {
+          text: "This content brings together ideas from the five modules. It draws on research on digital wellbeing and self-regulation in higher education, on the Jisc digital wellbeing framework, and on reviews of digital self-control tools. The strategies are options to experiment with, not guaranteed solutions.",
+          refs: [
+            "Jisc. Digital wellbeing (Building digital capability).",
+            "Mohd Bahar et al. (2026). BMC Medical Education.",
+            "Biedermann et al. (2021). Journal of Computer Assisted Learning.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Project documentation",
@@ -1792,10 +2082,12 @@ export const content = {
           id: "academic",
           title: "Academic sources",
           items: [
+            "Aeon, B., Faber, A., & Panaccio, A. (2021). Does time management work? A meta-analysis. <em>PLOS ONE, 16</em>(1), Article e0245066. https://doi.org/10.1371/journal.pone.0245066",
             "Albulescu, P., Macsinga, I., Rusu, A., Sulea, C., Bodnaru, A., & Tulbure, B. T. (2022). “Give me a break!” A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance. <em>PLOS ONE, 17</em>(8), Article e0272460. https://doi.org/10.1371/journal.pone.0272460",
             "Ansari, S., Iqbal, N., Asif, R., Hashim, M., Farooqi, S. R., & Alimoradi, Z. (2024). Social media use and well-being: A systematic review and meta-analysis. <em>Cyberpsychology, Behavior, and Social Networking, 27</em>(10), 704–719. https://doi.org/10.1089/cyber.2024.0001",
             "Appianing, J., Quansah, F., & Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Article 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
             "Biedermann, D., Schneider, J., & Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
+            "Broadbent, J., & Poon, W. L. (2015). Self-regulated learning strategies &amp; academic achievement in online higher education learning environments: A systematic review. <em>The Internet and Higher Education, 27</em>, 1–13. https://doi.org/10.1016/j.iheduc.2015.04.007",
             "Martin, F., Long, S., Haywood, K., & Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
             "Mohd Bahar, F. H., Roslan, N. S., Ping, N. P. T., Abdul Nasir, N. A., Ibrahim, M. S., Adam, S. K., Ahmad Razali, S., & Yusoff, M. S. B. (2026). The digital well-being among learners in higher education: A scoping review. <em>BMC Medical Education, 26</em>(1), Article 1146. https://doi.org/10.1186/s12909-026-09370-w",
             "Stothart, C., Mitchum, A., & Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <em>Journal of Experimental Psychology: Human Perception and Performance, 41</em>(4), 893–897. https://doi.org/10.1037/xhp0000100",
@@ -1821,18 +2113,22 @@ export const content = {
           id: "images",
           title: "Image and illustration sources",
           items: [
-            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em> and <em>m4b-social-media.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
+            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> and <em>m5b-digital-routine.svg</em>. All were created for this educational resource; no stock image banks or third-party resources are used.",
           ],
         },
         {
           id: "multimedia",
           title: "Multimedia resources",
-          items: [],
+          items: [
+            "The resource uses no video or audio. Its visual resources are original project SVG illustrations (see “Image and illustration sources”).",
+          ],
         },
         {
           id: "external",
           title: "External resources and assets",
-          items: [],
+          items: [
+            "The resource uses no third-party scripts, fonts, libraries or assets. It is built only with the project's own HTML5, CSS3 and JavaScript and is published with GitHub Pages.",
+          ],
         },
       ],
       toolsTitle: "Technology used",

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m5bFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m5bFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+
+    <circle cx="320" cy="150" r="96" fill="#5a9e70" opacity="0.12"/>
+    <path d="M320 54a96 96 0 1 1-68 28" fill="none" stroke="#2f7d8c" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10" opacity="0.7"/>
+    <path d="M258 74l-8 12 14 3z" fill="#2f7d8c" opacity="0.7"/>
+
+    <g fill="#245e6b">
+      <circle cx="320" cy="140" r="18"/>
+      <path d="M294 196v-30a26 26 0 0 1 52 0v30z"/>
+    </g>
+
+    <g fill="#437a55">
+      <rect x="300" y="44" width="40" height="26" rx="4"/>
+    </g>
+    <circle cx="428" cy="92" r="15" fill="#5a9e70"/>
+    <circle cx="428" cy="92" r="6" fill="#e3eef0"/>
+    <path d="M470 176a18 18 0 0 1-15 27 18 18 0 1 1 15-27z" fill="#5a9e70"/>
+    <path d="M320 232l-16 20h32z" fill="#437a55"/>
+    <path d="M170 176l16 6v10c0 9-6 15-16 18-10-3-16-9-16-18v-10z" fill="#5a9e70"/>
+    <g fill="#437a55">
+      <circle cx="196" cy="92" r="8"/>
+      <circle cx="220" cy="104" r="8"/>
+      <circle cx="196" cy="116" r="8"/>
+    </g>
+
+    <path d="M0 250C130 224 220 250 330 244 440 238 520 222 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>

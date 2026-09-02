@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m5aFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m5aFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+    <circle cx="330" cy="150" r="100" fill="#2f7d8c" opacity="0.10"/>
+
+    <g fill="#245e6b">
+      <circle cx="220" cy="120" r="17"/>
+      <path d="M194 206v-46a26 26 0 0 1 52 0v46z"/>
+    </g>
+
+    <rect x="300" y="86" width="150" height="128" rx="10" fill="#ffffff" stroke="#c3bfb2"/>
+    <rect x="352" y="78" width="46" height="16" rx="6" fill="#437a55"/>
+    <g stroke="#245e6b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <rect x="316" y="108" width="16" height="16" rx="3"/>
+      <path d="M320 116l4 4 7-9"/>
+      <rect x="316" y="140" width="16" height="16" rx="3"/>
+      <path d="M320 148l4 4 7-9"/>
+      <rect x="316" y="172" width="16" height="16" rx="3"/>
+    </g>
+    <rect x="344" y="112" width="90" height="8" rx="4" fill="#5a9e70" opacity="0.7"/>
+    <rect x="344" y="144" width="78" height="8" rx="4" fill="#5a9e70" opacity="0.6"/>
+    <rect x="344" y="176" width="86" height="8" rx="4" fill="#2f7d8c" opacity="0.35"/>
+
+    <rect x="470" y="120" width="52" height="52" rx="8" fill="#5a9e70" opacity="0.85"/>
+    <rect x="470" y="120" width="52" height="16" rx="8" fill="#437a55"/>
+    <g fill="#e3eef0">
+      <rect x="478" y="142" width="9" height="9" rx="2"/>
+      <rect x="493" y="142" width="9" height="9" rx="2"/>
+      <rect x="508" y="142" width="9" height="9" rx="2"/>
+      <rect x="478" y="156" width="9" height="9" rx="2"/>
+    </g>
+
+    <path d="M0 250C130 224 220 250 330 244 440 238 520 222 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>

@@ -967,7 +967,8 @@ svg {
 .quiz-result,
 .scenario-summary,
 .routine-panel,
-.break-result {
+.break-result,
+.planner-feedback {
   margin-top: var(--space-4);
   padding: var(--space-4);
   background: var(--accent-soft);
@@ -1164,6 +1165,130 @@ svg {
 .scenario-score {
   margin: 0 0 var(--space-2);
   font-weight: 600;
+}
+
+.selfcheck-closing {
+  margin: var(--space-3) 0 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  font-weight: 500;
+}
+
+/* Academic time planner (5A) */
+.planner-form {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.planner-field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.planner-field label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.planner-form input,
+.planner-form select {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font: inherit;
+}
+
+.planner-form .btn {
+  justify-self: start;
+}
+
+.planner-note {
+  margin: 0 0 var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.planner-empty {
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+}
+
+.planner-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.planner-task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.planner-badge {
+  padding: 2px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.priority-high .planner-badge {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.priority-medium .planner-badge {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.planner-name {
+  flex: 1;
+  min-width: 8rem;
+  font-weight: 500;
+}
+
+.planner-time {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.planner-row-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.planner-row-actions button {
+  border: 0;
+  background: transparent;
+  padding: var(--space-1) var(--space-2);
+  font: inherit;
+  font-size: var(--fs-sm);
+  color: var(--primary-dark);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.planner-row-actions button:hover {
+  color: var(--primary);
+}
+
+.planner-actions {
+  margin-top: var(--space-4);
 }
 
 /* Routine slider (3A) */

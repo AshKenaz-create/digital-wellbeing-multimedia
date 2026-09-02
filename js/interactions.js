@@ -27,6 +27,12 @@ export const storage = {
   },
 };
 
+const ESCAPE_MAP = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => ESCAPE_MAP[char]);
+}
+
 const handlers = new Map();
 
 export function registerInteraction(type, handler) {
@@ -86,8 +92,9 @@ function conceptCards(container, data) {
 }
 
 function habitsSelfCheck(container, data) {
-  const key = "dw_m1b_habits";
+  const key = data.storageKey || "dw_m1b_habits";
   const total = data.statements.length;
+  const live = Boolean(data.liveResult);
   const saved = Array.isArray(storage.get(key)) ? storage.get(key).filter((n) => n >= 0 && n < total) : [];
 
   container.innerHTML = `
@@ -106,7 +113,7 @@ function habitsSelfCheck(container, data) {
           .join("")}
       </fieldset>
       <div class="selfcheck-actions">
-        <button type="submit" class="btn btn-primary">${data.resultLabel}</button>
+        ${live ? "" : `<button type="submit" class="btn btn-primary">${data.resultLabel}</button>`}
         <button type="button" class="btn btn-secondary" data-reset>${data.resetLabel}</button>
       </div>
       <p class="selfcheck-count" aria-live="polite"></p>
@@ -122,36 +129,49 @@ function habitsSelfCheck(container, data) {
     [...form.querySelectorAll('input[name="habit"]:checked')].map((el) => Number(el.value));
 
   const updateCount = () => {
-    countEl.textContent = data.countLabel
-      .replace("{n}", selected().length)
-      .replace("{total}", total);
+    countEl.textContent = data.countLabel.replace("{n}", selected().length).replace("{total}", total);
   };
 
   const band = (count) => {
+    if (count === 0 && data.results.none) return "none";
     if (count <= Math.floor(total / 3)) return "few";
     if (count <= Math.floor((total * 2) / 3)) return "several";
     return "many";
   };
 
   const showResult = (count) => {
-    const result = data.results[band(count)];
+    const result = data.results[band(count)] || data.results.few;
     resultEl.innerHTML = `
       <h3>${result.title}</h3>
       <p>${result.body}</p>
-      <p class="selfcheck-reflection"><span>${data.reflectionLabel}:</span> ${data.reflectionPrompt}</p>`;
+      <p class="selfcheck-reflection"><span>${data.reflectionLabel}:</span> ${data.reflectionPrompt}</p>
+      ${data.closing ? `<p class="selfcheck-closing">${data.closing}</p>` : ""}`;
     resultEl.hidden = false;
+  };
+
+  const refreshResult = () => {
+    const count = selected().length;
+    if (count === 0 && !data.results.none) {
+      resultEl.hidden = true;
+      resultEl.innerHTML = "";
+      return;
+    }
+    showResult(count);
   };
 
   form.addEventListener("change", () => {
     updateCount();
     storage.set(key, selected());
+    if (live) refreshResult();
   });
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    showResult(selected().length);
-    resultEl.focus();
-  });
+  if (!live) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      showResult(selected().length);
+      resultEl.focus();
+    });
+  }
 
   form.querySelector("[data-reset]").addEventListener("click", () => {
     form.querySelectorAll('input[name="habit"]:checked').forEach((el) => {
@@ -164,7 +184,8 @@ function habitsSelfCheck(container, data) {
   });
 
   updateCount();
-  if (saved.length) showResult(saved.length);
+  if (live) refreshResult();
+  else if (saved.length) showResult(saved.length);
 }
 
 function frequencyQuiz(container, data) {
@@ -500,9 +521,133 @@ function breakSelector(container, data) {
   if (savedIndex !== null) show(savedIndex);
 }
 
+function taskPlanner(container, data) {
+  const key = "dw_m5a_planner";
+  const LEVELS = ["high", "medium", "low"];
+  let tasks = (storage.get(key) || []).filter(
+    (task) => task && typeof task.name === "string" && LEVELS.includes(task.priority)
+  );
+
+  container.innerHTML = `
+    <p class="interaction-intro">${data.instructions}</p>
+    <form class="planner-form">
+      <div class="planner-field">
+        <label for="planner-name">${data.nameLabel}</label>
+        <input type="text" id="planner-name" maxlength="80" autocomplete="off" required>
+      </div>
+      <div class="planner-field">
+        <label for="planner-priority">${data.priorityLabel}</label>
+        <select id="planner-priority">
+          <option value="high">${data.priorities.high}</option>
+          <option value="medium" selected>${data.priorities.medium}</option>
+          <option value="low">${data.priorities.low}</option>
+        </select>
+      </div>
+      <div class="planner-field">
+        <label for="planner-time">${data.timeLabel}</label>
+        <input type="text" id="planner-time" maxlength="40" autocomplete="off" placeholder="${data.timePlaceholder}">
+      </div>
+      <button type="submit" class="btn btn-primary">${data.addLabel}</button>
+    </form>
+    <div class="planner-view" aria-live="polite"></div>
+    <div class="planner-actions"></div>
+    <p class="selfcheck-note">${data.savedNote}</p>`;
+
+  const form = container.querySelector(".planner-form");
+  const nameInput = container.querySelector("#planner-name");
+  const priorityInput = container.querySelector("#planner-priority");
+  const timeInput = container.querySelector("#planner-time");
+  const view = container.querySelector(".planner-view");
+  const actionsEl = container.querySelector(".planner-actions");
+
+  const save = () => storage.set(key, tasks);
+
+  const orderedTasks = () =>
+    tasks
+      .map((task, index) => ({ task, index }))
+      .sort(
+        (a, b) =>
+          LEVELS.indexOf(a.task.priority) - LEVELS.indexOf(b.task.priority) || a.index - b.index
+      );
+
+  const feedback = () => {
+    if (tasks.length === 1) return data.feedback.one;
+    const high = tasks.filter((task) => task.priority === "high").length;
+    if (high >= 3) return data.feedback.manyHigh;
+    return data.feedback.several;
+  };
+
+  const render = () => {
+    if (tasks.length === 0) {
+      view.innerHTML = `<p class="planner-empty">${data.emptyLabel}</p>`;
+      actionsEl.innerHTML = "";
+      return;
+    }
+    const rows = orderedTasks()
+      .map(
+        ({ task, index }) => `
+        <li class="planner-task priority-${task.priority}">
+          <span class="planner-badge">${data.priorities[task.priority]}</span>
+          <span class="planner-name">${escapeHtml(task.name)}</span>
+          ${task.time ? `<span class="planner-time">${escapeHtml(task.time)}</span>` : ""}
+          <span class="planner-row-actions">
+            <button type="button" data-edit="${index}">${data.editLabel}</button>
+            <button type="button" data-remove="${index}">${data.removeLabel}</button>
+          </span>
+        </li>`
+      )
+      .join("");
+    view.innerHTML = `
+      <p class="planner-note">${data.orderNote}</p>
+      <ol class="planner-list">${rows}</ol>
+      <div class="planner-feedback">${feedback()}</div>`;
+    actionsEl.innerHTML = `<button type="button" class="btn btn-secondary" data-reset>${data.resetLabel}</button>`;
+  };
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = nameInput.value.trim();
+    if (!name) return;
+    tasks.push({ name, priority: priorityInput.value, time: timeInput.value.trim() });
+    save();
+    form.reset();
+    priorityInput.value = "medium";
+    render();
+    nameInput.focus();
+  });
+
+  container.addEventListener("click", (event) => {
+    const editBtn = event.target.closest("[data-edit]");
+    const removeBtn = event.target.closest("[data-remove]");
+    const resetBtn = event.target.closest("[data-reset]");
+    if (editBtn) {
+      const index = Number(editBtn.dataset.edit);
+      const task = tasks[index];
+      nameInput.value = task.name;
+      priorityInput.value = task.priority;
+      timeInput.value = task.time || "";
+      tasks.splice(index, 1);
+      save();
+      render();
+      nameInput.focus();
+    } else if (removeBtn) {
+      tasks.splice(Number(removeBtn.dataset.remove), 1);
+      save();
+      render();
+    } else if (resetBtn) {
+      tasks = [];
+      storage.remove(key);
+      render();
+    }
+  });
+
+  render();
+}
+
 registerInteraction("conceptCards", conceptCards);
 registerInteraction("habitsSelfCheck", habitsSelfCheck);
 registerInteraction("frequencyQuiz", frequencyQuiz);
 registerInteraction("scenarios", scenarios);
 registerInteraction("routineSlider", routineSlider);
 registerInteraction("breakSelector", breakSelector);
+registerInteraction("taskPlanner", taskPlanner);
