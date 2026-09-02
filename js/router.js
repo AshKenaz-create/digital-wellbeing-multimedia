@@ -1,4 +1,5 @@
-import { dict } from "./language.js";
+import { dict, getLang } from "./language.js";
+import { initInteraction } from "./interactions.js";
 
 const app = document.getElementById("app");
 
@@ -91,13 +92,17 @@ function homeView() {
 function creditsView() {
   const d = dict();
   const sections = d.credits.sections
-    .map(
-      (s) => `
+    .map((s) => {
+      const body =
+        s.items && s.items.length
+          ? `<ul class="ref-list">${s.items.map((item) => `<li>${item}</li>`).join("")}</ul>`
+          : `<p class="pending-note" data-placeholder>${d.credits.pending}</p>`;
+      return `
       <section class="credits-section" id="ref-${s.id}">
         <h2>${s.title}</h2>
-        <p class="pending-note" data-placeholder>${d.credits.pending}</p>
-      </section>`
-    )
+        ${body}
+      </section>`;
+    })
     .join("");
 
   return `
@@ -116,6 +121,73 @@ function creditsView() {
     </article>`;
 }
 
+function placeholderBody(s) {
+  return SECTION_KEYS.map(
+    (key) => `
+      <section class="screen-block placeholder-block" data-placeholder>
+        <h2>${s.sections[key]}</h2>
+        <p>${s.placeholder}</p>
+      </section>`
+  ).join("");
+}
+
+function contentBody(sc, s) {
+  const intro = `
+    <div class="screen-intro">
+      ${sc.intro.map((p) => `<p>${p}</p>`).join("")}
+    </div>`;
+
+  const dimensions = `
+    <div class="dimension-grid">
+      ${sc.main.dimensions
+        .map((dm) => `<div class="dimension"><h3>${dm.name}</h3><p>${dm.text}</p></div>`)
+        .join("")}
+    </div>`;
+
+  const main = `
+    <section class="screen-block">
+      <h2>${s.sections.content}</h2>
+      <p>${sc.main.lead}</p>
+      ${dimensions}
+      ${sc.main.note ? `<p class="category-note">${sc.main.note}</p>` : ""}
+    </section>`;
+
+  const example = `
+    <section class="screen-block example-block">
+      <h2>${s.sections.example}</h2>
+      <p>${sc.example.text}</p>
+      ${sc.example.note ? `<p class="example-note">${sc.example.note}</p>` : ""}
+    </section>`;
+
+  const visual = `
+    <figure class="screen-figure">
+      <img src="assets/illustrations/${sc.visual.file}" alt="${sc.visual.alt}">
+      <figcaption>${sc.visual.caption}</figcaption>
+    </figure>`;
+
+  const interaction = `
+    <section class="screen-block screen-interaction">
+      <h2>${s.sections.interaction}</h2>
+      <div class="interaction" data-interaction="${sc.interaction.type}"></div>
+    </section>`;
+
+  const reflection = `
+    <section class="screen-block reflection-block">
+      <h2>${s.sections.reflection}</h2>
+      <p class="reflection-prompt">${sc.reflection.prompt}</p>
+    </section>`;
+
+  const support = `
+    <section class="support-note">
+      <h2>${s.sections.sources}</h2>
+      <p>${sc.support.text}</p>
+      <ul>${sc.support.refs.map((ref) => `<li>${ref}</li>`).join("")}</ul>
+      <p class="support-link"><a href="#/credits">${s.sourcesLink}</a></p>
+    </section>`;
+
+  return `${intro}${main}${example}${visual}${interaction}${reflection}${support}`;
+}
+
 function screenView(routeId) {
   const d = dict();
   const info = screenInfo(routeId);
@@ -125,13 +197,8 @@ function screenView(routeId) {
   const position = FLOW.indexOf(routeId);
   const positionLabel = d.screen.positionLabel.replace("{n}", position);
 
-  const blocks = SECTION_KEYS.map(
-    (key) => `
-      <section class="screen-block placeholder-block" data-placeholder>
-        <h2>${d.screen.sections[key]}</h2>
-        <p>${d.screen.placeholder}</p>
-      </section>`
-  ).join("");
+  const sc = d.screenContent && d.screenContent[routeId];
+  const blocks = sc ? contentBody(sc, d.screen) : placeholderBody(d.screen);
 
   return `
     <article class="page screen" data-screen="${screen.id}">
@@ -210,6 +277,15 @@ export function renderCurrent() {
   }
   updateActiveNav(routeId);
   updateDocTitle(routeId);
+  mountInteraction(routeId);
+}
+
+function mountInteraction(routeId) {
+  const d = dict();
+  const sc = d.screenContent && d.screenContent[routeId];
+  if (!sc || !sc.interaction) return;
+  const host = app.querySelector(".interaction");
+  if (host) initInteraction(sc.interaction.type, host, sc.interaction, getLang());
 }
 
 export function buildModulesMenu() {
