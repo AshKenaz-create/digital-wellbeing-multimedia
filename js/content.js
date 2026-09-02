@@ -505,6 +505,176 @@ export const content = {
           ],
         },
       },
+      m3a: {
+        intro: [
+          "Por la noche, los dispositivos digitales pueden tener usos útiles: estudiar, comunicarte, entretenerte, leer u organizar el día siguiente. Esta pantalla no busca presentar el uso nocturno del teléfono como algo automáticamente negativo.",
+          "Lo que ocurre cerca de la hora de dormir puede depender de varios factores: cuánto se alarga la actividad, si retrasa la hora prevista para acostarte, el tipo de contenido, si siguen llegando mensajes o notificaciones, y si tienes un momento para ir bajando el ritmo. La investigación sobre pantallas y sueño es compleja y no se reduce solo a la «luz azul».",
+        ],
+        main: {
+          lead: "Para observar tu rutina digital nocturna, puedes fijarte en cuatro aspectos:",
+          dimensions: [
+            { name: "Tiempo e intención", text: "¿La actividad se alargó más de lo que habías planeado?" },
+            { name: "Estimulación", text: "¿La actividad era tranquila o seguía pidiendo tu atención?" },
+            { name: "Interrupciones", text: "¿Siguen llegando mensajes o notificaciones cuando quieres descansar?" },
+            { name: "Rutina de transición", text: "¿Hay algún momento entre la actividad digital activa y el intento de dormir?" },
+          ],
+          extra: [
+            "En población universitaria, algunos estudios observan que usar dispositivos justo antes de dormir se asocia con una peor calidad de sueño. Son asociaciones observadas, no una relación de causa directa.",
+          ],
+          note: "Son categorías de reflexión para este recurso, no una escala de sueño validada. En personas adultas, la relación entre el uso de pantallas y el sueño es compleja y varía según qué se mide y qué aspecto del sueño se evalúa.",
+        },
+        example: {
+          text: "Valentina termina una entrega por la noche y piensa acostarse pronto. Al cerrar, abre una red social «un par de minutos». Se inicia una conversación, después llega otra notificación, y la hora de dormir acaba siendo bastante más tarde de lo previsto.",
+          note: "El punto no es que haya un teléfono cerca de la cama. Es que Valentina puede observar cómo encaja esa actividad digital en su rutina de descanso y si cambia lo que había decidido hacer.",
+        },
+        visual: {
+          file: "m3a-sleep.svg",
+          alt: "Ilustración de una persona estudiante que pasa del uso del portátil y el teléfono hacia el descanso, con elementos nocturnos tranquilos y señales de notificaciones y tiempo.",
+          caption: "Cerca de la hora de dormir influyen varios factores: cuánto se alarga la actividad, las interrupciones y si hay un momento para bajar el ritmo.",
+        },
+        interaction: {
+          type: "routineSlider",
+          instructions: "Mueve el control para comparar cuatro ejemplos de rutina nocturna. No hay una rutina perfecta universal: la idea es observar diferencias.",
+          savedNote: "Tu selección se guarda solo en este navegador; puedes borrarla con «Reiniciar».",
+          sliderLabel: "Ejemplo de rutina nocturna",
+          resetLabel: "Reiniciar",
+          noticeLabel: "Qué podrías notar",
+          ideaLabel: "Una idea para probar",
+          reflectionLabel: "Para reflexionar",
+          note: "Ninguna de estas rutinas es «la correcta». Sirven para comparar y para pensar qué encaja contigo.",
+          positions: [
+            {
+              name: "Actividad digital hasta la hora de dormir",
+              description: "La actividad digital continúa directamente hasta la hora prevista para dormir, con mensajes y notificaciones todavía activos.",
+              notice: "Si la hora real de acostarte coincide con la que habías pensado.",
+              idea: "Silenciar las conversaciones que no necesitas seguir esta noche.",
+              reflection: "¿Qué suele mantenerte con el teléfono más tiempo del previsto?",
+            },
+            {
+              name: "Uso cercano a la hora de dormir, con menos interrupciones",
+              description: "El uso del dispositivo continúa cerca de la hora de dormir, pero empiezas a reducir las interrupciones que no son necesarias.",
+              notice: "Si bajar las notificaciones cambia cómo te sientes al acostarte.",
+              idea: "Elegir una hora a partir de la cual dejas de responder mensajes no urgentes.",
+              reflection: "¿Qué notificaciones podrías posponer sin problema hasta el día siguiente?",
+            },
+            {
+              name: "Tarea principal terminada y una transición breve",
+              description: "Terminas la tarea digital principal y creas una transición corta hacia el descanso.",
+              notice: "Si ese pequeño intervalo te ayuda a desconectar de la tarea.",
+              idea: "Dejar unos minutos entre cerrar el trabajo y apagar la luz, con una actividad tranquila.",
+              reflection: "¿Qué actividad breve te ayuda a cambiar de ritmo por la noche?",
+            },
+            {
+              name: "Rutina de transición más intencional",
+              description: "Una rutina para bajar el ritmo en la que has pausado las actividades digitales que no son esenciales.",
+              notice: "Si te resulta más fácil o más difícil mantener esta rutina algunos días.",
+              idea: "Preparar lo necesario para el día siguiente antes de empezar la transición, para no volver al teléfono.",
+              reflection: "¿Qué parte de esta rutina te parece realista para un día normal?",
+            },
+          ],
+        },
+        reflection: {
+          prompt: "¿Qué parte de tu rutina digital nocturna podrías observar con más atención esta semana?",
+        },
+        support: {
+          text: "Este contenido se apoya en investigación sobre el uso de pantallas antes de dormir. En personas adultas esa relación con el sueño es compleja y varía según qué se mide; en población universitaria, algunos estudios observan una asociación entre el uso de dispositivos justo antes de dormir y una peor calidad de sueño, sin establecer una causa directa.",
+          refs: [
+            "Vézina-Im et al. (2025). Sleep Health.",
+            "Wang et al. (2025). American Journal of Translational Research.",
+          ],
+        },
+      },
+      m3b: {
+        intro: [
+          "Las sesiones largas de estudio suelen implicar mirar una pantalla mucho tiempo, permanecer sentado o sentada, repetir la misma tarea mental y, a veces, sentir cansancio o incomodidad física.",
+          "Una pausa corta no significa abandonar el estudio: puede ser una transición breve antes de seguir. La investigación no demuestra que cualquier pausa mejore automáticamente el rendimiento académico, pero algunas pausas pueden ayudar a recuperar energía o a sentirte mejor.",
+        ],
+        main: {
+          lead: "Hay distintos tipos de pausa breve, y el más útil puede depender de lo que estés notando:",
+          dimensions: [
+            { name: "Pausa visual", text: "Apartar un momento la vista de la pantalla y mirar a una distancia diferente, más lejos." },
+            { name: "Pausa de movimiento", text: "Ponerte de pie, estirarte con suavidad o dar un paseo corto después de mucho rato sentado o sentada." },
+            { name: "Reinicio mental", text: "Alejarte un momento de una tarea exigente antes de decidir el siguiente paso." },
+            { name: "Revisión del entorno", text: "Ajustar la postura, el espacio de trabajo o las distracciones antes de continuar." },
+          ],
+          extra: [
+            "En un metaanálisis, las pausas cortas mostraron pequeños beneficios para sentirse con más energía y menos fatiga, mientras que el efecto general sobre el rendimiento no fue significativo. En un estudio con estudiantes universitarios, interrumpir el tiempo sentado con actividad ligera tuvo efectos selectivos, no generales.",
+          ],
+          note: "Solo se incluyen ideas respaldadas por las fuentes citadas. No son rutinas médicas de estiramiento ni un tratamiento.",
+        },
+        example: {
+          text: "Andrés lleva un buen rato leyendo artículos y escribiendo. Se da cuenta de que está releyendo el mismo párrafo, apenas ha cambiado de postura y lleva mucho tiempo mirando el portátil sin descanso.",
+          note: "En lugar de obligarse a seguir igual, elige una pausa corta acorde con lo que está notando. La idea es la conciencia y la elección, no optimizar la productividad.",
+        },
+        visual: {
+          file: "m3b-breaks.svg",
+          alt: "Ilustración de una persona estudiante en un escritorio con símbolos sencillos de mirar a lo lejos, ponerse de pie y moverse, respirar y volver al estudio.",
+          caption: "Durante una sesión larga, distintos tipos de pausa breve pueden ayudar según lo que estés notando.",
+        },
+        interaction: {
+          type: "breakSelector",
+          instructions: "Elige la opción que más se parezca a tu situación. Verás una idea opcional para probar.",
+          question: "¿Qué estás notando ahora mismo?",
+          savedNote: "Tu selección se guarda solo en este navegador; puedes borrarla con «Reiniciar».",
+          resetLabel: "Reiniciar",
+          whatLabel: "Qué probar",
+          whyLabel: "Por qué elegirla",
+          reflectionLabel: "Para reflexionar",
+          options: [
+            {
+              label: "Llevo mucho tiempo mirando la pantalla.",
+              recommendation: {
+                title: "Si llevas rato mirando la pantalla de forma continua",
+                what: "Aparta la vista unos segundos y mira un objeto que esté más lejos; aprovecha para parpadear varias veces de forma consciente.",
+                why: "Al mirar pantallas se parpadea menos y la vista se mantiene fija a la misma distancia, lo que puede producir molestias como sequedad o cansancio ocular.",
+                rationale: "La Academia Americana de Oftalmología sugiere hacer pausas durante el uso prolongado del computador, parpadear de forma consciente y mirar a lo lejos; una versión muy usada de este recordatorio es la regla 20-20-20.",
+                reflection: "¿Cada cuánto sueles apartar la vista de la pantalla cuando estudias?",
+              },
+            },
+            {
+              label: "Llevo mucho tiempo en la misma postura.",
+              recommendation: {
+                title: "Si llevas un periodo largo sentado o sentada",
+                what: "Ponte de pie un momento y, si te viene bien, haz unos minutos de movimiento ligero, como caminar un poco.",
+                why: "Interrumpir los periodos largos sentado es una opción práctica para cambiar de postura y activar el cuerpo.",
+                rationale: "En un estudio con estudiantes universitarios, intercalar actividad ligera durante el tiempo sentado tuvo efectos selectivos sobre la cognición y el ánimo, no una mejora general; aun así, cortar el sedentarismo es algo que puedes probar.",
+                reflection: "¿Cuánto tiempo sueles pasar sentado o sentada sin levantarte durante una sesión de estudio?",
+              },
+            },
+            {
+              label: "Me siento saturado o saturada con la tarea.",
+              recommendation: {
+                title: "Si notas cansancio mental con la tarea",
+                what: "Haz una pausa corta lejos de la tarea y, al volver, decide cuál será el siguiente paso pequeño.",
+                why: "Alejarte un momento de una tarea muy exigente puede ayudarte a retomarla con una idea más clara de por dónde seguir.",
+                rationale: "Un metaanálisis sobre pausas cortas observó pequeños beneficios para sentirse con más energía y menos fatiga; el efecto sobre el rendimiento fue más limitado y dependía del tipo de tarea.",
+                reflection: "¿Qué señales te indican que una tarea te está saturando?",
+              },
+            },
+            {
+              label: "Tengo varias de estas a la vez.",
+              recommendation: {
+                title: "Si notas varias de estas cosas a la vez",
+                what: "Combina una pausa breve sin pantallas con algo de movimiento y, al volver, define un plan sencillo para reanudar.",
+                why: "Cuando se juntan la fatiga visual, el tiempo sentado y el cansancio mental, una sola pausa puede atender más de un aspecto.",
+                rationale: "Las fuentes coinciden en que las pausas cortas pueden apoyar la recuperación y el bienestar, aunque no garantizan una mejora del rendimiento; conviene probarlas como una opción, no como una regla fija.",
+                reflection: "Si solo pudieras cambiar una cosa de tus sesiones largas, ¿cuál sería?",
+              },
+            },
+          ],
+        },
+        reflection: {
+          prompt: "Durante una sesión larga de estudio, ¿qué señal suele indicarte que necesitas una pausa?",
+        },
+        support: {
+          text: "Este contenido se apoya en investigación sobre pausas cortas y sobre la interrupción del tiempo sentado, y en orientación de la Academia Americana de Oftalmología sobre el descanso visual. La evidencia sugiere beneficios modestos para el bienestar y efectos selectivos sobre el rendimiento, no mejoras garantizadas.",
+          refs: [
+            "Albulescu et al. (2022). PLOS ONE.",
+            "Wu et al. (2023). Scandinavian Journal of Medicine & Science in Sports.",
+            "American Academy of Ophthalmology (2023). Eye strain and sleepy eyes.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Documentación del proyecto",
@@ -516,17 +686,22 @@ export const content = {
           id: "academic",
           title: "Fuentes académicas",
           items: [
+            "Albulescu, P., Macsinga, I., Rusu, A., Sulea, C., Bodnaru, A. y Tulbure, B. T. (2022). “Give me a break!” A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance. <em>PLOS ONE, 17</em>(8), Artículo e0272460. https://doi.org/10.1371/journal.pone.0272460",
             "Appianing, J., Quansah, F. y Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Artículo 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
             "Biedermann, D., Schneider, J. y Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
             "Martin, F., Long, S., Haywood, K. y Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
             "Mohd Bahar, F. H., Roslan, N. S., Ping, N. P. T., Abdul Nasir, N. A., Ibrahim, M. S., Adam, S. K., Ahmad Razali, S. y Yusoff, M. S. B. (2026). The digital well-being among learners in higher education: A scoping review. <em>BMC Medical Education, 26</em>(1), Artículo 1146. https://doi.org/10.1186/s12909-026-09370-w",
             "Stothart, C., Mitchum, A. y Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <em>Journal of Experimental Psychology: Human Perception and Performance, 41</em>(4), 893–897. https://doi.org/10.1037/xhp0000100",
+            "Vézina-Im, L.-A., Morin, C. M., Chen, S., Ivers, H., Carney, C. E., Chaput, J.-P., Dang-Vu, T. T., Davidson, J. R., Robillard, R. y Canadian Sleep Research Consortium. (2025). The complex association between bedtime screen use and adult sleep health. <em>Sleep Health, 11</em>(5), 572–578. https://doi.org/10.1016/j.sleh.2025.06.010",
+            "Wang, J., Ishak, I., Mazri, F. H., Siau, C. S., Xin, F., Wang, X. y Mat Ludin, A. F. (2025). Sleep quality and related risk factors among college students in China: A systematic review and meta-analysis. <em>American Journal of Translational Research, 17</em>(12), 10111–10128. https://doi.org/10.62347/bpae1262",
+            "Wu, Y., Van Gerven, P. W. M., de Groot, R. H. M., Eijnde, B. O., Winkens, B. y Savelberg, H. H. C. M. (2023). Effects of breaking up sitting with light-intensity physical activity on cognition and mood in university students. <em>Scandinavian Journal of Medicine &amp; Science in Sports, 33</em>(3), 257–266. https://doi.org/10.1111/sms.14277",
           ],
         },
         {
           id: "institutional",
           title: "Fuentes institucionales",
           items: [
+            "American Academy of Ophthalmology. (2023). <em>Eye strain and sleepy eyes: How to prevent eye discomfort</em>. Recuperado el 2 de septiembre de 2026, de https://www.aao.org/eye-health/diseases/what-is-eye-strain",
             "Jisc. (s. f.). <em>Digital wellbeing</em>. Building digital capability. Recuperado el 2 de septiembre de 2026, de https://digitalcapability.jisc.ac.uk/what-is-digital-capability/digital-wellbeing/",
           ],
         },
@@ -534,7 +709,7 @@ export const content = {
           id: "images",
           title: "Fuentes de imágenes e ilustraciones",
           items: [
-            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em> y <em>m2b-distractions.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
+            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em> y <em>m3b-breaks.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
           ],
         },
         {
@@ -1064,6 +1239,176 @@ export const content = {
           ],
         },
       },
+      m3a: {
+        intro: [
+          "In the evening, digital devices can serve useful purposes: studying, communicating, entertainment, reading, or organising the next day. This screen is not about portraying nighttime device use as automatically bad.",
+          "What happens near bedtime can involve several factors: how long the activity continues, whether it delays your intended bedtime, the type of content, whether messages or notifications keep arriving, and whether you have a moment to wind down. Research on screens and sleep is complex, and it is not only about “blue light”.",
+        ],
+        main: {
+          lead: "To look at your nighttime digital routine, you can pay attention to four things:",
+          dimensions: [
+            { name: "Time and intention", text: "Did the activity continue longer than you planned?" },
+            { name: "Stimulation", text: "Was the activity calm, or did it keep demanding your attention?" },
+            { name: "Interruptions", text: "Do messages or notifications keep arriving when you want to rest?" },
+            { name: "Wind-down routine", text: "Is there any moment between active digital activity and trying to sleep?" },
+          ],
+          extra: [
+            "In university-student samples, some studies observe that using devices right before sleep is associated with poorer sleep quality. These are observed associations, not a direct causal link.",
+          ],
+          note: "These are reflection categories for this resource, not a validated sleep scale. In adults, the relationship between screen use and sleep is complex and varies with what is measured and which dimension of sleep is evaluated.",
+        },
+        example: {
+          text: "Valentina finishes an assignment at night and plans to sleep soon. As she closes it, she opens a social-media app “for a couple of minutes”. A conversation starts, then another notification arrives, and bedtime ends up much later than planned.",
+          note: "The point is not that a phone is near the bed. It is that Valentina can notice how that digital activity fits into her rest routine and whether it changes what she had decided to do.",
+        },
+        visual: {
+          file: "m3a-sleep.svg",
+          alt: "Illustration of a student moving from laptop and phone use toward rest, with calm nighttime elements and cues for notifications and time.",
+          caption: "Near bedtime, several factors matter: how long the activity runs, the interruptions, and whether there is a moment to wind down.",
+        },
+        interaction: {
+          type: "routineSlider",
+          instructions: "Move the control to compare four example evening routines. There is no universal perfect routine: the idea is to notice differences.",
+          savedNote: "Your selection is saved only in this browser; you can clear it with “Reset”.",
+          sliderLabel: "Example evening routine",
+          resetLabel: "Reset",
+          noticeLabel: "What you could notice",
+          ideaLabel: "One idea to try",
+          reflectionLabel: "To reflect on",
+          note: "None of these routines is “the right one”. They are for comparing and for thinking about what fits you.",
+          positions: [
+            {
+              name: "Digital activity until bedtime",
+              description: "Digital activity continues directly until the intended sleep time, with messages and notifications still active.",
+              notice: "Whether your actual bedtime matches the one you had in mind.",
+              idea: "Mute the conversations you do not need to follow tonight.",
+              reflection: "What usually keeps you on the phone longer than planned?",
+            },
+            {
+              name: "Use near bedtime, with fewer interruptions",
+              description: "Device use continues near bedtime, but you start reducing the interruptions that are not necessary.",
+              notice: "Whether lowering notifications changes how you feel as you go to bed.",
+              idea: "Choose a time after which you stop replying to non-urgent messages.",
+              reflection: "Which notifications could you postpone until the next day without a problem?",
+            },
+            {
+              name: "Main task finished and a short transition",
+              description: "You finish the main digital task and create a short transition toward rest.",
+              notice: "Whether that small gap helps you disconnect from the task.",
+              idea: "Leave a few minutes between closing your work and turning off the light, with a calm activity.",
+              reflection: "What brief activity helps you change pace at night?",
+            },
+            {
+              name: "A more intentional wind-down routine",
+              description: "A routine for slowing down in which you have paused the non-essential digital activities.",
+              notice: "Whether it feels easier or harder to keep this routine on some days.",
+              idea: "Get what you need for the next day ready before starting the transition, so you do not go back to the phone.",
+              reflection: "Which part of this routine seems realistic for a normal day?",
+            },
+          ],
+        },
+        reflection: {
+          prompt: "Which part of your nighttime digital routine could you pay more attention to this week?",
+        },
+        support: {
+          text: "This content draws on research on screen use before bed. In adults, that relationship with sleep is complex and varies with what is measured; in university-student samples, some studies observe an association between using devices right before sleep and poorer sleep quality, without establishing a direct cause.",
+          refs: [
+            "Vézina-Im et al. (2025). Sleep Health.",
+            "Wang et al. (2025). American Journal of Translational Research.",
+          ],
+        },
+      },
+      m3b: {
+        intro: [
+          "Long study sessions often involve looking at a screen for extended periods, staying seated, repeating the same mental task and, sometimes, feeling tired or physically uncomfortable.",
+          "A short break does not mean giving up on studying: it can be a brief transition before continuing. Research does not show that any break automatically improves academic performance, but some breaks can help you recover energy or feel better.",
+        ],
+        main: {
+          lead: "There are different kinds of short break, and the most useful one may depend on what you are noticing:",
+          dimensions: [
+            { name: "Visual break", text: "Looking away from the screen for a moment and looking at a different, farther distance." },
+            { name: "Movement break", text: "Standing up, stretching gently or taking a short walk after a long time seated." },
+            { name: "Mental reset", text: "Stepping away from a demanding task for a moment before deciding the next step." },
+            { name: "Environment check", text: "Adjusting your posture, your workspace or distractions before continuing." },
+          ],
+          extra: [
+            "In a meta-analysis, short breaks showed small benefits for feeling more energetic and less fatigued, while the overall effect on performance was not significant. In a study with university students, breaking up sitting with light activity had selective, not general, effects.",
+          ],
+          note: "Only ideas supported by the cited sources are included. These are not medical stretching routines or a treatment.",
+        },
+        example: {
+          text: "Andrés has been reading articles and writing for quite a while. He notices that he is rereading the same paragraph, has barely changed position, and has been looking at the laptop for a long time without a break.",
+          note: "Instead of forcing himself to continue unchanged, he chooses a short break that matches what he is noticing. The idea is awareness and choice, not optimising productivity.",
+        },
+        visual: {
+          file: "m3b-breaks.svg",
+          alt: "Illustration of a student at a study desk with simple symbols for looking into the distance, standing and moving, breathing, and returning to study.",
+          caption: "During a long session, different kinds of short break can help depending on what you are noticing.",
+        },
+        interaction: {
+          type: "breakSelector",
+          instructions: "Choose the option that best matches your situation. You will see an optional idea to try.",
+          question: "What are you noticing right now?",
+          savedNote: "Your selection is saved only in this browser; you can clear it with “Reset”.",
+          resetLabel: "Reset",
+          whatLabel: "What to try",
+          whyLabel: "Why you might choose it",
+          reflectionLabel: "To reflect on",
+          options: [
+            {
+              label: "I have been looking at the screen for a long time.",
+              recommendation: {
+                title: "If you have been looking at the screen continuously",
+                what: "Look away for a few seconds at an object that is farther away, and take the chance to blink several times consciously.",
+                why: "When looking at screens people blink less and keep their eyes fixed at the same distance, which can cause discomfort such as dryness or tired eyes.",
+                rationale: "The American Academy of Ophthalmology suggests taking breaks during prolonged computer use, blinking consciously and looking into the distance; a widely used version of this reminder is the 20-20-20 rule.",
+                reflection: "How often do you usually look away from the screen when you study?",
+              },
+            },
+            {
+              label: "I have been in the same position for a long time.",
+              recommendation: {
+                title: "If you have been seated for a long period",
+                what: "Stand up for a moment and, if it suits you, do a few minutes of light movement, such as walking a little.",
+                why: "Interrupting long periods of sitting is a practical option for changing posture and getting the body moving.",
+                rationale: "In a study with university students, adding light activity during sitting had selective effects on cognition and mood, not a general improvement; even so, breaking up sedentary time is something you can try.",
+                reflection: "How long do you usually stay seated without getting up during a study session?",
+              },
+            },
+            {
+              label: "I feel mentally saturated with the task.",
+              recommendation: {
+                title: "If you notice mental tiredness with the task",
+                what: "Take a short break away from the task and, when you return, decide what the next small step will be.",
+                why: "Stepping away from a very demanding task for a moment can help you return with a clearer idea of how to continue.",
+                rationale: "A meta-analysis of short breaks observed small benefits for feeling more energetic and less fatigued; the effect on performance was more limited and depended on the type of task.",
+                reflection: "What signs tell you that a task is saturating you?",
+              },
+            },
+            {
+              label: "I have several of these at the same time.",
+              recommendation: {
+                title: "If you notice several of these things at once",
+                what: "Combine a short screen-free break with some movement and, when you return, set a simple plan to resume.",
+                why: "When visual fatigue, sitting time and mental tiredness come together, a single break can address more than one thing.",
+                rationale: "The sources agree that short breaks can support recovery and wellbeing, although they do not guarantee better performance; it is worth trying them as an option, not as a fixed rule.",
+                reflection: "If you could change only one thing about your long sessions, what would it be?",
+              },
+            },
+          ],
+        },
+        reflection: {
+          prompt: "During a long study session, what usually tells you that you may need a break?",
+        },
+        support: {
+          text: "This content draws on research on short breaks and on breaking up sitting time, and on guidance from the American Academy of Ophthalmology about resting the eyes. The evidence suggests modest benefits for wellbeing and selective effects on performance, not guaranteed improvements.",
+          refs: [
+            "Albulescu et al. (2022). PLOS ONE.",
+            "Wu et al. (2023). Scandinavian Journal of Medicine & Science in Sports.",
+            "American Academy of Ophthalmology (2023). Eye strain and sleepy eyes.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Project documentation",
@@ -1075,17 +1420,22 @@ export const content = {
           id: "academic",
           title: "Academic sources",
           items: [
+            "Albulescu, P., Macsinga, I., Rusu, A., Sulea, C., Bodnaru, A., & Tulbure, B. T. (2022). “Give me a break!” A systematic review and meta-analysis on the efficacy of micro-breaks for increasing well-being and performance. <em>PLOS ONE, 17</em>(8), Article e0272460. https://doi.org/10.1371/journal.pone.0272460",
             "Appianing, J., Quansah, F., & Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Article 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
             "Biedermann, D., Schneider, J., & Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
             "Martin, F., Long, S., Haywood, K., & Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
             "Mohd Bahar, F. H., Roslan, N. S., Ping, N. P. T., Abdul Nasir, N. A., Ibrahim, M. S., Adam, S. K., Ahmad Razali, S., & Yusoff, M. S. B. (2026). The digital well-being among learners in higher education: A scoping review. <em>BMC Medical Education, 26</em>(1), Article 1146. https://doi.org/10.1186/s12909-026-09370-w",
             "Stothart, C., Mitchum, A., & Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <em>Journal of Experimental Psychology: Human Perception and Performance, 41</em>(4), 893–897. https://doi.org/10.1037/xhp0000100",
+            "Vézina-Im, L.-A., Morin, C. M., Chen, S., Ivers, H., Carney, C. E., Chaput, J.-P., Dang-Vu, T. T., Davidson, J. R., Robillard, R., & Canadian Sleep Research Consortium. (2025). The complex association between bedtime screen use and adult sleep health. <em>Sleep Health, 11</em>(5), 572–578. https://doi.org/10.1016/j.sleh.2025.06.010",
+            "Wang, J., Ishak, I., Mazri, F. H., Siau, C. S., Xin, F., Wang, X., & Mat Ludin, A. F. (2025). Sleep quality and related risk factors among college students in China: A systematic review and meta-analysis. <em>American Journal of Translational Research, 17</em>(12), 10111–10128. https://doi.org/10.62347/bpae1262",
+            "Wu, Y., Van Gerven, P. W. M., de Groot, R. H. M., Eijnde, B. O., Winkens, B., & Savelberg, H. H. C. M. (2023). Effects of breaking up sitting with light-intensity physical activity on cognition and mood in university students. <em>Scandinavian Journal of Medicine &amp; Science in Sports, 33</em>(3), 257–266. https://doi.org/10.1111/sms.14277",
           ],
         },
         {
           id: "institutional",
           title: "Institutional sources",
           items: [
+            "American Academy of Ophthalmology. (2023). <em>Eye strain and sleepy eyes: How to prevent eye discomfort</em>. Retrieved September 2, 2026, from https://www.aao.org/eye-health/diseases/what-is-eye-strain",
             "Jisc. (n.d.). <em>Digital wellbeing</em>. Building digital capability. Retrieved September 2, 2026, from https://digitalcapability.jisc.ac.uk/what-is-digital-capability/digital-wellbeing/",
           ],
         },
@@ -1093,7 +1443,7 @@ export const content = {
           id: "images",
           title: "Image and illustration sources",
           items: [
-            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em> and <em>m2b-distractions.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
+            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em> and <em>m3b-breaks.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
           ],
         },
         {

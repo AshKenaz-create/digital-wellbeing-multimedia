@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m3bFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m3bFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+    <circle cx="330" cy="150" r="100" fill="#2f7d8c" opacity="0.10"/>
+
+    <g fill="#245e6b">
+      <circle cx="250" cy="128" r="17"/>
+      <path d="M224 210v-44a26 26 0 0 1 52 0v44z"/>
+    </g>
+    <rect x="292" y="152" width="72" height="46" rx="5" fill="#437a55"/>
+    <rect x="299" y="159" width="58" height="32" rx="3" fill="#e3eef0"/>
+    <rect x="286" y="198" width="86" height="8" rx="4" fill="#245e6b"/>
+
+    <path d="M150 96c14-12 34-12 48 0-14 12-34 12-48 0z" fill="none" stroke="#245e6b" stroke-width="4"/>
+    <circle cx="174" cy="96" r="5" fill="#245e6b"/>
+    <path d="M198 96h34" stroke="#245e6b" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 7"/>
+    <circle cx="242" cy="96" r="6" fill="#5a9e70"/>
+
+    <g stroke="#437a55" stroke-width="5" stroke-linecap="round" fill="none">
+      <path d="M470 210v-40"/>
+      <path d="M470 176l-14 16M470 176l14 16"/>
+      <circle cx="470" cy="152" r="9" fill="#437a55" stroke="none"/>
+    </g>
+    <path d="M494 150c8-8 8-20 0-28" stroke="#5a9e70" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M504 156c12-12 12-30 0-42" stroke="#5a9e70" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <path d="M410 92a34 34 0 1 1 -10 24" fill="none" stroke="#2f7d8c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M396 120l4-14 12 6z" fill="#2f7d8c"/>
+
+    <path d="M0 250C130 224 220 250 330 244 440 238 520 222 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>

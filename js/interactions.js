@@ -373,7 +373,121 @@ function scenarios(container, data) {
   refresh();
 }
 
+function routineSlider(container, data) {
+  const key = "dw_m3a_slider";
+  const count = data.positions.length;
+  const stored = Number(storage.get(key));
+  const start = Number.isInteger(stored) && stored >= 0 && stored < count ? stored : 0;
+
+  container.innerHTML = `
+    <p class="interaction-intro">${data.instructions}</p>
+    <div class="routine-slider">
+      <label class="routine-slider-label" for="routine-range">${data.sliderLabel}</label>
+      <input type="range" id="routine-range" min="0" max="${count - 1}" step="1" value="${start}" aria-describedby="routine-panel">
+      <div class="routine-ticks" aria-hidden="true">
+        ${data.positions.map((_, i) => `<span>${i + 1}</span>`).join("")}
+      </div>
+      <div class="routine-panel" id="routine-panel" role="status" tabindex="-1"></div>
+      <div class="routine-actions">
+        <button type="button" class="btn btn-secondary" data-reset>${data.resetLabel}</button>
+      </div>
+      <p class="selfcheck-note">${data.savedNote}</p>
+      <p class="routine-note">${data.note}</p>
+    </div>`;
+
+  const range = container.querySelector("#routine-range");
+  const panel = container.querySelector("#routine-panel");
+
+  const render = (index) => {
+    const position = data.positions[index];
+    panel.innerHTML = `
+      <h3>${position.name}</h3>
+      <p>${position.description}</p>
+      <p class="pair-line"><span>${data.noticeLabel}:</span> ${position.notice}</p>
+      <p class="pair-line"><span>${data.ideaLabel}:</span> ${position.idea}</p>
+      <p class="pair-line"><span>${data.reflectionLabel}:</span> ${position.reflection}</p>`;
+  };
+
+  range.addEventListener("input", () => {
+    const index = Number(range.value);
+    render(index);
+    storage.set(key, index);
+  });
+
+  container.querySelector("[data-reset]").addEventListener("click", () => {
+    range.value = 0;
+    render(0);
+    storage.remove(key);
+  });
+
+  render(start);
+}
+
+function breakSelector(container, data) {
+  const key = "dw_m3b_selector";
+  const count = data.options.length;
+  const stored = Number(storage.get(key));
+  const savedIndex = Number.isInteger(stored) && stored >= 0 && stored < count ? stored : null;
+
+  container.innerHTML = `
+    <p class="interaction-intro">${data.instructions}</p>
+    <form class="break-selector">
+      <fieldset>
+        <legend>${data.question}</legend>
+        <div class="scenario-options break-options">
+          ${data.options
+            .map(
+              (option, i) => `
+            <label class="scenario-option">
+              <input type="radio" name="notice" value="${i}"${savedIndex === i ? " checked" : ""}>
+              <span>${option.label}</span>
+            </label>`
+            )
+            .join("")}
+        </div>
+      </fieldset>
+      <div class="break-actions">
+        <button type="button" class="btn btn-secondary" data-reset>${data.resetLabel}</button>
+      </div>
+      <p class="selfcheck-note">${data.savedNote}</p>
+    </form>
+    <div class="break-result" role="status" tabindex="-1" hidden></div>`;
+
+  const form = container.querySelector(".break-selector");
+  const resultEl = container.querySelector(".break-result");
+
+  const show = (index) => {
+    const rec = data.options[index].recommendation;
+    resultEl.innerHTML = `
+      <h3>${rec.title}</h3>
+      <p class="pair-line"><span>${data.whatLabel}:</span> ${rec.what}</p>
+      <p class="pair-line"><span>${data.whyLabel}:</span> ${rec.why}</p>
+      <p class="break-rationale">${rec.rationale}</p>
+      <p class="pair-line"><span>${data.reflectionLabel}:</span> ${rec.reflection}</p>`;
+    resultEl.hidden = false;
+  };
+
+  form.addEventListener("change", (event) => {
+    const index = Number(event.target.value);
+    show(index);
+    storage.set(key, index);
+  });
+
+  form.querySelector("[data-reset]").addEventListener("click", () => {
+    form.querySelectorAll("input:checked").forEach((el) => {
+      el.checked = false;
+    });
+    storage.remove(key);
+    resultEl.hidden = true;
+    resultEl.innerHTML = "";
+  });
+
+  if (savedIndex !== null) show(savedIndex);
+}
+
 registerInteraction("conceptCards", conceptCards);
 registerInteraction("habitsSelfCheck", habitsSelfCheck);
 registerInteraction("frequencyQuiz", frequencyQuiz);
 registerInteraction("scenarios", scenarios);
+registerInteraction("routineSlider", routineSlider);
+registerInteraction("breakSelector", breakSelector);

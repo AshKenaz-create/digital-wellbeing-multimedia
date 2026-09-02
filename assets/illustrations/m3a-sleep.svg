@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m3aFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m3aFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+
+    <circle cx="500" cy="96" r="40" fill="#2f7d8c" opacity="0.12"/>
+    <path d="M512 74a26 26 0 1 0 0 44 20 20 0 0 1 0-44z" fill="#5a9e70" opacity="0.75"/>
+    <circle cx="446" cy="70" r="3" fill="#437a55" opacity="0.7"/>
+    <circle cx="470" cy="132" r="2.5" fill="#437a55" opacity="0.6"/>
+    <circle cx="540" cy="150" r="2.5" fill="#437a55" opacity="0.6"/>
+
+    <rect x="86" y="150" width="86" height="54" rx="6" fill="#437a55"/>
+    <rect x="94" y="158" width="70" height="38" rx="3" fill="#e3eef0"/>
+    <rect x="78" y="204" width="102" height="8" rx="4" fill="#245e6b"/>
+
+    <circle cx="210" cy="120" r="7" fill="#437a55"/>
+    <circle cx="248" cy="112" r="5.5" fill="#437a55" opacity="0.6"/>
+    <circle cx="284" cy="108" r="4" fill="#437a55" opacity="0.35"/>
+
+    <path d="M330 214v-40a150 150 0 0 1 220 0v40z" fill="#2f7d8c" opacity="0.16"/>
+    <rect x="330" y="196" width="230" height="20" rx="8" fill="#245e6b"/>
+    <rect x="344" y="176" width="70" height="30" rx="10" fill="#5a9e70"/>
+
+    <circle cx="300" cy="150" r="15" fill="#245e6b"/>
+    <path d="M285 214v-40a15 15 0 0 1 30 0v40z" fill="#245e6b"/>
+
+    <path d="M0 250C130 224 220 250 330 244 440 238 520 222 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>
