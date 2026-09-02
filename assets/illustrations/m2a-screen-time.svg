@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-label="">
+  <defs>
+    <clipPath id="m2aFrame"><rect width="640" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#m2aFrame)">
+    <rect width="640" height="300" fill="#e3eef0"/>
+    <circle cx="330" cy="150" r="96" fill="#2f7d8c" opacity="0.10"/>
+
+    <g fill="#245e6b">
+      <circle cx="250" cy="122" r="17"/>
+      <path d="M224 206v-46a26 26 0 0 1 52 0v46z"/>
+    </g>
+
+    <rect x="300" y="150" width="86" height="56" rx="6" fill="#437a55"/>
+    <rect x="308" y="158" width="70" height="40" rx="3" fill="#e3eef0"/>
+    <rect x="292" y="206" width="102" height="8" rx="4" fill="#245e6b"/>
+
+    <rect x="410" y="168" width="26" height="40" rx="5" fill="#5a9e70"/>
+    <rect x="415" y="174" width="16" height="24" rx="2" fill="#e3eef0"/>
+
+    <circle cx="472" cy="96" r="22" fill="none" stroke="#2f7d8c" stroke-width="5"/>
+    <path d="M472 96v-13M472 96l9 7" stroke="#2f7d8c" stroke-width="5" stroke-linecap="round"/>
+
+    <path d="M168 210c-20-8-22-30-6-36 4 16 14 22 6 36z" fill="#5a9e70"/>
+    <circle cx="150" cy="86" r="14" fill="#5a9e70" opacity="0.7"/>
+
+    <path d="M0 250C130 224 220 250 330 244 440 238 520 222 640 242V300H0Z" fill="#2f7d8c" opacity="0.18"/>
+  </g>
+</svg>

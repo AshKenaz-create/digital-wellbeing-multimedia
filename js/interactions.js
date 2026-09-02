@@ -167,5 +167,213 @@ function habitsSelfCheck(container, data) {
   if (saved.length) showResult(saved.length);
 }
 
+function frequencyQuiz(container, data) {
+  const key = "dw_m2a_quiz";
+  const count = data.questions.length;
+  const stored = storage.get(key);
+  const saved = Array.isArray(stored) && stored.length === count ? stored : Array(count).fill(null);
+
+  container.innerHTML = `
+    <p class="interaction-intro">${data.instructions}</p>
+    <form class="freq-quiz" novalidate>
+      <ol class="freq-list">
+        ${data.questions
+          .map(
+            (question, i) => `
+          <li class="freq-item">
+            <fieldset>
+              <legend>${question}</legend>
+              <div class="freq-options">
+                ${data.options
+                  .map(
+                    (option, j) => `
+                  <label class="freq-option">
+                    <input type="radio" name="q${i}" value="${j}"${saved[i] === j ? " checked" : ""}>
+                    <span>${option}</span>
+                  </label>`
+                  )
+                  .join("")}
+              </div>
+            </fieldset>
+          </li>`
+          )
+          .join("")}
+      </ol>
+      <div class="quiz-actions">
+        <button type="submit" class="btn btn-primary">${data.resultLabel}</button>
+        <button type="button" class="btn btn-secondary" data-reset>${data.resetLabel}</button>
+      </div>
+      <p class="quiz-progress" aria-live="polite"></p>
+      <p class="selfcheck-note">${data.savedNote}</p>
+    </form>
+    <div class="quiz-result" role="status" tabindex="-1" hidden></div>`;
+
+  const form = container.querySelector(".freq-quiz");
+  const progressEl = container.querySelector(".quiz-progress");
+  const resultEl = container.querySelector(".quiz-result");
+
+  const answers = () =>
+    [...Array(count)].map((_, i) => {
+      const picked = form.querySelector(`input[name="q${i}"]:checked`);
+      return picked ? Number(picked.value) : null;
+    });
+
+  const answeredCount = () => answers().filter((a) => a !== null).length;
+
+  const updateProgress = (message) => {
+    progressEl.textContent =
+      message || data.progressLabel.replace("{n}", answeredCount()).replace("{total}", count);
+  };
+
+  const band = (score) => {
+    const max = count * (data.options.length - 1);
+    if (score <= max / 3) return "low";
+    if (score <= (max * 2) / 3) return "mid";
+    return "high";
+  };
+
+  const showResult = (score) => {
+    const result = data.results[band(score)];
+    resultEl.innerHTML = `
+      <h3>${result.title}</h3>
+      <p>${result.body}</p>
+      <div class="quiz-strategies">
+        <h4>${data.strategiesTitle}</h4>
+        <ul>${data.strategies.map((s) => `<li>${s}</li>`).join("")}</ul>
+      </div>
+      <p class="quiz-reflection"><span>${data.reflectionLabel}:</span> ${data.reflectionPrompt}</p>`;
+    resultEl.hidden = false;
+  };
+
+  form.addEventListener("change", () => {
+    storage.set(key, answers());
+    updateProgress();
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const current = answers();
+    if (current.includes(null)) {
+      updateProgress(data.incompleteLabel);
+      return;
+    }
+    showResult(current.reduce((sum, value) => sum + value, 0));
+    resultEl.focus();
+  });
+
+  form.querySelector("[data-reset]").addEventListener("click", () => {
+    form.querySelectorAll("input[type=radio]:checked").forEach((el) => {
+      el.checked = false;
+    });
+    storage.remove(key);
+    resultEl.hidden = true;
+    resultEl.innerHTML = "";
+    updateProgress();
+  });
+
+  updateProgress();
+  if (!saved.includes(null)) showResult(saved.reduce((sum, value) => sum + value, 0));
+}
+
+function scenarios(container, data) {
+  const key = "dw_m2b_scenarios";
+  const count = data.scenarios.length;
+  const stored = storage.get(key);
+  const saved = Array.isArray(stored) && stored.length === count ? stored : Array(count).fill(null);
+
+  container.innerHTML = `
+    <p class="interaction-intro">${data.instructions}</p>
+    <div class="scenario-list">
+      ${data.scenarios
+        .map(
+          (scenario, i) => `
+        <div class="scenario" data-scenario="${i}">
+          <fieldset>
+            <legend><span class="scenario-num">${i + 1}</span> ${scenario.situation}</legend>
+            <div class="scenario-options">
+              ${scenario.options
+                .map(
+                  (option, j) => `
+                <label class="scenario-option">
+                  <input type="radio" name="scenario-${i}" value="${j}"${saved[i] === j ? " checked" : ""}>
+                  <span>${option.text}</span>
+                </label>`
+                )
+                .join("")}
+            </div>
+          </fieldset>
+          <div class="scenario-feedback" role="status" hidden></div>
+        </div>`
+        )
+        .join("")}
+    </div>
+    <div class="scenario-actions">
+      <button type="button" class="btn btn-secondary" data-reset>${data.resetLabel}</button>
+    </div>
+    <p class="scenario-progress" aria-live="polite"></p>
+    <p class="selfcheck-note">${data.savedNote}</p>
+    <div class="scenario-summary" role="status" tabindex="-1" hidden></div>`;
+
+  const blocks = [...container.querySelectorAll(".scenario")];
+  const progressEl = container.querySelector(".scenario-progress");
+  const summaryEl = container.querySelector(".scenario-summary");
+
+  const answers = () =>
+    blocks.map((block) => {
+      const picked = block.querySelector("input:checked");
+      return picked ? Number(picked.value) : null;
+    });
+
+  const showFeedback = (i, choice) => {
+    const feedbackEl = blocks[i].querySelector(".scenario-feedback");
+    feedbackEl.textContent = data.scenarios[i].options[choice].feedback;
+    feedbackEl.hidden = false;
+  };
+
+  const refresh = () => {
+    const current = answers();
+    const done = current.filter((a) => a !== null).length;
+    progressEl.textContent = data.progressLabel.replace("{n}", done).replace("{total}", count);
+    if (done === count) {
+      summaryEl.innerHTML = `
+        <h3>${data.summaryTitle}</h3>
+        <p>${data.summary}</p>
+        <p class="scenario-reflection"><span>${data.reflectionLabel}:</span> ${data.reflectionPrompt}</p>`;
+      summaryEl.hidden = false;
+    } else {
+      summaryEl.hidden = true;
+      summaryEl.innerHTML = "";
+    }
+  };
+
+  blocks.forEach((block, i) => {
+    block.addEventListener("change", (event) => {
+      const choice = Number(event.target.value);
+      showFeedback(i, choice);
+      storage.set(key, answers());
+      refresh();
+    });
+  });
+
+  container.querySelector("[data-reset]").addEventListener("click", () => {
+    container.querySelectorAll("input[type=radio]:checked").forEach((el) => {
+      el.checked = false;
+    });
+    container.querySelectorAll(".scenario-feedback").forEach((el) => {
+      el.hidden = true;
+      el.textContent = "";
+    });
+    storage.remove(key);
+    refresh();
+  });
+
+  saved.forEach((choice, i) => {
+    if (choice !== null) showFeedback(i, choice);
+  });
+  refresh();
+}
+
 registerInteraction("conceptCards", conceptCards);
 registerInteraction("habitsSelfCheck", habitsSelfCheck);
+registerInteraction("frequencyQuiz", frequencyQuiz);
+registerInteraction("scenarios", scenarios);

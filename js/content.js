@@ -312,6 +312,199 @@ export const content = {
           ],
         },
       },
+      m2a: {
+        intro: [
+          "En la universidad es normal pasar muchas horas frente a una pantalla por razones necesarias: clases virtuales, búsqueda de información, trabajos, comunicación con compañeros y también descanso o entretenimiento.",
+          "Por eso, el total de horas de pantalla, por sí solo, no dice si la tecnología te está ayudando o interrumpiendo una actividad. Lo que más importa es el contexto: para qué usas el dispositivo, con qué intención y cuánto control sientes que tienes.",
+        ],
+        main: {
+          lead: "Cuando pienses en tu uso de pantallas, puedes hacerte cuatro preguntas sencillas:",
+          dimensions: [
+            { name: "Propósito", text: "¿Para qué estoy usando este dispositivo ahora mismo?" },
+            { name: "Tiempo", text: "¿Llevo más tiempo del que había pensado?" },
+            { name: "Interferencia", text: "¿Este uso está interrumpiendo otra tarea o rutina?" },
+            { name: "Control", text: "¿Puedo parar, hacer una pausa o cambiar de actividad cuando lo decido?" },
+          ],
+          extra: [
+            "Las estadísticas de uso que ofrecen los dispositivos pueden servir como información para observar patrones, pero conviene interpretarlas junto con el contexto de cada día.",
+          ],
+          note: "Son categorías de reflexión, no una escala de diagnóstico. No existe un número único de horas diarias de pantalla que sea saludable o no para todas las personas.",
+        },
+        example: {
+          text: "Mariana dedica la mañana a una clase virtual y a avanzar un trabajo en el computador. Por la tarde, cada vez que se bloquea con una idea, abre las redes sociales «un momento». Esas pausas breves se repiten y su sesión de estudio termina alargándose casi una hora más de lo previsto.",
+          note: "El uso académico de la pantalla era necesario; lo que se acumuló fueron las interrupciones no planificadas. Notar esa diferencia es más útil que contar solo las horas.",
+        },
+        visual: {
+          file: "m2a-screen-time.svg",
+          alt: "Ilustración de una persona estudiante con un portátil y un teléfono, junto a elementos que representan el tiempo de estudio, el uso intencionado y las pausas.",
+          caption: "Gestionar el tiempo de pantalla tiene que ver con el para qué, el cuándo y el control, más que con el total de horas.",
+        },
+        interaction: {
+          type: "frequencyQuiz",
+          instructions: "Elige la opción que mejor describa tu experiencia habitual. No es una prueba: es una guía para reflexionar.",
+          savedNote: "Tus respuestas se guardan solo en este navegador; puedes borrarlas con «Reiniciar».",
+          options: ["Nunca", "Rara vez", "A veces", "A menudo"],
+          questions: [
+            "Sigo usando una aplicación más tiempo del que había planeado.",
+            "Reviso contenidos ajenos a la tarea mientras estudio.",
+            "Pierdo la noción del tiempo mientras uso el dispositivo.",
+            "Me cuesta hacer una pausa cuando decido que quiero parar.",
+            "Uso el dispositivo sin tener claro para qué lo abrí.",
+            "Empiezo a estudiar sin reservar un rato concreto de concentración para una sola tarea.",
+          ],
+          progressLabel: "{n} de {total} respondidas",
+          incompleteLabel: "Responde todas las preguntas para ver el resultado.",
+          resultLabel: "Ver resultado",
+          resetLabel: "Reiniciar",
+          strategiesTitle: "Estrategias para probar",
+          strategies: [
+            "Antes de abrir una aplicación o el dispositivo, define para qué lo vas a usar y por cuánto tiempo.",
+            "Reserva un rato concreto para concentrarte en una sola tarea académica, sin cambiar de actividad.",
+            "Reduce temporalmente el acceso a una distracción que ya conoces mientras haces esa tarea.",
+          ],
+          reflectionLabel: "Para reflexionar",
+          reflectionPrompt: "Elige una situación de la lista y obsérvala durante esta semana: ¿cuándo aparece y qué la desencadena?",
+          results: {
+            low: {
+              title: "Tu uso parece bastante intencional",
+              body: "Tus respuestas sugieren que, en general, decides tu uso de pantallas de forma consciente. Aun así, puede haber alguna situación puntual que valga la pena observar.",
+            },
+            mid: {
+              title: "Hay algunos momentos que puedes observar",
+              body: "Identificaste varios momentos en los que el uso de pantallas puede alargarse o interrumpir otra actividad. Elige una sola situación para observar durante esta semana.",
+            },
+            high: {
+              title: "Varias situaciones compiten con tu objetivo",
+              body: "Notaste varias situaciones en las que las actividades digitales pueden competir con lo que querías hacer. En lugar de cambiarlo todo a la vez, elige un pequeño ajuste para probar.",
+            },
+          },
+        },
+        reflection: {
+          prompt: "¿Qué momento de tu uso diario de pantallas te gustaría hacer un poco más intencional?",
+        },
+        support: {
+          text: "Este contenido se apoya en investigación reciente sobre distracción digital y sobre herramientas de autocontrol digital, que describen el uso de pantallas como algo que depende de varios factores y presentan las estrategias como opciones para probar, no como soluciones garantizadas.",
+          refs: [
+            "Martin et al. (2025). Educational Technology Research and Development.",
+            "Biedermann et al. (2021). Journal of Computer Assisted Learning.",
+          ],
+        },
+      },
+      m2b: {
+        intro: [
+          "Una distracción digital ocurre cuando pierdes el foco de la tarea académica porque tu atención se va hacia contenido digital que no tiene relación con ella: mensajes, alertas de redes sociales, correos, notificaciones de aplicaciones, pestañas del navegador o revisar el teléfono de forma automática.",
+          "Además, una notificación no siempre necesita abrirse para competir por tu atención: el aviso en sí ya puede interrumpir la concentración.",
+        ],
+        main: {
+          lead: "Las causas de la distracción digital suelen agruparse en tres tipos:",
+          dimensions: [
+            { name: "Tecnología", text: "Avisos, aplicaciones y mensajes, y el acceso fácil a contenido que no tiene relación con la tarea." },
+            { name: "Factores personales", text: "La costumbre, la curiosidad, el aburrimiento o las ganas de comprobar algo." },
+            { name: "Entorno", text: "Tener varios dispositivos a la vez, el lugar de estudio o las interrupciones y expectativas de las personas alrededor." },
+          ],
+          note: "Esta forma de ordenar las causas —tecnología, factores personales y entorno— proviene de una revisión reciente sobre distracción digital en educación. Como intervienen varios factores, gestionarla suele requerir más de una estrategia.",
+        },
+        example: {
+          text: "Sofía está redactando un trabajo. Llega la notificación de un mensaje y lo abre para responder rápido. Enseguida entra un correo. Antes de darse cuenta, ha pasado por la app de mensajes, el correo y una red social, y cuando vuelve al documento necesita releer el último párrafo para retomar el hilo.",
+          note: "El ejemplo muestra cómo se interrumpe una tarea, no busca señalar a quien estudia. A casi todo el mundo le pasa.",
+        },
+        visual: {
+          file: "m2b-distractions.svg",
+          alt: "Ilustración de una persona estudiante frente a un portátil, con pequeños elementos de notificación alrededor y una zona central que representa la atención concentrada.",
+          caption: "Varias señales digitales compiten por la atención mientras se estudia; proteger un espacio de concentración ayuda a sostener la tarea.",
+        },
+        interaction: {
+          type: "scenarios",
+          instructions: "En cada situación, elige la respuesta que probarías. Después verás una explicación. No siempre hay una única respuesta perfecta.",
+          savedNote: "Tus respuestas se guardan solo en este navegador; puedes borrarlas con «Reiniciar».",
+          progressLabel: "{n} de {total} situaciones respondidas",
+          resetLabel: "Reiniciar",
+          scenarios: [
+            {
+              situation: "Estás escribiendo un trabajo y aparece la notificación de un mensaje que no es urgente.",
+              options: [
+                {
+                  text: "Silencio las notificaciones no esenciales durante este rato de trabajo.",
+                  feedback: "Reduce la cantidad de avisos que compiten por tu atención. En un estudio experimental, recibir notificaciones bastó para afectar el rendimiento en una tarea de atención, aunque no se tocara el teléfono.",
+                },
+                {
+                  text: "Miro el mensaje un segundo para saber de qué es y sigo.",
+                  feedback: "Aunque parezca rápido, el aviso ya interrumpió la tarea y retomar el punto donde estabas cuesta un esfuerzo extra. Puede tener sentido si de verdad esperas algo importante.",
+                },
+                {
+                  text: "Respondo ahora para quitármelo de encima.",
+                  feedback: "Responder de inmediato suele abrir la puerta a más mensajes y a cambiar de aplicación. Si no es urgente, fijar un momento para revisar los mensajes protege mejor la concentración.",
+                },
+              ],
+            },
+            {
+              situation: "Estás leyendo material académico con varias pestañas del navegador y redes sociales abiertas de antes.",
+              options: [
+                {
+                  text: "Cierro las pestañas que no necesito para esta lectura.",
+                  feedback: "Quita accesos directos a la distracción y deja a la vista solo lo relacionado con la tarea, lo que facilita mantener el foco.",
+                },
+                {
+                  text: "Las dejo abiertas; no las estoy mirando.",
+                  feedback: "Tenerlas a un clic facilita el cambio automático de tarea, sobre todo en pausas o momentos de bloqueo. No siempre distraen, pero aumentan la probabilidad.",
+                },
+                {
+                  text: "Me permito revisarlas cada vez que termino una página.",
+                  feedback: "Puede servir como recompensa breve, aunque a veces esas pausas se alargan. Si lo pruebas, decide de antemano cuánto durará la pausa.",
+                },
+              ],
+            },
+            {
+              situation: "Durante una clase virtual, el chat del grupo se anima con una conversación que no es sobre la clase.",
+              options: [
+                {
+                  text: "Silencio ese chat hasta que termine la clase.",
+                  feedback: "Protege la atención para la clase sin cerrar la conversación, que puedes retomar después.",
+                },
+                {
+                  text: "Sigo la conversación mientras escucho la clase.",
+                  feedback: "Atender a dos cosas a la vez reparte la atención y es fácil perderse partes de la explicación. Puede ser asumible si la clase es de repaso y el mensaje es importante.",
+                },
+                {
+                  text: "Contesto rápido y vuelvo a la clase.",
+                  feedback: "Una respuesta corta parece inofensiva, pero suele encadenar más respuestas. Avisar de que responderás al terminar la clase suele funcionar mejor.",
+                },
+              ],
+            },
+            {
+              situation: "Coges el teléfono para leer un mensaje de un compañero sobre un trabajo y ves que hay otras notificaciones esperando.",
+              options: [
+                {
+                  text: "Leo solo el mensaje del trabajo y dejo el resto para más tarde.",
+                  feedback: "Mantienes el motivo por el que cogiste el teléfono y evitas que otras notificaciones decidan el siguiente paso.",
+                },
+                {
+                  text: "Aprovecho para revisar también las demás.",
+                  feedback: "Es la reacción más habitual, y por eso las notificaciones «arrastran»: una lleva a otra. Revisar solo lo que buscabas mantiene el control de la situación.",
+                },
+                {
+                  text: "Dejo el teléfono boca abajo y lo miro en la siguiente pausa.",
+                  feedback: "Aplaza la interrupción por completo. Funciona bien si de verdad no esperas nada urgente en ese momento.",
+                },
+              ],
+            },
+          ],
+          summaryTitle: "Resumen",
+          summary: "Has practicado varias formas de responder a las interrupciones digitales. La estrategia más útil depende de la tarea y de la situación; no hay una que sirva siempre. Piensa en cuál te resultaría más fácil de probar.",
+          reflectionLabel: "Para reflexionar",
+          reflectionPrompt: "De las estrategias que probaste, ¿cuál te gustaría usar la próxima vez que estudies?",
+        },
+        reflection: {
+          prompt: "¿Qué distracción digital aparece con más frecuencia cuando estás estudiando?",
+        },
+        support: {
+          text: "Este contenido se apoya en investigación sobre distracción digital en educación y en un estudio experimental sobre el efecto de las notificaciones en la atención. Los resultados de laboratorio no significan que cada notificación cause un mal resultado académico; muestran que los avisos pueden competir por la atención.",
+          refs: [
+            "Martin et al. (2025). Educational Technology Research and Development.",
+            "Stothart et al. (2015). Journal of Experimental Psychology: Human Perception and Performance.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Documentación del proyecto",
@@ -324,7 +517,10 @@ export const content = {
           title: "Fuentes académicas",
           items: [
             "Appianing, J., Quansah, F. y Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Artículo 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
+            "Biedermann, D., Schneider, J. y Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
+            "Martin, F., Long, S., Haywood, K. y Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
             "Mohd Bahar, F. H., Roslan, N. S., Ping, N. P. T., Abdul Nasir, N. A., Ibrahim, M. S., Adam, S. K., Ahmad Razali, S. y Yusoff, M. S. B. (2026). The digital well-being among learners in higher education: A scoping review. <em>BMC Medical Education, 26</em>(1), Artículo 1146. https://doi.org/10.1186/s12909-026-09370-w",
+            "Stothart, C., Mitchum, A. y Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <em>Journal of Experimental Psychology: Human Perception and Performance, 41</em>(4), 893–897. https://doi.org/10.1037/xhp0000100",
           ],
         },
         {
@@ -338,7 +534,7 @@ export const content = {
           id: "images",
           title: "Fuentes de imágenes e ilustraciones",
           items: [
-            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em> y <em>m1b-awareness.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
+            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em> y <em>m2b-distractions.svg</em>. Creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
           ],
         },
         {
@@ -675,6 +871,199 @@ export const content = {
           ],
         },
       },
+      m2a: {
+        intro: [
+          "At university it is normal to spend many hours in front of a screen for necessary reasons: online classes, looking for information, assignments, communication with classmates, and also rest or entertainment.",
+          "So the total number of screen hours, on its own, does not tell you whether technology is helping you or interrupting an activity. What matters most is context: what you are using the device for, with what intention, and how much control you feel you have.",
+        ],
+        main: {
+          lead: "When you think about your screen use, you can ask yourself four simple questions:",
+          dimensions: [
+            { name: "Purpose", text: "What am I using this device for right now?" },
+            { name: "Time", text: "Have I been at it longer than I intended?" },
+            { name: "Interference", text: "Is this use interrupting another task or routine?" },
+            { name: "Control", text: "Can I stop, pause or switch activities when I decide to?" },
+          ],
+          extra: [
+            "The usage statistics that devices provide can be useful as information for noticing patterns, but it helps to read them together with the context of each day.",
+          ],
+          note: "These are reflection categories, not a diagnostic scale. There is no single number of daily screen hours that is healthy or unhealthy for everyone.",
+        },
+        example: {
+          text: "Mariana spends the morning in an online class and working on an assignment on her laptop. In the afternoon, every time she gets stuck on an idea she opens social media “for a moment”. Those short breaks repeat, and her study session ends up running almost an hour longer than planned.",
+          note: "The academic screen use was necessary; what added up were the unplanned interruptions. Noticing that difference is more useful than only counting the hours.",
+        },
+        visual: {
+          file: "m2a-screen-time.svg",
+          alt: "Illustration of a student with a laptop and a phone, next to elements representing study time, intentional use and breaks.",
+          caption: "Managing screen time is about the what for, the when and the sense of control, more than the total number of hours.",
+        },
+        interaction: {
+          type: "frequencyQuiz",
+          instructions: "Choose the option that best describes your usual experience. This is not a test: it is a guide for reflection.",
+          savedNote: "Your answers are saved only in this browser; you can clear them with “Reset”.",
+          options: ["Never", "Rarely", "Sometimes", "Often"],
+          questions: [
+            "I keep using an app for longer than I had planned.",
+            "I check content unrelated to the task while I study.",
+            "I lose track of time while using the device.",
+            "I find it hard to pause when I decide I want to stop.",
+            "I use the device without being clear about why I opened it.",
+            "I start studying without setting aside a specific period to focus on one task.",
+          ],
+          progressLabel: "{n} of {total} answered",
+          incompleteLabel: "Answer every question to see the result.",
+          resultLabel: "See result",
+          resetLabel: "Reset",
+          strategiesTitle: "Strategies to try",
+          strategies: [
+            "Before opening an app or the device, decide what you will use it for and for how long.",
+            "Set aside a specific period to focus on one academic task, without switching activities.",
+            "Temporarily reduce access to a distraction you already know about while you do that task.",
+          ],
+          reflectionLabel: "To reflect on",
+          reflectionPrompt: "Choose one situation from the list and observe it this week: when does it happen, and what triggers it?",
+          results: {
+            low: {
+              title: "Your use looks fairly intentional",
+              body: "Your answers suggest that, in general, you decide on your screen use consciously. Even so, there may be a particular situation worth observing.",
+            },
+            mid: {
+              title: "There are a few moments you could observe",
+              body: "You identified several moments where screen use may continue longer or interrupt another activity. Choose one situation to observe this week.",
+            },
+            high: {
+              title: "Several situations compete with your goal",
+              body: "You noticed several situations where digital activities may compete with what you set out to do. Rather than changing everything at once, choose one small adjustment to test.",
+            },
+          },
+        },
+        reflection: {
+          prompt: "Which part of your daily screen use would you like to make a little more intentional?",
+        },
+        support: {
+          text: "This content draws on recent research on digital distraction and on digital self-control tools, which describe screen use as something that depends on several factors and present strategies as options to experiment with, not as guaranteed solutions.",
+          refs: [
+            "Martin et al. (2025). Educational Technology Research and Development.",
+            "Biedermann et al. (2021). Journal of Computer Assisted Learning.",
+          ],
+        },
+      },
+      m2b: {
+        intro: [
+          "A digital distraction happens when you lose focus on the academic task because your attention moves toward digital content unrelated to it: messages, social-media alerts, email, app notifications, browser tabs, or checking the phone automatically.",
+          "A notification does not always need to be opened to compete for your attention: the alert itself can already interrupt your concentration.",
+        ],
+        main: {
+          lead: "The causes of digital distraction are usually grouped into three types:",
+          dimensions: [
+            { name: "Technology", text: "Alerts, apps and messages, and easy access to content unrelated to the task." },
+            { name: "Personal factors", text: "Habit, curiosity, boredom, or the urge to check something." },
+            { name: "Environment", text: "Having several devices at once, the study location, or interruptions and expectations from people nearby." },
+          ],
+          note: "This way of organising the causes —technology, personal factors and environment— comes from a recent review of digital distraction in education. Because several factors are involved, managing it usually takes more than one strategy.",
+        },
+        example: {
+          text: "Sofía is writing an assignment. A message notification arrives and she opens it to reply quickly. An email comes in right after. Before she realises it, she has moved through the messaging app, her email and a social network, and when she returns to the document she has to reread the last paragraph to pick up the thread.",
+          note: "The example shows how a task gets interrupted; it is not about blaming the student. It happens to almost everyone.",
+        },
+        visual: {
+          file: "m2b-distractions.svg",
+          alt: "Illustration of a student at a laptop, with small notification elements around them and a central area representing focused attention.",
+          caption: "Several digital signals compete for attention while studying; protecting a space for focus helps to sustain the task.",
+        },
+        interaction: {
+          type: "scenarios",
+          instructions: "In each situation, choose the response you would try. You will then see an explanation. There is not always a single perfect answer.",
+          savedNote: "Your answers are saved only in this browser; you can clear them with “Reset”.",
+          progressLabel: "{n} of {total} situations answered",
+          resetLabel: "Reset",
+          scenarios: [
+            {
+              situation: "You are writing an assignment and a notification appears for a message that is not urgent.",
+              options: [
+                {
+                  text: "I mute non-essential notifications for this stretch of work.",
+                  feedback: "It reduces the number of alerts competing for your attention. In one experiment, simply receiving notifications was enough to affect performance on an attention task, even when the phone was not touched.",
+                },
+                {
+                  text: "I glance at the message for a second to see what it is, then continue.",
+                  feedback: "Even if it seems quick, the alert has already interrupted the task, and getting back to where you were takes extra effort. It can make sense if you really are expecting something important.",
+                },
+                {
+                  text: "I reply now to get it out of the way.",
+                  feedback: "Replying straight away often opens the door to more messages and to switching apps. If it is not urgent, setting a time to check messages protects your concentration better.",
+                },
+              ],
+            },
+            {
+              situation: "You are reading academic material with several browser tabs and social media open from before.",
+              options: [
+                {
+                  text: "I close the tabs I do not need for this reading.",
+                  feedback: "It removes shortcuts to distraction and keeps only task-related content in view, which makes it easier to stay focused.",
+                },
+                {
+                  text: "I leave them open; I am not looking at them.",
+                  feedback: "Having them one click away makes automatic task-switching easier, especially during breaks or when you get stuck. They do not always distract, but they raise the chance.",
+                },
+                {
+                  text: "I let myself check them each time I finish a page.",
+                  feedback: "It can work as a short reward, though those breaks sometimes stretch out. If you try it, decide in advance how long the break will last.",
+                },
+              ],
+            },
+            {
+              situation: "During an online class, the group chat comes alive with a conversation that is not about the class.",
+              options: [
+                {
+                  text: "I mute that chat until the class is over.",
+                  feedback: "It protects your attention for the class without closing the conversation, which you can return to afterwards.",
+                },
+                {
+                  text: "I follow the conversation while I listen to the class.",
+                  feedback: "Attending to two things at once splits your attention and it is easy to miss parts of the explanation. It may be acceptable if the class is revision and the message is important.",
+                },
+                {
+                  text: "I reply quickly and go back to the class.",
+                  feedback: "A short reply seems harmless, but it often leads to more replies. Saying you will answer after the class usually works better.",
+                },
+              ],
+            },
+            {
+              situation: "You pick up your phone to read a classmate's message about an assignment and see other notifications waiting.",
+              options: [
+                {
+                  text: "I read only the assignment message and leave the rest for later.",
+                  feedback: "You keep the reason you picked up the phone and avoid letting other notifications decide your next step.",
+                },
+                {
+                  text: "I take the chance to check the others too.",
+                  feedback: "It is the most common reaction, and it is why notifications “pull” you along: one leads to another. Checking only what you came for keeps you in control of the situation.",
+                },
+                {
+                  text: "I put the phone face down and look at it during the next break.",
+                  feedback: "It postpones the interruption completely. It works well if you really are not expecting anything urgent right now.",
+                },
+              ],
+            },
+          ],
+          summaryTitle: "Summary",
+          summary: "You have practised several ways of responding to digital interruptions. The most useful strategy depends on the task and the situation; there is not one that always works. Think about which one would be easiest for you to test.",
+          reflectionLabel: "To reflect on",
+          reflectionPrompt: "Of the strategies you tried, which one would you like to use next time you study?",
+        },
+        reflection: {
+          prompt: "Which digital distraction appears most often when you are studying?",
+        },
+        support: {
+          text: "This content draws on research on digital distraction in education and on an experiment about the effect of notifications on attention. Laboratory results do not mean that every notification causes a poor academic outcome; they show that alerts can compete for attention.",
+          refs: [
+            "Martin et al. (2025). Educational Technology Research and Development.",
+            "Stothart et al. (2015). Journal of Experimental Psychology: Human Perception and Performance.",
+          ],
+        },
+      },
     },
     credits: {
       eyebrow: "Project documentation",
@@ -687,7 +1076,10 @@ export const content = {
           title: "Academic sources",
           items: [
             "Appianing, J., Quansah, F., & Amoako, R. (2026). Development and validation of the digital well-being scale using university students. <em>Frontiers in Psychiatry, 17</em>, Article 1853998. https://doi.org/10.3389/fpsyt.2026.1853998",
+            "Biedermann, D., Schneider, J., & Drachsler, H. (2021). Digital self-control interventions for distracting media multitasking: A systematic review. <em>Journal of Computer Assisted Learning, 37</em>(5), 1217–1231. https://doi.org/10.1111/jcal.12581",
+            "Martin, F., Long, S., Haywood, K., & Xie, K. (2025). Digital distractions in education: A systematic review of research on causes, consequences and prevention strategies. <em>Educational Technology Research and Development, 73</em>(6), 3423–3451. https://doi.org/10.1007/s11423-025-10550-6",
             "Mohd Bahar, F. H., Roslan, N. S., Ping, N. P. T., Abdul Nasir, N. A., Ibrahim, M. S., Adam, S. K., Ahmad Razali, S., & Yusoff, M. S. B. (2026). The digital well-being among learners in higher education: A scoping review. <em>BMC Medical Education, 26</em>(1), Article 1146. https://doi.org/10.1186/s12909-026-09370-w",
+            "Stothart, C., Mitchum, A., & Yehnert, C. (2015). The attentional cost of receiving a cell phone notification. <em>Journal of Experimental Psychology: Human Perception and Performance, 41</em>(4), 893–897. https://doi.org/10.1037/xhp0000100",
           ],
         },
         {
@@ -701,7 +1093,7 @@ export const content = {
           id: "images",
           title: "Image and illustration sources",
           items: [
-            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em> and <em>m1b-awareness.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
+            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em> and <em>m2b-distractions.svg</em>. Created for this educational resource; no stock image banks or third-party resources are used.",
           ],
         },
         {

@@ -144,11 +144,13 @@ function contentBody(sc, s) {
         .join("")}
     </div>`;
 
+  const extra = sc.main.extra ? sc.main.extra.map((p) => `<p>${p}</p>`).join("") : "";
   const main = `
     <section class="screen-block">
       <h2>${s.sections.content}</h2>
       <p>${sc.main.lead}</p>
       ${dimensions}
+      ${extra}
       ${sc.main.note ? `<p class="category-note">${sc.main.note}</p>` : ""}
     </section>`;
 
