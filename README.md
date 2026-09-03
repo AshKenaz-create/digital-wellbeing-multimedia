@@ -4,13 +4,15 @@ Recurso multimedia educativo bilingüe (español / inglés) sobre bienestar digi
 dirigido a estudiantes universitarios. Corresponde a la Fase 2 del curso de
 Aplicaciones Multimedia del programa de Ingeniería Multimedia de la UNAD.
 
+**Aplicación publicada:** <https://ashkenaz-create.github.io/digital-wellbeing-multimedia/#/>
+
 ## Tecnología
 
 - HTML5, CSS3 y JavaScript (sin frameworks ni dependencias)
 - Aplicación de una sola página con enrutamiento por hash (`#/`)
 - Sin backend, sin base de datos, sin registro de usuarios
 - Sin scripts, fuentes ni activos de terceros
-- Preparado para publicación mediante GitHub Pages
+- Publicado mediante GitHub Pages
 
 ## Contenido
 
@@ -38,7 +40,8 @@ Luego abrir: <http://localhost:8000/#/>
 
 1. Subir el repositorio a GitHub.
 2. En *Settings → Pages*, seleccionar la rama principal y la carpeta raíz (`/`).
-3. La aplicación quedará disponible en la URL pública que indique GitHub Pages.
+3. La aplicación queda disponible en:
+   <https://ashkenaz-create.github.io/digital-wellbeing-multimedia/#/>
 
 El enrutamiento por hash permite recargar cualquier vista sin errores 404.
 

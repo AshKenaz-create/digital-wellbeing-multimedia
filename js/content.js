@@ -1054,7 +1054,7 @@ export const content = {
           id: "external",
           title: "Recursos y activos externos",
           items: [
-            "El recurso no utiliza scripts, fuentes tipográficas, librerías ni activos de terceros. Se desarrolla únicamente con HTML5, CSS3 y JavaScript propios y está preparado para publicación mediante GitHub Pages.",
+            "El recurso no utiliza scripts, fuentes tipográficas, librerías ni activos de terceros. Se desarrolla únicamente con HTML5, CSS3 y JavaScript propios. Publicado mediante GitHub Pages.",
           ],
         },
         {
@@ -1068,7 +1068,7 @@ export const content = {
         },
       ],
       toolsTitle: "Tecnología utilizada",
-      tools: "HTML5, CSS3 y JavaScript sin frameworks. Preparado para publicación mediante GitHub Pages.",
+      tools: "HTML5, CSS3 y JavaScript sin frameworks. Publicado mediante GitHub Pages.",
     },
     notFound: {
       title: "Página no encontrada",
@@ -2132,7 +2132,7 @@ export const content = {
           id: "external",
           title: "External resources and assets",
           items: [
-            "The resource uses no third-party scripts, fonts, libraries or assets. It is built only with the project's own HTML5, CSS3 and JavaScript and is prepared for deployment with GitHub Pages.",
+            "The resource uses no third-party scripts, fonts, libraries or assets. It is built only with the project's own HTML5, CSS3 and JavaScript. Published with GitHub Pages.",
           ],
         },
         {
@@ -2146,7 +2146,7 @@ export const content = {
         },
       ],
       toolsTitle: "Technology used",
-      tools: "HTML5, CSS3 and framework-free JavaScript. Prepared for deployment with GitHub Pages.",
+      tools: "HTML5, CSS3 and framework-free JavaScript. Published with GitHub Pages.",
     },
     notFound: {
       title: "Page not found",
