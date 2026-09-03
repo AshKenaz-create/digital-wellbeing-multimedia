@@ -54,7 +54,6 @@ export const content = {
         reflection: "Retroalimentación y reflexión",
         sources: "Apoyo académico e institucional",
       },
-      placeholder: "El contenido del módulo se integrará en la siguiente etapa de desarrollo.",
     },
     pager: {
       label: "Navegación entre pantallas",
@@ -1004,8 +1003,7 @@ export const content = {
     credits: {
       eyebrow: "Documentación del proyecto",
       title: "Créditos y referencias",
-      lead: "Esta sección reúne las fuentes académicas e institucionales y la atribución de los recursos visuales utilizados en el recurso. Se completa progresivamente a medida que se desarrolla cada módulo.",
-      pending: "Las referencias de este apartado se documentarán durante el desarrollo de los módulos correspondientes.",
+      lead: "Esta sección reúne las fuentes académicas e institucionales, la atribución de los recursos visuales y la información sobre las herramientas utilizadas en el recurso.",
       sections: [
         {
           id: "academic",
@@ -1042,7 +1040,7 @@ export const content = {
           id: "images",
           title: "Fuentes de imágenes e ilustraciones",
           items: [
-            "Ilustraciones originales del proyecto en formato SVG: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> y <em>m5b-digital-routine.svg</em>. Todas fueron creadas para este recurso educativo; no se emplean bancos de imágenes ni recursos de terceros.",
+            "Ilustraciones SVG desarrolladas específicamente para este proyecto con apoyo de herramientas de IA durante el proceso de desarrollo: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> y <em>m5b-digital-routine.svg</em>. No se utilizaron bancos de imágenes ni recursos visuales de terceros.",
           ],
         },
         {
@@ -1056,12 +1054,21 @@ export const content = {
           id: "external",
           title: "Recursos y activos externos",
           items: [
-            "El recurso no utiliza scripts, fuentes tipográficas, librerías ni activos de terceros. Se desarrolla únicamente con HTML5, CSS3 y JavaScript propios y se publica mediante GitHub Pages.",
+            "El recurso no utiliza scripts, fuentes tipográficas, librerías ni activos de terceros. Se desarrolla únicamente con HTML5, CSS3 y JavaScript propios y está preparado para publicación mediante GitHub Pages.",
+          ],
+        },
+        {
+          id: "ai",
+          title: "Asistencia de inteligencia artificial",
+          intro: "Durante el desarrollo del recurso se utilizaron herramientas de inteligencia artificial generativa como apoyo para la estructuración de contenidos y el desarrollo del código. La información educativa se revisó y contrastó posteriormente con las fuentes académicas e institucionales relacionadas en esta página.",
+          items: [
+            "Anthropic. (2026). <em>Claude</em> [modelo de lenguaje grande]. https://claude.ai",
+            "OpenAI. (2026). <em>ChatGPT</em> [modelo de lenguaje grande]. https://chatgpt.com",
           ],
         },
       ],
       toolsTitle: "Tecnología utilizada",
-      tools: "HTML5, CSS3 y JavaScript sin frameworks. Publicado con GitHub Pages.",
+      tools: "HTML5, CSS3 y JavaScript sin frameworks. Preparado para publicación mediante GitHub Pages.",
     },
     notFound: {
       title: "Página no encontrada",
@@ -1125,7 +1132,6 @@ export const content = {
         reflection: "Feedback and reflection",
         sources: "Academic and institutional support",
       },
-      placeholder: "Module content will be integrated during the next development stage.",
     },
     pager: {
       label: "Screen navigation",
@@ -2075,8 +2081,7 @@ export const content = {
     credits: {
       eyebrow: "Project documentation",
       title: "Credits & references",
-      lead: "This section brings together the academic and institutional sources and the attribution of the visual resources used in this resource. It is completed progressively as each module is developed.",
-      pending: "The references for this section will be documented while the corresponding modules are developed.",
+      lead: "This section brings together the academic and institutional sources, the attribution of the visual resources, and information about the tools used in this resource.",
       sections: [
         {
           id: "academic",
@@ -2113,7 +2118,7 @@ export const content = {
           id: "images",
           title: "Image and illustration sources",
           items: [
-            "Original project illustrations in SVG format: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> and <em>m5b-digital-routine.svg</em>. All were created for this educational resource; no stock image banks or third-party resources are used.",
+            "SVG illustrations developed specifically for this project with AI-assisted development: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> and <em>m5b-digital-routine.svg</em>. No stock-image libraries or third-party visual assets were used.",
           ],
         },
         {
@@ -2127,12 +2132,21 @@ export const content = {
           id: "external",
           title: "External resources and assets",
           items: [
-            "The resource uses no third-party scripts, fonts, libraries or assets. It is built only with the project's own HTML5, CSS3 and JavaScript and is published with GitHub Pages.",
+            "The resource uses no third-party scripts, fonts, libraries or assets. It is built only with the project's own HTML5, CSS3 and JavaScript and is prepared for deployment with GitHub Pages.",
+          ],
+        },
+        {
+          id: "ai",
+          title: "Generative AI assistance",
+          intro: "Generative AI tools were used during development to support content structuring and code development. Educational information was then reviewed and checked against the academic and institutional sources listed on this page.",
+          items: [
+            "Anthropic. (2026). <em>Claude</em> [Large language model]. https://claude.ai",
+            "OpenAI. (2026). <em>ChatGPT</em> [Large language model]. https://chatgpt.com",
           ],
         },
       ],
       toolsTitle: "Technology used",
-      tools: "HTML5, CSS3 and framework-free JavaScript. Published with GitHub Pages.",
+      tools: "HTML5, CSS3 and framework-free JavaScript. Prepared for deployment with GitHub Pages.",
     },
     notFound: {
       title: "Page not found",

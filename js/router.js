@@ -5,7 +5,6 @@ const app = document.getElementById("app");
 
 const SCREEN_IDS = ["m1a", "m1b", "m2a", "m2b", "m3a", "m3b", "m4a", "m4b", "m5a", "m5b"];
 const FLOW = ["home", ...SCREEN_IDS, "credits"];
-const SECTION_KEYS = ["intro", "content", "example", "visual", "interaction", "reflection", "sources"];
 
 function currentRoute() {
   const raw = window.location.hash.replace(/^#\/?/, "").trim();
@@ -92,17 +91,14 @@ function homeView() {
 function creditsView() {
   const d = dict();
   const sections = d.credits.sections
-    .map((s) => {
-      const body =
-        s.items && s.items.length
-          ? `<ul class="ref-list">${s.items.map((item) => `<li>${item}</li>`).join("")}</ul>`
-          : `<p class="pending-note" data-placeholder>${d.credits.pending}</p>`;
-      return `
+    .map(
+      (s) => `
       <section class="credits-section" id="ref-${s.id}">
         <h2>${s.title}</h2>
-        ${body}
-      </section>`;
-    })
+        ${s.intro ? `<p>${s.intro}</p>` : ""}
+        <ul class="ref-list">${s.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </section>`
+    )
     .join("");
 
   return `
@@ -119,16 +115,6 @@ function creditsView() {
       </section>
       ${pagerHtml("credits")}
     </article>`;
-}
-
-function placeholderBody(s) {
-  return SECTION_KEYS.map(
-    (key) => `
-      <section class="screen-block placeholder-block" data-placeholder>
-        <h2>${s.sections[key]}</h2>
-        <p>${s.placeholder}</p>
-      </section>`
-  ).join("");
 }
 
 function contentBody(sc, s) {
@@ -200,7 +186,8 @@ function screenView(routeId) {
   const positionLabel = d.screen.positionLabel.replace("{n}", position);
 
   const sc = d.screenContent && d.screenContent[routeId];
-  const blocks = sc ? contentBody(sc, d.screen) : placeholderBody(d.screen);
+  if (!sc) return notFoundView();
+  const blocks = contentBody(sc, d.screen);
 
   return `
     <article class="page screen" data-screen="${screen.id}">

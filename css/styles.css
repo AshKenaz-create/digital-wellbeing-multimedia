@@ -537,26 +537,6 @@ svg {
   color: var(--text-muted);
 }
 
-.placeholder-block {
-  background: var(--surface-soft);
-  border-style: dashed;
-  border-color: var(--border-strong);
-}
-
-.placeholder-block p {
-  font-style: italic;
-}
-
-.pending-note {
-  margin: 0;
-  padding: var(--space-3) var(--space-4);
-  background: var(--surface-soft);
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-sm);
-  font-style: italic;
-  color: var(--text-muted);
-}
-
 .credits-section {
   margin-bottom: var(--space-6);
 }
@@ -1273,9 +1253,10 @@ svg {
 }
 
 .planner-row-actions button {
+  min-height: 2.5rem;
   border: 0;
   background: transparent;
-  padding: var(--space-1) var(--space-2);
+  padding: var(--space-2) var(--space-3);
   font: inherit;
   font-size: var(--fs-sm);
   color: var(--primary-dark);
