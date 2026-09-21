@@ -755,6 +755,514 @@ svg {
   color: var(--text-muted);
 }
 
+/* Visual summary — shared building blocks */
+.visual-summary-block figure {
+  margin: 0;
+}
+
+.visual-summary-block figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.visual-step-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--primary-dark);
+}
+
+.visual-step-label {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Visual summary — step sequence (1B cycle, 4A sequence) */
+.visual-steps {
+  padding: var(--space-5);
+  background: var(--primary-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.visual-steps-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visual-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: 7.5rem;
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.visual-steps:not(.visual-steps-numbered) .visual-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1.35rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 3px solid var(--primary-dark);
+  border-right: 3px solid var(--primary-dark);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.visual-steps-numbered .visual-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -1.35rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.visual-step-num {
+  position: absolute;
+  top: -0.55rem;
+  left: -0.55rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.visual-steps-loop {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  margin: var(--space-4) auto 0;
+}
+
+/* Timeline variant (2A, 3A): a gentle fade toward the final stage */
+.visual-steps-timeline .visual-step:nth-child(1) .visual-step-icon {
+  opacity: 1;
+}
+
+.visual-steps-timeline .visual-step:nth-child(2) .visual-step-icon {
+  opacity: 0.88;
+}
+
+.visual-steps-timeline .visual-step:nth-child(3) .visual-step-icon {
+  opacity: 0.76;
+}
+
+.visual-steps-timeline .visual-step:nth-child(4) .visual-step-icon {
+  opacity: 0.64;
+}
+
+.visual-steps-timeline .visual-step:nth-child(5) .visual-step-icon {
+  opacity: 0.52;
+}
+
+@media (max-width: 34em) {
+  .visual-steps-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .visual-step {
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  .visual-steps:not(.visual-steps-numbered) .visual-step:not(:last-child)::after,
+  .visual-steps-numbered .visual-step:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -1.35rem;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(135deg);
+  }
+}
+
+/* Visual summary — balance map (1A) */
+.visual-map {
+  padding: var(--space-5);
+  background: var(--primary-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.visual-map-center {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.visual-map-center::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  width: 3px;
+  height: 1rem;
+  background: var(--primary-dark);
+  transform: translateX(-50%);
+}
+
+.visual-map-center-label {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.visual-map-nodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visual-map-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+/* Visual summary — comparison grid (3B) */
+.visual-grid {
+  padding: var(--space-5);
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.visual-grid-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visual-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 26em) {
+  .visual-grid-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Visual summary — before/after comparison (5A) */
+.visual-compare {
+  padding: var(--space-5);
+  background: var(--surface-soft);
+  border-radius: var(--radius-sm);
+}
+
+.visual-compare-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.visual-compare-panel {
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.visual-compare-heading {
+  margin: 0 0 var(--space-3);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.visual-compare-scatter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 4.5rem;
+}
+
+.scatter-chip {
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.5rem;
+  background: var(--primary-soft);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.visual-compare-scatter .scatter-chip:nth-child(1) {
+  transform: rotate(-8deg);
+}
+
+.visual-compare-scatter .scatter-chip:nth-child(2) {
+  transform: rotate(6deg) translateY(3px);
+}
+
+.visual-compare-scatter .scatter-chip:nth-child(3) {
+  transform: rotate(-3deg) translateY(-2px);
+}
+
+.visual-compare-scatter .scatter-chip:nth-child(4) {
+  transform: rotate(10deg);
+}
+
+.visual-compare-scatter .scatter-chip:nth-child(5) {
+  transform: rotate(-12deg) translateY(2px);
+}
+
+.visual-compare-scatter .scatter-chip:nth-child(6) {
+  transform: rotate(4deg) translateY(-3px);
+}
+
+.visual-compare-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.priority-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background: var(--primary-soft);
+  border-radius: var(--radius-sm);
+  border-top: 3px solid var(--border-strong);
+}
+
+.priority-col .scatter-chip {
+  transform: none;
+}
+
+.priority-col-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.priority-dot {
+  display: inline-flex;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: var(--primary-dark);
+}
+
+.priority-dot svg {
+  width: 100%;
+  height: 100%;
+}
+
+.priority-col.priority-high {
+  border-top-color: var(--primary);
+}
+
+.priority-col.priority-medium {
+  border-top-color: var(--accent);
+}
+
+@media (max-width: 34em) {
+  .visual-compare-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-compare-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Visual summary — shared pill (5B centre message, 4B reflective follow-up) */
+.visual-pill {
+  display: inline-block;
+  margin: 0 0 var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+
+/* Closing-cycle variant (5B): same steps pattern as 1B, distinct palette */
+.visual-steps-closing {
+  background: var(--accent-soft);
+}
+
+.visual-steps-closing .visual-step-icon {
+  background: var(--primary-soft);
+  color: var(--accent-dark);
+}
+
+/* Visual summary — branching flow (2B, 4B) */
+.visual-flow {
+  padding: var(--space-5);
+  background: var(--primary-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.visual-flow-lead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.visual-flow-lead .visual-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 3px;
+  height: var(--space-3);
+  background: var(--primary-dark);
+  transform: translateX(-50%);
+}
+
+.visual-flow-lead .visual-step:last-child::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 3px;
+  height: calc(var(--space-4) * 2);
+  background: var(--primary-dark);
+  transform: translateX(-50%);
+}
+
+.visual-flow-lead .visual-step:only-child {
+  width: 100%;
+  max-width: 22rem;
+}
+
+.visual-flow-branches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 2px dashed var(--border-strong);
+}
+
+.visual-flow-branch {
+  position: relative;
+  flex: 1;
+  min-width: 9rem;
+}
+
+.visual-flow-branch::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--space-4));
+  left: 50%;
+  width: 3px;
+  height: var(--space-4);
+  background: var(--primary-dark);
+  transform: translateX(-50%);
+}
+
+.visual-flow-branch-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visual-flow-branch-steps .visual-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -1.1rem;
+  left: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 2px solid var(--primary-dark);
+  border-right: 2px solid var(--primary-dark);
+  transform: translateX(-50%) rotate(135deg);
+}
+
+@media (max-width: 34em) {
+  .visual-flow-branch {
+    min-width: 100%;
+    max-width: 16rem;
+  }
+}
+
+/* Slightly more visual card treatment for the 1B self-awareness framework */
+[data-screen="m1b"] .dimension:nth-child(odd) {
+  border-left: 3px solid var(--primary);
+}
+
+[data-screen="m1b"] .dimension:nth-child(even) {
+  border-left: 3px solid var(--accent);
+}
+
 .reflection-block {
   background: var(--accent-soft);
   border-color: var(--accent);

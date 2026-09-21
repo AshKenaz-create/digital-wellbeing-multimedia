@@ -186,6 +186,17 @@ export const content = {
           ],
           note: "Estas cuatro categorías son una guía educativa inspirada en la literatura sobre bienestar digital; no constituyen una escala oficial de medición.",
         },
+        visualSummary: {
+          type: "map",
+          caption: "El bienestar digital busca equilibrar el estudio, el descanso, las relaciones y la tecnología.",
+          center: { icon: "balance", label: "Bienestar digital" },
+          nodes: [
+            { icon: "study", label: "Estudio" },
+            { icon: "rest", label: "Descanso" },
+            { icon: "relationships", label: "Relaciones" },
+            { icon: "technology", label: "Tecnología" },
+          ],
+        },
         example: {
           text: "Camila asiste a clases virtuales desde su computador, usa el teléfono para comunicarse y para redes sociales, y trabaja en sus entregas con herramientas digitales. En una semana de parciales nota que revisar el teléfono cada pocos minutos alarga sus tareas y le cuesta retomar la concentración.",
           note: "El objetivo no es dejar de usar la tecnología, sino reconocer en qué momentos apoya el estudio, el descanso y la organización, y en cuáles los interrumpe.",
@@ -254,6 +265,18 @@ export const content = {
             { name: "Cómo afecta tu objetivo", text: "Terminaste la tarea, la retrasaste, descansaste mejor o peor." },
           ],
           note: "En la investigación en educación superior, esta observación se relaciona con la autorregulación digital: la capacidad de orientar tu propio uso de la tecnología. Una revisión reciente señala que las dificultades con la autorregulación digital fueron la fuente de efectos negativos más mencionada en los estudios revisados.",
+        },
+        visualSummary: {
+          type: "cycle",
+          file: "m1b-habit-cycle.svg",
+          alt: "Diagrama circular del ciclo del hábito digital, con una flecha punteada que conecta el último paso de nuevo con el primero.",
+          caption: "El ciclo puede repetirse cada vez que llega una nueva notificación.",
+          steps: [
+            { icon: "notification", label: "Notificación" },
+            { icon: "check", label: "Revisar el teléfono" },
+            { icon: "distraction", label: "Distracción" },
+            { icon: "return", label: "Volver a la tarea" },
+          ],
         },
         example: {
           text: "Daniel se sienta a redactar un informe. Cada vez que recibe un mensaje, abre el chat, responde y luego mira las redes sociales unos minutos. Cuando vuelve al informe, necesita releer lo que había escrito para recordar dónde iba.",
@@ -329,6 +352,17 @@ export const content = {
           ],
           note: "Son categorías de reflexión, no una escala de diagnóstico. No existe un número único de horas diarias de pantalla que sea saludable o no para todas las personas.",
         },
+        visualSummary: {
+          type: "timeline",
+          caption: "El tiempo de pantalla puede cumplir funciones diferentes a lo largo del día; observar el contexto ayuda a interpretarlo mejor.",
+          steps: [
+            { icon: "class", label: "Clase" },
+            { icon: "study", label: "Estudio" },
+            { icon: "communication", label: "Comunicación" },
+            { icon: "leisure", label: "Ocio" },
+            { icon: "rest", label: "Descanso" },
+          ],
+        },
         example: {
           text: "Mariana dedica la mañana a una clase virtual y a avanzar un trabajo en el computador. Por la tarde, cada vez que se bloquea con una idea, abre las redes sociales «un momento». Esas pausas breves se repiten y su sesión de estudio termina alargándose casi una hora más de lo previsto.",
           note: "El uso académico de la pantalla era necesario; lo que se acumuló fueron las interrupciones no planificadas. Notar esa diferencia es más útil que contar solo las horas.",
@@ -402,6 +436,29 @@ export const content = {
             { name: "Entorno", text: "Tener varios dispositivos a la vez, el lugar de estudio o las interrupciones y expectativas de las personas alrededor." },
           ],
           note: "Esta forma de ordenar las causas —tecnología, factores personales y entorno— proviene de una revisión reciente sobre distracción digital en educación. Como intervienen varios factores, gestionarla suele requerir más de una estrategia.",
+        },
+        visualSummary: {
+          type: "flow",
+          caption: "Distintas respuestas ante una notificación llevan a resultados distintos; ninguna es la única forma correcta de actuar.",
+          lead: [
+            { icon: "task", label: "Tarea" },
+            { icon: "notification", label: "Llega una notificación" },
+          ],
+          branches: [
+            {
+              steps: [
+                { icon: "postpone", label: "Posponer" },
+                { icon: "continue", label: "Continuar" },
+              ],
+            },
+            {
+              steps: [
+                { icon: "check", label: "Revisar" },
+                { icon: "shift", label: "Cambiar la atención" },
+                { icon: "return", label: "Volver a la tarea" },
+              ],
+            },
+          ],
         },
         example: {
           text: "Sofía está redactando un trabajo. Llega la notificación de un mensaje y lo abre para responder rápido. Enseguida entra un correo. Antes de darse cuenta, ha pasado por la app de mensajes, el correo y una red social, y cuando vuelve al documento necesita releer el último párrafo para retomar el hilo.",
@@ -522,6 +579,16 @@ export const content = {
           ],
           note: "Son categorías de reflexión para este recurso, no una escala de sueño validada. En personas adultas, la relación entre el uso de pantallas y el sueño es compleja y varía según qué se mide y qué aspecto del sueño se evalúa.",
         },
+        visualSummary: {
+          type: "timeline",
+          caption: "Una rutina nocturna puede incluir una transición gradual entre la actividad digital y el descanso.",
+          steps: [
+            { icon: "technology", label: "Actividad digital" },
+            { icon: "windDown", label: "Bajar el ritmo" },
+            { icon: "prepareSleep", label: "Prepararse para dormir" },
+            { icon: "rest", label: "Descanso" },
+          ],
+        },
         example: {
           text: "Valentina termina una entrega por la noche y piensa acostarse pronto. Al cerrar, abre una red social «un par de minutos». Se inicia una conversación, después llega otra notificación, y la hora de dormir acaba siendo bastante más tarde de lo previsto.",
           note: "El punto no es que haya un teléfono cerca de la cama. Es que Valentina puede observar cómo encaja esa actividad digital en su rutina de descanso y si cambia lo que había decidido hacer.",
@@ -600,6 +667,16 @@ export const content = {
             "En un metaanálisis, las pausas cortas mostraron pequeños beneficios para sentirse con más energía y menos fatiga, mientras que el efecto general sobre el rendimiento no fue significativo. En un estudio con estudiantes universitarios, interrumpir el tiempo sentado con actividad ligera tuvo efectos selectivos, no generales.",
           ],
           note: "Solo se incluyen ideas respaldadas por las fuentes citadas. No son rutinas médicas de estiramiento ni un tratamiento.",
+        },
+        visualSummary: {
+          type: "grid",
+          caption: "Cuatro tipos de pausa breve que puedes elegir según lo que notes.",
+          items: [
+            { icon: "visualBreak", label: "Pausa visual" },
+            { icon: "movement", label: "Movimiento" },
+            { icon: "mentalReset", label: "Pausa mental" },
+            { icon: "environment", label: "Cambio de entorno" },
+          ],
         },
         example: {
           text: "Andrés lleva un buen rato leyendo artículos y escribiendo. Se da cuenta de que está releyendo el mismo párrafo, apenas ha cambiado de postura y lleva mucho tiempo mirando el portátil sin descanso.",
@@ -691,6 +768,16 @@ export const content = {
             "Las contraseñas por sí solas no protegen frente al phishing: si alguien te engaña para escribirla en un sitio falso, la longitud no ayuda. Por eso la verificación en dos pasos es un apoyo útil.",
           ],
           note: "Son categorías educativas, no una certificación de seguridad.",
+        },
+        visualSummary: {
+          type: "sequence",
+          caption: "Cuatro pasos que puedes repetir para cuidar tus cuentas y tu privacidad.",
+          steps: [
+            { icon: "passphrase", label: "Contraseña o frase segura" },
+            { icon: "factor", label: "Segundo factor" },
+            { icon: "link", label: "Revisar enlaces" },
+            { icon: "privacy", label: "Revisar privacidad" },
+          ],
         },
         example: {
           text: "Sofía recibe un correo que dice que su cuenta de la universidad será suspendida si no la verifica de inmediato mediante un enlace. El correo lleva el logo de la universidad y parece creíble.",
@@ -786,6 +873,18 @@ export const content = {
           ],
           note: "Son preguntas para reflexionar, no una escala de bienestar validada.",
         },
+        visualSummary: {
+          type: "flow",
+          caption: "Ninguna de estas razones para usar una red social es mejor que otra; notar el propósito ayuda a decidir de forma intencional.",
+          lead: [{ icon: "reflect", label: "¿Para qué estoy usando la red ahora?" }],
+          branches: [
+            { steps: [{ icon: "relationships", label: "Conectar" }] },
+            { steps: [{ icon: "inform", label: "Informarme" }] },
+            { steps: [{ icon: "leisure", label: "Entretenerme" }] },
+            { steps: [{ icon: "post", label: "Publicar" }] },
+          ],
+          followUp: "¿Sigue siendo ese mi propósito?",
+        },
         example: {
           text: "Mateo abre una red social para responder un mensaje del grupo de una asignatura. Después de responder, empieza a ver publicaciones que no tienen que ver con eso y, un rato más tarde, se da cuenta de que ha estado bastante más tiempo del que había pensado.",
           note: "La lección no es «las redes sociales son malas». Es que el propósito inicial cambió sin que Mateo lo notara. Reconocer ese cambio le da la opción de seguir de forma intencional o volver a lo que había planeado.",
@@ -875,6 +974,18 @@ export const content = {
           ],
           note: "Son preguntas para organizar, no un modelo de productividad validado.",
         },
+        visualSummary: {
+          type: "compare",
+          caption: "Ejemplo ilustrativo: cada estudiante define sus propias prioridades y su propio orden.",
+          beforeLabel: "Antes: tareas dispersas",
+          afterLabel: "Después: organizadas por prioridad",
+          scatterCount: 6,
+          columns: [
+            { tier: "high", label: "Alta", count: 1 },
+            { tier: "medium", label: "Media", count: 2 },
+            { tier: "low", label: "Baja", count: 3 },
+          ],
+        },
         example: {
           text: "Lucía tiene una participación en un foro con fecha próxima, una lectura de otra asignatura, una parte de un trabajo colaborativo y un compromiso personal más tarde. En lugar de intentar hacerlo todo a la vez, identifica qué tiene la entrega más cercana, qué necesita coordinarse con otras personas y qué puede pasar a otro momento disponible.",
           note: "El objetivo no es encontrar el orden perfecto, sino hacer visible la carga de trabajo y elegir de forma intencional.",
@@ -934,6 +1045,20 @@ export const content = {
             "Estas ideas se apoyan en investigación sobre bienestar digital, autorregulación y herramientas de autocontrol digital; las estrategias son opciones para probar, no soluciones garantizadas.",
           ],
           note: "Elige las que te resulten útiles ahora; no hace falta adoptarlas todas.",
+        },
+        visualSummary: {
+          type: "cycle",
+          file: "m5b-routine-cycle.svg",
+          alt: "Diagrama circular que conecta conciencia, atención, descanso, responsabilidad y organización, con una flecha que vuelve al primer paso.",
+          caption: "El bienestar digital es un proceso que se puede observar, elegir y ajustar con el tiempo; no una rutina perfecta ni un modelo científico validado.",
+          centerLabel: "Observar, elegir y ajustar",
+          steps: [
+            { icon: "visualBreak", label: "Conciencia" },
+            { icon: "focus", label: "Atención" },
+            { icon: "rest", label: "Descanso" },
+            { icon: "factor", label: "Responsabilidad" },
+            { icon: "organize", label: "Organización" },
+          ],
         },
         example: {
           text: "Al empezar la semana, Tomás revisa sus tareas académicas. Durante los ratos de estudio reduce una distracción que ya conoce. Por la noche se fija en si la actividad digital se está alargando más de lo previsto. Hace pausas cortas cuando las necesita y revisa la configuración de privacidad y seguridad cuando toca.",
@@ -1264,6 +1389,17 @@ export const content = {
           ],
           note: "These four categories are an educational guide inspired by the digital wellbeing literature; they are not an official measurement scale.",
         },
+        visualSummary: {
+          type: "map",
+          caption: "Digital wellbeing means balancing study, rest, relationships and technology.",
+          center: { icon: "balance", label: "Digital wellbeing" },
+          nodes: [
+            { icon: "study", label: "Study" },
+            { icon: "rest", label: "Rest" },
+            { icon: "relationships", label: "Relationships" },
+            { icon: "technology", label: "Technology" },
+          ],
+        },
         example: {
           text: "Camila attends online classes on her laptop, uses her phone for messaging and social media, and works on her assignments with digital tools. During an exam week she notices that checking her phone every few minutes makes her tasks longer and makes it harder to regain focus.",
           note: "The goal is not to stop using technology, but to notice when it supports study, rest and organisation, and when it interrupts them.",
@@ -1332,6 +1468,18 @@ export const content = {
             { name: "How it affects your goal", text: "You finished the task, delayed it, rested better or worse." },
           ],
           note: "In higher education research, this kind of noticing is linked to digital self-regulation: the ability to guide your own use of technology. A recent review reports that difficulties with digital self-regulation were the most frequently mentioned source of negative outcomes in the studies it examined.",
+        },
+        visualSummary: {
+          type: "cycle",
+          file: "m1b-habit-cycle.svg",
+          alt: "Circular diagram of the digital habit cycle, with a dashed arrow connecting the last step back to the first.",
+          caption: "The cycle can repeat every time a new notification arrives.",
+          steps: [
+            { icon: "notification", label: "Notification" },
+            { icon: "check", label: "Check the phone" },
+            { icon: "distraction", label: "Distraction" },
+            { icon: "return", label: "Return to the task" },
+          ],
         },
         example: {
           text: "Daniel sits down to write a report. Each time a message arrives, he opens the chat, replies, and then looks at social media for a few minutes. When he goes back to the report, he has to reread what he had written to remember where he was.",
@@ -1407,6 +1555,17 @@ export const content = {
           ],
           note: "These are reflection categories, not a diagnostic scale. There is no single number of daily screen hours that is healthy or unhealthy for everyone.",
         },
+        visualSummary: {
+          type: "timeline",
+          caption: "Screen time can serve different purposes throughout the day; looking at context helps interpret it more clearly.",
+          steps: [
+            { icon: "class", label: "Class" },
+            { icon: "study", label: "Study" },
+            { icon: "communication", label: "Communication" },
+            { icon: "leisure", label: "Leisure" },
+            { icon: "rest", label: "Rest" },
+          ],
+        },
         example: {
           text: "Mariana spends the morning in an online class and working on an assignment on her laptop. In the afternoon, every time she gets stuck on an idea she opens social media “for a moment”. Those short breaks repeat, and her study session ends up running almost an hour longer than planned.",
           note: "The academic screen use was necessary; what added up were the unplanned interruptions. Noticing that difference is more useful than only counting the hours.",
@@ -1480,6 +1639,29 @@ export const content = {
             { name: "Environment", text: "Having several devices at once, the study location, or interruptions and expectations from people nearby." },
           ],
           note: "This way of organising the causes —technology, personal factors and environment— comes from a recent review of digital distraction in education. Because several factors are involved, managing it usually takes more than one strategy.",
+        },
+        visualSummary: {
+          type: "flow",
+          caption: "Different responses to a notification lead to different outcomes; none of them is the only correct way to react.",
+          lead: [
+            { icon: "task", label: "Task" },
+            { icon: "notification", label: "Notification arrives" },
+          ],
+          branches: [
+            {
+              steps: [
+                { icon: "postpone", label: "Postpone" },
+                { icon: "continue", label: "Continue" },
+              ],
+            },
+            {
+              steps: [
+                { icon: "check", label: "Check" },
+                { icon: "shift", label: "Attention shifts" },
+                { icon: "return", label: "Return to task" },
+              ],
+            },
+          ],
         },
         example: {
           text: "Sofía is writing an assignment. A message notification arrives and she opens it to reply quickly. An email comes in right after. Before she realises it, she has moved through the messaging app, her email and a social network, and when she returns to the document she has to reread the last paragraph to pick up the thread.",
@@ -1600,6 +1782,16 @@ export const content = {
           ],
           note: "These are reflection categories for this resource, not a validated sleep scale. In adults, the relationship between screen use and sleep is complex and varies with what is measured and which dimension of sleep is evaluated.",
         },
+        visualSummary: {
+          type: "timeline",
+          caption: "An evening routine can include a gradual transition from digital activity to rest.",
+          steps: [
+            { icon: "technology", label: "Digital activity" },
+            { icon: "windDown", label: "Wind down" },
+            { icon: "prepareSleep", label: "Prepare for sleep" },
+            { icon: "rest", label: "Rest" },
+          ],
+        },
         example: {
           text: "Valentina finishes an assignment at night and plans to sleep soon. As she closes it, she opens a social-media app “for a couple of minutes”. A conversation starts, then another notification arrives, and bedtime ends up much later than planned.",
           note: "The point is not that a phone is near the bed. It is that Valentina can notice how that digital activity fits into her rest routine and whether it changes what she had decided to do.",
@@ -1678,6 +1870,16 @@ export const content = {
             "In a meta-analysis, short breaks showed small benefits for feeling more energetic and less fatigued, while the overall effect on performance was not significant. In a study with university students, breaking up sitting with light activity had selective, not general, effects.",
           ],
           note: "Only ideas supported by the cited sources are included. These are not medical stretching routines or a treatment.",
+        },
+        visualSummary: {
+          type: "grid",
+          caption: "Four kinds of short break you can choose depending on what you notice.",
+          items: [
+            { icon: "visualBreak", label: "Visual break" },
+            { icon: "movement", label: "Movement" },
+            { icon: "mentalReset", label: "Mental reset" },
+            { icon: "environment", label: "Environment check" },
+          ],
         },
         example: {
           text: "Andrés has been reading articles and writing for quite a while. He notices that he is rereading the same paragraph, has barely changed position, and has been looking at the laptop for a long time without a break.",
@@ -1769,6 +1971,16 @@ export const content = {
             "Passwords on their own do not protect against phishing: if someone tricks you into typing yours on a fake site, length does not help. That is why two-step verification is a useful support.",
           ],
           note: "These are educational categories, not a security certification.",
+        },
+        visualSummary: {
+          type: "sequence",
+          caption: "Four steps you can repeat to look after your accounts and your privacy.",
+          steps: [
+            { icon: "passphrase", label: "Strong passphrase" },
+            { icon: "factor", label: "Second factor" },
+            { icon: "link", label: "Check links" },
+            { icon: "privacy", label: "Review privacy" },
+          ],
         },
         example: {
           text: "Sofía receives an email saying her university account will be suspended unless she verifies it immediately through a link. The email carries the university logo and looks believable.",
@@ -1864,6 +2076,18 @@ export const content = {
           ],
           note: "These are prompts for reflection, not a validated wellbeing scale.",
         },
+        visualSummary: {
+          type: "flow",
+          caption: "None of these reasons for using social media is better than another; noticing your purpose helps you decide intentionally.",
+          lead: [{ icon: "reflect", label: "What am I using social media for right now?" }],
+          branches: [
+            { steps: [{ icon: "relationships", label: "Connect" }] },
+            { steps: [{ icon: "inform", label: "Get information" }] },
+            { steps: [{ icon: "leisure", label: "Be entertained" }] },
+            { steps: [{ icon: "post", label: "Post" }] },
+          ],
+          followUp: "Is that still my purpose?",
+        },
         example: {
           text: "Mateo opens a social network to answer a message in a course group. After replying, he starts looking at unrelated posts and, some time later, realises he has stayed much longer than he had planned.",
           note: "The lesson is not “social media is bad”. It is that the original purpose changed without Mateo noticing. Recognising that shift gives him the option to continue intentionally or return to what he had planned.",
@@ -1953,6 +2177,18 @@ export const content = {
           ],
           note: "These are prompts for organising, not a validated productivity model.",
         },
+        visualSummary: {
+          type: "compare",
+          caption: "Illustrative example: each student sets their own priorities and order.",
+          beforeLabel: "Before: scattered tasks",
+          afterLabel: "After: organised by priority",
+          scatterCount: 6,
+          columns: [
+            { tier: "high", label: "High", count: 1 },
+            { tier: "medium", label: "Medium", count: 2 },
+            { tier: "low", label: "Low", count: 3 },
+          ],
+        },
         example: {
           text: "Lucía has a discussion-forum contribution due soon, a reading for another course, part of a collaborative assignment, and a personal commitment later in the day. Instead of trying to do everything at once, she identifies what has the nearer deadline, what needs coordination with other people, and what can move to another available period.",
           note: "The point is not to find the perfect order, but to make the workload visible and choose intentionally.",
@@ -2012,6 +2248,20 @@ export const content = {
             "These ideas draw on research on digital wellbeing, self-regulation and digital self-control tools; the strategies are options to try, not guaranteed solutions.",
           ],
           note: "Choose the ones that are useful to you now; you do not need to adopt them all.",
+        },
+        visualSummary: {
+          type: "cycle",
+          file: "m5b-routine-cycle.svg",
+          alt: "Circular diagram connecting awareness, attention, rest, responsibility and organisation, with an arrow returning to the first step.",
+          caption: "Digital wellbeing is a process you can notice, choose and adjust over time; not a perfect routine or a validated scientific model.",
+          centerLabel: "Notice, choose and adjust",
+          steps: [
+            { icon: "visualBreak", label: "Awareness" },
+            { icon: "focus", label: "Attention" },
+            { icon: "rest", label: "Rest" },
+            { icon: "factor", label: "Responsibility" },
+            { icon: "organize", label: "Organisation" },
+          ],
         },
         example: {
           text: "At the start of the week, Tomás reviews his academic tasks. During study periods he reduces one distraction he already knows about. At night he notices whether digital activity is running later than planned. He takes short breaks when he needs them and reviews privacy and security settings when appropriate.",
