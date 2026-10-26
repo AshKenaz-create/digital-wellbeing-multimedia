@@ -88,6 +88,13 @@ function homeView() {
     </section>`;
 }
 
+function linkifyUrls(html) {
+  return html.replace(/https?:\/\/[^\s<)]+/g, (url) => {
+    const clean = url.replace(/[.,;]+$/, "");
+    return `<a href="${clean}" target="_blank" rel="noopener noreferrer">${clean}</a>${url.slice(clean.length)}`;
+  });
+}
+
 function creditsView() {
   const d = dict();
   const sections = d.credits.sections
@@ -96,7 +103,7 @@ function creditsView() {
       <section class="credits-section" id="ref-${s.id}">
         <h2>${s.title}</h2>
         ${s.intro ? `<p>${s.intro}</p>` : ""}
-        <ul class="ref-list">${s.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+        <ul class="ref-list">${s.items.map((item) => `<li>${linkifyUrls(item)}</li>`).join("")}</ul>
       </section>`
     )
     .join("");
@@ -458,14 +465,14 @@ function updateDocTitle(routeId) {
   }
 }
 
-export function renderCurrent() {
+export function renderCurrent({ keepScroll = false } = {}) {
+  const scrollY = window.scrollY;
   const routeId = currentRoute();
   if (routeId === "home") app.innerHTML = homeView();
   else if (routeId === "credits") app.innerHTML = creditsView();
   else if (routeId === "not-found") app.innerHTML = notFoundView();
   else app.innerHTML = screenView(routeId);
 
-  window.scrollTo(0, 0);
   const heading = app.querySelector("h1");
   if (heading) {
     heading.setAttribute("tabindex", "-1");
@@ -474,6 +481,9 @@ export function renderCurrent() {
   updateActiveNav(routeId);
   updateDocTitle(routeId);
   mountInteraction(routeId);
+
+  // Scroll after the interaction is mounted so the page has its full height
+  window.scrollTo(0, keepScroll ? scrollY : 0);
 }
 
 function mountInteraction(routeId) {
@@ -507,6 +517,6 @@ export function initRouter() {
   if (!window.location.hash) {
     history.replaceState(null, "", "#/");
   }
-  window.addEventListener("hashchange", renderCurrent);
+  window.addEventListener("hashchange", () => renderCurrent());
   renderCurrent();
 }

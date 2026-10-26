@@ -44,7 +44,7 @@ function init() {
 
   onLangChange(() => {
     buildModulesMenu();
-    renderCurrent();
+    renderCurrent({ keepScroll: true });
   });
 }
 

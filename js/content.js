@@ -1165,7 +1165,7 @@ export const content = {
           id: "images",
           title: "Fuentes de imágenes e ilustraciones",
           items: [
-            "Ilustraciones SVG desarrolladas específicamente para este proyecto con apoyo de herramientas de IA durante el proceso de desarrollo: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> y <em>m5b-digital-routine.svg</em>. No se utilizaron bancos de imágenes ni recursos visuales de terceros.",
+            "Ilustraciones SVG desarrolladas específicamente para este proyecto con apoyo de herramientas de IA durante el proceso de desarrollo: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m1b-habit-cycle.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em>, <em>m5b-digital-routine.svg</em> y <em>m5b-routine-cycle.svg</em>. No se utilizaron bancos de imágenes ni recursos visuales de terceros.",
           ],
         },
         {
@@ -2368,7 +2368,7 @@ export const content = {
           id: "images",
           title: "Image and illustration sources",
           items: [
-            "SVG illustrations developed specifically for this project with AI-assisted development: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em> and <em>m5b-digital-routine.svg</em>. No stock-image libraries or third-party visual assets were used.",
+            "SVG illustrations developed specifically for this project with AI-assisted development: <em>home-balance.svg</em>, <em>m1a-balance.svg</em>, <em>m1b-awareness.svg</em>, <em>m1b-habit-cycle.svg</em>, <em>m2a-screen-time.svg</em>, <em>m2b-distractions.svg</em>, <em>m3a-sleep.svg</em>, <em>m3b-breaks.svg</em>, <em>m4a-online-safety.svg</em>, <em>m4b-social-media.svg</em>, <em>m5a-time-planner.svg</em>, <em>m5b-digital-routine.svg</em> and <em>m5b-routine-cycle.svg</em>. No stock-image libraries or third-party visual assets were used.",
           ],
         },
         {
