@@ -535,7 +535,7 @@ export const content = {
                 name: "Estrategia",
                 description: "Aparece una campana tachada junto al teléfono, que queda en silencio. Las fichas de notificación se guardan en una bandeja de espera y un reloj marca un momento fijo para revisarlas. El círculo de atención queda firme, Sofía retoma su trabajo y se marca la tercera tarea. El vídeo termina con el logotipo de Digital Wellbeing, una hoja, sobre fondo claro.",
                 captions: [
-                  "Ahora silencia las notificaciones no esenciales.",
+                  "Ahora silencia las notificaciones no esenciales",
                   "y fija un momento para revisar sus mensajes.",
                   "Pequeños ajustes ayudan a proteger la concentración.",
                 ],
@@ -1823,7 +1823,7 @@ export const content = {
                 name: "Strategy",
                 description: "A crossed-out bell appears next to the phone, which goes quiet. The notification cards move into a waiting tray and a clock sets a fixed time to check them. The attention circle becomes steady, Sofía resumes her work and the third task is ticked. The video ends with the Digital Wellbeing logo, a leaf, on a light background.",
                 captions: [
-                  "Now she mutes non-essential notifications.",
+                  "Now she mutes non-essential notifications",
                   "and sets a time to check her messages.",
                   "Small adjustments help protect your focus.",
                 ],

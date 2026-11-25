@@ -52,7 +52,7 @@ ubicada después de la ilustración y antes de la actividad interactiva.
 El proyecto usa módulos de JavaScript, por lo que debe abrirse a través de un
 servidor HTTP (no con `file://`). El servidor sencillo de Python no admite
 solicitudes por rangos, por lo que desplazarse dentro del vídeo puede ser limitado
-en local; en GitHub Pages funciona con normalidad.
+en local. La reproducción en GitHub Pages se comprobará en la versión pública.
 
 ```
 python3 -m http.server 8000
