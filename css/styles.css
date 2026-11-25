@@ -647,6 +647,13 @@ svg {
   margin: 0;
 }
 
+.resume-error {
+  margin: var(--space-3) 0 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text);
+}
+
 .module-end {
   margin-bottom: var(--space-4);
   padding: var(--space-4) var(--space-5);

@@ -67,13 +67,34 @@ function resumeHtml() {
         </section>`;
 }
 
+// Removal counts only if the record is really gone afterwards
+function forgetLastScreen() {
+  try {
+    localStorage.removeItem(LAST_SCREEN_KEY);
+    return localStorage.getItem(LAST_SCREEN_KEY) === null;
+  } catch {
+    return false;
+  }
+}
+
 function mountResume() {
   const card = app.querySelector(".resume-card");
   const forget = card && card.querySelector("[data-forget-last]");
   if (!forget) return;
   forget.addEventListener("click", () => {
-    storage.remove(LAST_SCREEN_KEY);
-    card.innerHTML = `<p class="resume-forgotten" role="status" tabindex="-1">${dict().home.resume.forgotten}</p>`;
+    const r = dict().home.resume;
+    if (!forgetLastScreen()) {
+      let error = card.querySelector(".resume-error");
+      if (!error) {
+        error = document.createElement("p");
+        error.className = "resume-error";
+        error.setAttribute("role", "alert");
+        card.appendChild(error);
+      }
+      error.textContent = r.forgetError;
+      return;
+    }
+    card.innerHTML = `<p class="resume-forgotten" role="status" tabindex="-1">${r.forgotten}</p>`;
     card.removeAttribute("aria-labelledby");
     card.querySelector("p").focus();
   });
