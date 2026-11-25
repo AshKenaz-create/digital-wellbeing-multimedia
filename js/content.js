@@ -50,6 +50,7 @@ export const content = {
         content: "Contenido educativo",
         example: "Ejemplo práctico",
         visual: "Recurso visual",
+        video: "Recurso audiovisual",
         interaction: "Actividad interactiva",
         reflection: "Retroalimentación y reflexión",
         sources: "Apoyo académico e institucional",
@@ -468,6 +469,79 @@ export const content = {
           file: "m2b-distractions.svg",
           alt: "Ilustración de una persona estudiante frente a un portátil, con pequeños elementos de notificación alrededor y una zona central que representa la atención concentrada.",
           caption: "Varias señales digitales compiten por la atención mientras se estudia; proteger un espacio de concentración ayuda a sostener la tarea.",
+        },
+        video: {
+          file: "una-notificacion-una-distraccion",
+          title: "Una notificación, una distracción",
+          intro: "Esta animación de 60 segundos sigue el ejemplo de Sofía: muestra cómo una notificación puede interrumpir una tarea y cómo una estrategia sencilla ayuda a recuperar la concentración. No tiene voz; puedes seguirla con los subtítulos o con la alternativa textual.",
+          caption: "Animación original de 60 segundos, sin voz. Los subtítulos aparecen activados en el idioma seleccionado; puedes desactivarlos con los controles del reproductor.",
+          unsupported: "Tu navegador no puede reproducir este vídeo. Consulta la alternativa textual que aparece debajo.",
+          tracks: [
+            {
+              lang: "es",
+              label: "Español",
+            },
+            {
+              lang: "en",
+              label: "English",
+            },
+          ],
+          altLabel: "Alternativa textual del vídeo",
+          transcriptLabel: "Transcripción descriptiva",
+          captionsLabel: "Subtítulos",
+          alternative: {
+            summary: "Animación de 60 segundos, sin voz y sin texto en pantalla. Sofía estudia concentrada frente a su portátil. Llegan varias notificaciones sin que las toque y su atención empieza a vacilar. Abre el mensaje y su atención pasa del documento al correo y a una red social. Al volver, relee para retomar el hilo. Finalmente silencia las notificaciones no esenciales y fija un momento para revisar sus mensajes. La narración está en los subtítulos.",
+            scenes: [
+              {
+                time: "0:00–0:08",
+                name: "Concentración",
+                description: "Sofía, una figura sin rostro, escribe en su portátil dentro de un círculo verde punteado que representa su atención. A la izquierda hay una lista de tres tareas y se marcan las dos primeras. Un globo de pensamiento muestra un documento. El teléfono descansa sobre el escritorio, en silencio.",
+                captions: [
+                  "Sofía estudia y avanza en su trabajo.",
+                  "Su atención está en una sola tarea.",
+                ],
+              },
+              {
+                time: "0:08–0:19",
+                name: "Llegada",
+                description: "Llegan cuatro notificaciones, una a una: dos de mensaje, una de correo y una de red social. Alrededor del teléfono se expanden anillos suaves y la pantalla acumula avisos. Sofía no toca el teléfono, pero el círculo de atención empieza a vacilar.",
+                captions: [
+                  "Llega una notificación. Luego otra.",
+                  "No hace falta abrirlas para que compitan por su atención.",
+                ],
+              },
+              {
+                time: "0:19–0:33",
+                name: "Interrupción",
+                description: "Sofía gira hacia el teléfono y lo alcanza con la mano. Un punto verde, que representa su atención, sale del documento y recorre un camino punteado: del mensaje al correo y a la red social. El círculo de atención se desplaza hacia el teléfono y se debilita; la lista de tareas y el documento se atenúan.",
+                captions: [
+                  "Sofía abre el mensaje para responder rápido.",
+                  "Del mensaje pasa al correo y a una red social.",
+                  "Su atención se va alejando de la tarea.",
+                ],
+              },
+              {
+                time: "0:33–0:45",
+                name: "Recuperación",
+                description: "El punto verde vuelve al portátil por un arco punteado. Un resaltador recorre el documento de arriba abajo, como una relectura, mientras el globo de pensamiento muestra una flecha circular. El círculo de atención se recompone poco a poco.",
+                captions: [
+                  "Su atención regresa al documento.",
+                  "Releer para retomar el hilo cuesta un esfuerzo extra.",
+                  "A casi todo el mundo le pasa.",
+                ],
+              },
+              {
+                time: "0:45–1:00",
+                name: "Estrategia",
+                description: "Aparece una campana tachada junto al teléfono, que queda en silencio. Las fichas de notificación se guardan en una bandeja de espera y un reloj marca un momento fijo para revisarlas. El círculo de atención queda firme, Sofía retoma su trabajo y se marca la tercera tarea. El vídeo termina con el logotipo de Digital Wellbeing, una hoja, sobre fondo claro.",
+                captions: [
+                  "Ahora silencia las notificaciones no esenciales.",
+                  "y fija un momento para revisar sus mensajes.",
+                  "Pequeños ajustes ayudan a proteger la concentración.",
+                ],
+              },
+            ],
+          },
         },
         interaction: {
           type: "scenarios",
@@ -1172,7 +1246,17 @@ export const content = {
           id: "multimedia",
           title: "Recursos multimedia",
           items: [
-            "El recurso no utiliza vídeo ni audio. Los recursos visuales son ilustraciones SVG originales del proyecto (ver «Fuentes de imágenes e ilustraciones»).",
+            "El recurso incluye una animación original de 60 segundos, «Una notificación, una distracción» (pantalla 2B), sin voz y con subtítulos en español e inglés. Archivos: <em>una-notificacion-una-distraccion.mp4</em>, <em>una-notificacion-una-distraccion-poster.jpg</em>, <em>una-notificacion-una-distraccion.es.vtt</em> y <em>una-notificacion-una-distraccion.en.vtt</em>. Incluye una alternativa textual descriptiva en ambos idiomas.",
+            "La animación se diseñó específicamente para este proyecto a partir del lenguaje visual de las ilustraciones SVG originales, con apoyo de herramientas de IA durante su concepción y programación. No se utilizaron vídeos, audios, música ni imágenes de terceros. Los demás recursos visuales son ilustraciones SVG originales del proyecto (ver «Fuentes de imágenes e ilustraciones»).",
+          ],
+        },
+        {
+          id: "production",
+          title: "Herramientas de producción audiovisual",
+          intro: "Estas herramientas se utilizaron solo para producir la animación y no forman parte de la aplicación publicada, que continúa utilizando únicamente HTML5, CSS3 y JavaScript.",
+          items: [
+            "Remotion. (s. f.). <em>Remotion</em> (versión 4.0.547) [Software para crear vídeo con React]. https://www.remotion.dev",
+            "FFmpeg. (s. f.). <em>FFmpeg</em> (versión 9.0.2) [Software]. https://ffmpeg.org",
           ],
         },
         {
@@ -1180,12 +1264,13 @@ export const content = {
           title: "Recursos y activos externos",
           items: [
             "El recurso no utiliza scripts, fuentes tipográficas, librerías ni activos de terceros. Se desarrolla únicamente con HTML5, CSS3 y JavaScript propios. Publicado mediante GitHub Pages.",
+            "Las herramientas de producción de la animación (ver «Herramientas de producción audiovisual») no forman parte de la aplicación publicada: solo se incluye el archivo de vídeo resultante, junto con su póster y sus subtítulos.",
           ],
         },
         {
           id: "ai",
           title: "Asistencia de inteligencia artificial",
-          intro: "Durante el desarrollo del recurso se utilizaron herramientas de inteligencia artificial generativa como apoyo para la estructuración de contenidos y el desarrollo del código. La información educativa se revisó y contrastó posteriormente con las fuentes académicas e institucionales relacionadas en esta página.",
+          intro: "Durante el desarrollo del recurso se utilizaron herramientas de inteligencia artificial generativa como apoyo para la estructuración de contenidos y el desarrollo del código. La información educativa se revisó y contrastó posteriormente con las fuentes académicas e institucionales relacionadas en esta página. En la animación de la pantalla 2B, la IA (Claude) apoyó la concepción del guion visual, la programación de la composición y la preparación de los subtítulos y de la alternativa textual; el autor revisó y aprobó el resultado.",
           items: [
             "Anthropic. (2026). <em>Claude</em> [modelo de lenguaje grande]. https://claude.ai",
             "OpenAI. (2026). <em>ChatGPT</em> [modelo de lenguaje grande]. https://chatgpt.com",
@@ -1253,6 +1338,7 @@ export const content = {
         content: "Educational content",
         example: "Practical example",
         visual: "Visual resource",
+        video: "Audiovisual resource",
         interaction: "Interactive activity",
         reflection: "Feedback and reflection",
         sources: "Academic and institutional support",
@@ -1671,6 +1757,79 @@ export const content = {
           file: "m2b-distractions.svg",
           alt: "Illustration of a student at a laptop, with small notification elements around them and a central area representing focused attention.",
           caption: "Several digital signals compete for attention while studying; protecting a space for focus helps to sustain the task.",
+        },
+        video: {
+          file: "una-notificacion-una-distraccion",
+          title: "One notification, one distraction",
+          intro: "This 60-second animation follows Sofía's example: it shows how a notification can interrupt a task and how a simple strategy helps you regain focus. It has no voice; you can follow it with the captions or the text alternative.",
+          caption: "Original 60-second animation with no voice. Captions are switched on in the selected language; you can turn them off with the player controls.",
+          unsupported: "Your browser cannot play this video. Please use the text alternative below.",
+          tracks: [
+            {
+              lang: "es",
+              label: "Español",
+            },
+            {
+              lang: "en",
+              label: "English",
+            },
+          ],
+          altLabel: "Text alternative for the video",
+          transcriptLabel: "Descriptive transcript",
+          captionsLabel: "Captions",
+          alternative: {
+            summary: "A 60-second animation with no voice and no on-screen text. Sofía studies, focused, at her laptop. Several notifications arrive without her touching them and her attention begins to waver. She opens a message and her attention moves from the document to email and a social network. Back at her work, she rereads to pick up the thread. Finally she mutes non-essential notifications and sets a time to check her messages. The narration is in the captions.",
+            scenes: [
+              {
+                time: "0:00–0:08",
+                name: "Focus",
+                description: "Sofía, a figure without a face, types on her laptop inside a dotted green circle that represents her attention. On the left is a list of three tasks and the first two get ticked. A thought bubble shows a document. The phone rests on the desk, silent.",
+                captions: [
+                  "Sofía is studying and making progress.",
+                  "Her attention is on a single task.",
+                ],
+              },
+              {
+                time: "0:08–0:19",
+                name: "Arrival",
+                description: "Four notifications arrive one by one: two messages, one email and one social-network alert. Soft rings spread around the phone and its screen piles up alerts. Sofía does not touch the phone, but the attention circle begins to waver.",
+                captions: [
+                  "A notification arrives. Then another.",
+                  "They don't need to be opened to compete for her attention.",
+                ],
+              },
+              {
+                time: "0:19–0:33",
+                name: "Interruption",
+                description: "Sofía turns toward the phone and reaches for it. A green dot, which stands for her attention, leaves the document and follows a dotted path: from the message to email and to the social network. The attention circle drifts toward the phone and weakens; the task list and the document fade.",
+                captions: [
+                  "Sofía opens the message to reply quickly.",
+                  "From the message she moves to email and a social network.",
+                  "Her attention drifts away from the task.",
+                ],
+              },
+              {
+                time: "0:33–0:45",
+                name: "Recovery",
+                description: "The green dot returns to the laptop along a dotted arc. A highlighter sweeps down the document like a reread, while the thought bubble shows a circular arrow. The attention circle slowly re-forms.",
+                captions: [
+                  "Her attention returns to the document.",
+                  "Rereading to pick up the thread takes extra effort.",
+                  "It happens to almost everyone.",
+                ],
+              },
+              {
+                time: "0:45–1:00",
+                name: "Strategy",
+                description: "A crossed-out bell appears next to the phone, which goes quiet. The notification cards move into a waiting tray and a clock sets a fixed time to check them. The attention circle becomes steady, Sofía resumes her work and the third task is ticked. The video ends with the Digital Wellbeing logo, a leaf, on a light background.",
+                captions: [
+                  "Now she mutes non-essential notifications.",
+                  "and sets a time to check her messages.",
+                  "Small adjustments help protect your focus.",
+                ],
+              },
+            ],
+          },
         },
         interaction: {
           type: "scenarios",
@@ -2375,7 +2534,17 @@ export const content = {
           id: "multimedia",
           title: "Multimedia resources",
           items: [
-            "The resource uses no video or audio. Its visual resources are original project SVG illustrations (see “Image and illustration sources”).",
+            "The resource includes an original 60-second animation, “One notification, one distraction” (screen 2B), with no voice and with captions in Spanish and English. Files: <em>una-notificacion-una-distraccion.mp4</em>, <em>una-notificacion-una-distraccion-poster.jpg</em>, <em>una-notificacion-una-distraccion.es.vtt</em> and <em>una-notificacion-una-distraccion.en.vtt</em>. It has a descriptive text alternative in both languages.",
+            "The animation was designed specifically for this project from the visual language of the original SVG illustrations, with AI-assisted conception and programming. No third-party video, audio, music or images were used. The remaining visual resources are original project SVG illustrations (see “Image and illustration sources”).",
+          ],
+        },
+        {
+          id: "production",
+          title: "Audiovisual production tools",
+          intro: "These tools were used only to produce the animation and are not part of the published application, which still uses only HTML5, CSS3 and JavaScript.",
+          items: [
+            "Remotion. (n.d.). <em>Remotion</em> (version 4.0.547) [Software for creating video with React]. https://www.remotion.dev",
+            "FFmpeg. (n.d.). <em>FFmpeg</em> (version 9.0.2) [Software]. https://ffmpeg.org",
           ],
         },
         {
@@ -2383,12 +2552,13 @@ export const content = {
           title: "External resources and assets",
           items: [
             "The resource uses no third-party scripts, fonts, libraries or assets. It is built only with the project's own HTML5, CSS3 and JavaScript. Published with GitHub Pages.",
+            "The tools used to produce the animation (see “Audiovisual production tools”) are not part of the published application: only the resulting video file is included, together with its poster and captions.",
           ],
         },
         {
           id: "ai",
           title: "Generative AI assistance",
-          intro: "Generative AI tools were used during development to support content structuring and code development. Educational information was then reviewed and checked against the academic and institutional sources listed on this page.",
+          intro: "Generative AI tools were used during development to support content structuring and code development. Educational information was then reviewed and checked against the academic and institutional sources listed on this page. For the screen 2B animation, AI (Claude) supported the visual script, the programming of the composition, and the preparation of the captions and the text alternative; the author reviewed and approved the result.",
           items: [
             "Anthropic. (2026). <em>Claude</em> [Large language model]. https://claude.ai",
             "OpenAI. (2026). <em>ChatGPT</em> [Large language model]. https://chatgpt.com",

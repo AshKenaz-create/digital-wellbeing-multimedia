@@ -764,6 +764,104 @@ svg {
   color: var(--text-muted);
 }
 
+/* Audiovisual resource (2B) */
+.video-intro {
+  margin-bottom: var(--space-4);
+}
+
+.video-figure {
+  margin: 0;
+}
+
+.video-figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sm);
+  background: var(--primary-soft);
+}
+
+.video-figure figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+video::cue {
+  color: #ffffff;
+  background-color: rgba(38, 48, 59, 0.88);
+  font-size: 135%;
+  line-height: 1.25;
+}
+
+.video-alt {
+  margin-top: var(--space-4);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.video-alt summary {
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
+.video-alt[open] summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.video-alt-body {
+  padding: var(--space-4);
+}
+
+.video-alt-body h3 {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: var(--fs-base);
+  color: var(--text);
+}
+
+.video-transcript {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-transcript > li {
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.video-transcript h4 {
+  margin: 0 0 var(--space-1);
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+
+.screen-block .video-transcript p {
+  margin: 0 0 var(--space-2);
+  font-size: var(--fs-sm);
+}
+
+.screen-block .video-captions-label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.video-captions {
+  margin: 0;
+  padding-left: var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
 /* Visual summary — shared building blocks */
 .visual-summary-block figure {
   margin: 0;

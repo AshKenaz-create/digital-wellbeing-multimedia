@@ -21,14 +21,38 @@ Aplicaciones Multimedia del programa de Ingeniería Multimedia de la UNAD.
 - Cada pantalla incluye introducción, contenido educativo, ejemplo práctico,
   una ilustración original, una actividad interactiva con retroalimentación y
   una nota de apoyo académico o institucional.
+- Una animación original de 60 segundos en la pantalla 2B (ver «Recurso
+  audiovisual»).
 - Página de Créditos y referencias (fuentes académicas e institucionales,
-  atribución de ilustraciones y de las herramientas utilizadas).
+  atribución de ilustraciones, del recurso audiovisual y de las herramientas
+  utilizadas).
 - Todo el texto de interfaz y de contenido existe en español y en inglés.
+
+## Recurso audiovisual (AJ-01)
+
+La pantalla 2B incluye la animación «Una notificación, una distracción»,
+ubicada después de la ilustración y antes de la actividad interactiva.
+
+- Archivos en `assets/video/`: `una-notificacion-una-distraccion.mp4`
+  (1920 × 1080, 30 fps, 60 s, H.264, sin audio, 3,1 MB), su póster
+  (`...-poster.jpg`) y los subtítulos `.es.vtt` y `.en.vtt`.
+- El vídeo no tiene voz ni texto incrustado. Los subtítulos se activan
+  inicialmente en el idioma seleccionado y el usuario puede desactivarlos con los
+  controles del reproductor; esa preferencia se recuerda en el navegador.
+- No se reproduce automáticamente. Al cambiar de idioma en la pantalla 2B se
+  conservan el instante de reproducción y la alternativa textual abierta.
+- La alternativa textual (resumen y transcripción descriptiva por escena) está en
+  `js/content.js`, en español e inglés, y se muestra bajo el vídeo.
+- Se produjo con Remotion y FFmpeg, herramientas de producción que no forman parte
+  de la aplicación: el repositorio solo contiene el vídeo resultante, su póster y
+  los subtítulos. La aplicación sigue usando únicamente HTML5, CSS3 y JavaScript.
 
 ## Ejecutar en local
 
 El proyecto usa módulos de JavaScript, por lo que debe abrirse a través de un
-servidor HTTP (no con `file://`).
+servidor HTTP (no con `file://`). El servidor sencillo de Python no admite
+solicitudes por rangos, por lo que desplazarse dentro del vídeo puede ser limitado
+en local; en GitHub Pages funciona con normalidad.
 
 ```
 python3 -m http.server 8000
@@ -56,6 +80,7 @@ js/language.js        Cambio de idioma ES / EN y persistencia
 js/content.js         Todos los textos de interfaz y de contenido (ES / EN)
 js/interactions.js    Actividades interactivas y almacenamiento local
 assets/illustrations/ Ilustraciones SVG originales
+assets/video/         Animación de la pantalla 2B: MP4, póster y subtítulos VTT
 assets/icons/         Favicon
 ```
 
