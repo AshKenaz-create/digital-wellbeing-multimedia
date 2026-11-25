@@ -1,5 +1,5 @@
 import { dict, getLang } from "./language.js";
-import { initInteraction } from "./interactions.js";
+import { initInteraction, storage } from "./interactions.js";
 
 const app = document.getElementById("app");
 
@@ -329,6 +329,51 @@ function visualSummaryHtml(sc, s) {
     </section>`;
 }
 
+const CAPTIONS_KEY = "dw_video_captions";
+
+function videoHtml(sc, s) {
+  if (!sc.video) return "";
+  const v = sc.video;
+  const base = `assets/video/${v.file}`;
+  const tracks = v.tracks
+    .map((t) => `<track kind="captions" srclang="${t.lang}" label="${t.label}" src="${base}.${t.lang}.vtt">`)
+    .join("");
+  const scenes = v.alternative.scenes
+    .map(
+      (scene) => `
+      <li>
+        <h4>${scene.time} · ${scene.name}</h4>
+        <p>${scene.description}</p>
+        <p class="video-captions-label">${v.captionsLabel}:</p>
+        <ul class="video-captions">${scene.captions.map((c) => `<li>${c}</li>`).join("")}</ul>
+      </li>`
+    )
+    .join("");
+
+  return `
+    <section class="screen-block video-block">
+      <h2>${s.sections.video}</h2>
+      <p class="video-intro">${v.intro}</p>
+      <figure class="video-figure">
+        <video controls playsinline preload="metadata" poster="${base}-poster.jpg"
+               aria-label="${v.title}" aria-describedby="video-alt-summary">
+          <source src="${base}.mp4" type="video/mp4">
+          ${tracks}
+          <p>${v.unsupported}</p>
+        </video>
+        <figcaption>${v.caption}</figcaption>
+      </figure>
+      <details class="video-alt">
+        <summary>${v.altLabel}</summary>
+        <div class="video-alt-body">
+          <p id="video-alt-summary">${v.alternative.summary}</p>
+          <h3>${v.transcriptLabel}</h3>
+          <ol class="video-transcript">${scenes}</ol>
+        </div>
+      </details>
+    </section>`;
+}
+
 function contentBody(sc, s) {
   const intro = `
     <div class="screen-intro">
@@ -353,6 +398,7 @@ function contentBody(sc, s) {
     </section>`;
 
   const visualSummary = visualSummaryHtml(sc, s);
+  const video = videoHtml(sc, s);
 
   const example = `
     <section class="screen-block example-block">
@@ -387,7 +433,7 @@ function contentBody(sc, s) {
       <p class="support-link"><a href="#/credits">${s.sourcesLink}</a></p>
     </section>`;
 
-  return `${intro}${main}${visualSummary}${example}${visual}${interaction}${reflection}${support}`;
+  return `${intro}${main}${visualSummary}${example}${visual}${video}${interaction}${reflection}${support}`;
 }
 
 function screenView(routeId) {
@@ -467,6 +513,7 @@ function updateDocTitle(routeId) {
 
 export function renderCurrent({ keepScroll = false } = {}) {
   const scrollY = window.scrollY;
+  const resume = keepScroll ? currentVideoState() : null;
   const routeId = currentRoute();
   if (routeId === "home") app.innerHTML = homeView();
   else if (routeId === "credits") app.innerHTML = creditsView();
@@ -481,9 +528,50 @@ export function renderCurrent({ keepScroll = false } = {}) {
   updateActiveNav(routeId);
   updateDocTitle(routeId);
   mountInteraction(routeId);
+  mountVideo(resume);
 
   // Scroll after the interaction is mounted so the page has its full height
   window.scrollTo(0, keepScroll ? scrollY : 0);
+}
+
+function currentVideoState() {
+  const video = app.querySelector(".video-figure video");
+  if (!video) return null;
+  return {
+    time: video.currentTime,
+    playing: !video.paused && !video.ended,
+    altOpen: !!app.querySelector(".video-alt[open]"),
+  };
+}
+
+// Captions start on in the selected language; the player keeps control of turning them off
+function mountVideo(resume) {
+  const video = app.querySelector(".video-figure video");
+  if (!video) return;
+
+  const lang = getLang();
+  const captionsOn = storage.get(CAPTIONS_KEY, true);
+  for (const track of video.textTracks) {
+    track.mode = captionsOn && track.language === lang ? "showing" : "disabled";
+  }
+  video.textTracks.addEventListener("change", () => {
+    if (!video.isConnected) return;
+    storage.set(CAPTIONS_KEY, [...video.textTracks].some((track) => track.mode === "showing"));
+  });
+
+  if (!resume) return;
+  const details = app.querySelector(".video-alt");
+  if (details && resume.altOpen) details.open = true;
+  if (resume.time > 0) {
+    video.addEventListener(
+      "loadedmetadata",
+      () => {
+        video.currentTime = resume.time;
+        if (resume.playing) video.play().catch(() => {});
+      },
+      { once: true }
+    );
+  }
 }
 
 function mountInteraction(routeId) {
