@@ -436,6 +436,7 @@ function routineSlider(container, data) {
 
   const render = (index) => {
     const position = data.positions[index];
+    range.setAttribute("aria-valuetext", `${index + 1}: ${position.name}`);
     panel.innerHTML = `
       <h3>${position.name}</h3>
       <p>${position.description}</p>
@@ -560,7 +561,9 @@ function taskPlanner(container, data) {
   const view = container.querySelector(".planner-view");
   const actionsEl = container.querySelector(".planner-actions");
 
-  const save = () => storage.set(key, tasks);
+  // A task being edited stays in storage until the edit is saved
+  let editing = null;
+  const save = () => storage.set(key, editing ? [...tasks, editing] : tasks);
 
   const orderedTasks = () =>
     tasks
@@ -591,8 +594,8 @@ function taskPlanner(container, data) {
           <span class="planner-name">${escapeHtml(task.name)}</span>
           ${task.time ? `<span class="planner-time">${escapeHtml(task.time)}</span>` : ""}
           <span class="planner-row-actions">
-            <button type="button" data-edit="${index}">${data.editLabel}</button>
-            <button type="button" data-remove="${index}">${data.removeLabel}</button>
+            <button type="button" data-edit="${index}" aria-label="${data.editLabel}: ${escapeHtml(task.name)}">${data.editLabel}</button>
+            <button type="button" data-remove="${index}" aria-label="${data.removeLabel}: ${escapeHtml(task.name)}">${data.removeLabel}</button>
           </span>
         </li>`
       )
@@ -609,6 +612,7 @@ function taskPlanner(container, data) {
     const name = nameInput.value.trim();
     if (!name) return;
     tasks.push({ name, priority: priorityInput.value, time: timeInput.value.trim() });
+    editing = null;
     save();
     form.reset();
     priorityInput.value = "medium";
@@ -626,6 +630,7 @@ function taskPlanner(container, data) {
       nameInput.value = task.name;
       priorityInput.value = task.priority;
       timeInput.value = task.time || "";
+      editing = task;
       tasks.splice(index, 1);
       save();
       render();
@@ -636,6 +641,7 @@ function taskPlanner(container, data) {
       render();
     } else if (resetBtn) {
       tasks = [];
+      editing = null;
       storage.remove(key);
       render();
     }
