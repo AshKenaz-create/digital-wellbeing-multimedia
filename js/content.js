@@ -16,8 +16,8 @@ export const content = {
       language: "Selección de idioma",
     },
     langSwitch: {
-      es: "Contenido en español",
-      en: "Cambiar a inglés",
+      es: "ES: contenido en español",
+      en: "EN: cambiar a inglés",
     },
     footer: {
       support: "Recurso académico desarrollado para el curso de Aplicaciones Multimedia, Ingeniería Multimedia, UNAD.",
@@ -1318,8 +1318,8 @@ export const content = {
       language: "Language selection",
     },
     langSwitch: {
-      es: "Switch to Spanish",
-      en: "Content in English",
+      es: "ES: switch to Spanish",
+      en: "EN: content in English",
     },
     footer: {
       support: "Academic resource developed for the Multimedia Applications course, Multimedia Engineering, UNAD.",
