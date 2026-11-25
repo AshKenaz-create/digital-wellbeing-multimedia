@@ -30,6 +30,13 @@ export const content = {
       lead: "Información clara y actividades interactivas para reflexionar sobre tu relación con la tecnología y construir hábitos digitales más saludables.",
       startCta: "Comenzar",
       startHint: "Empieza por el Módulo 1 o elige el tema que quieras explorar.",
+      resume: {
+        label: "Última pantalla visitada",
+        cta: "Ir a esta pantalla",
+        forget: "Olvidar último punto",
+        note: "Solo se elimina este registro de navegación; tus respuestas en las actividades se conservan.",
+        forgotten: "Último punto olvidado. Tus respuestas en las actividades no se han borrado.",
+      },
       modulesTitle: "Los cinco módulos",
       modulesIntro: "Cada módulo incluye dos pantallas educativas con una actividad interactiva.",
       guideTitle: "Cómo usar este recurso",
@@ -43,6 +50,7 @@ export const content = {
       moduleWord: "Módulo",
       screenWord: "Pantalla",
       positionLabel: "Pantalla {n} de 10",
+      endNoteTitle: "Para continuar",
       objectiveLabel: "Objetivo de aprendizaje",
       sourcesLink: "Ver todas las referencias",
       sections: {
@@ -71,6 +79,7 @@ export const content = {
       {
         n: 1,
         title: "Comprender el bienestar digital",
+        endNote: "Has llegado al final del Módulo 1. Si deseas continuar, el siguiente tema trata sobre el tiempo de pantalla.",
         screens: [
           {
             id: "m1a",
@@ -89,6 +98,7 @@ export const content = {
       {
         n: 2,
         title: "Tiempo de pantalla y distracciones digitales",
+        endNote: "Has llegado al final del Módulo 2. El siguiente módulo aborda el descanso y las pausas.",
         screens: [
           {
             id: "m2a",
@@ -107,6 +117,7 @@ export const content = {
       {
         n: 3,
         title: "Uso saludable de la tecnología",
+        endNote: "Has llegado al final del Módulo 3. Puedes continuar con privacidad y seguridad en línea.",
         screens: [
           {
             id: "m3a",
@@ -125,6 +136,7 @@ export const content = {
       {
         n: 4,
         title: "Hábitos digitales responsables",
+        endNote: "Has llegado al final del Módulo 4. El último módulo se centra en la organización y los hábitos digitales.",
         screens: [
           {
             id: "m4a",
@@ -143,6 +155,7 @@ export const content = {
       {
         n: 5,
         title: "Equilibrio digital y gestión del tiempo",
+        endNote: "Has llegado a la última pantalla del recorrido. Puedes regresar a cualquier tema o consultar las referencias.",
         screens: [
           {
             id: "m5a",
@@ -1318,6 +1331,13 @@ export const content = {
       lead: "Clear information and interactive activities to reflect on your relationship with technology and build healthier digital habits.",
       startCta: "Start",
       startHint: "Begin with Module 1 or choose the topic you want to explore.",
+      resume: {
+        label: "Last screen visited",
+        cta: "Go to this screen",
+        forget: "Forget last point",
+        note: "Only this navigation record is removed; your answers in the activities are kept.",
+        forgotten: "Last point forgotten. Your answers in the activities have not been deleted.",
+      },
       modulesTitle: "The five modules",
       modulesIntro: "Each module includes two educational screens with an interactive activity.",
       guideTitle: "How to use this resource",
@@ -1331,6 +1351,7 @@ export const content = {
       moduleWord: "Module",
       screenWord: "Screen",
       positionLabel: "Screen {n} of 10",
+      endNoteTitle: "To continue",
       objectiveLabel: "Learning objective",
       sourcesLink: "See all references",
       sections: {
@@ -1359,6 +1380,7 @@ export const content = {
       {
         n: 1,
         title: "Understanding Digital Wellbeing",
+        endNote: "You have reached the end of Module 1. If you would like to continue, the next topic is about screen time.",
         screens: [
           {
             id: "m1a",
@@ -1377,6 +1399,7 @@ export const content = {
       {
         n: 2,
         title: "Screen Time and Digital Distractions",
+        endNote: "You have reached the end of Module 2. The next module covers rest and breaks.",
         screens: [
           {
             id: "m2a",
@@ -1395,6 +1418,7 @@ export const content = {
       {
         n: 3,
         title: "Healthy Use of Technology",
+        endNote: "You have reached the end of Module 3. You can continue with privacy and online safety.",
         screens: [
           {
             id: "m3a",
@@ -1413,6 +1437,7 @@ export const content = {
       {
         n: 4,
         title: "Responsible Digital Habits",
+        endNote: "You have reached the end of Module 4. The last module focuses on organisation and digital habits.",
         screens: [
           {
             id: "m4a",
@@ -1431,6 +1456,7 @@ export const content = {
       {
         n: 5,
         title: "Digital Balance and Time Management",
+        endNote: "You have reached the last screen of the journey. You can go back to any topic or check the references.",
         screens: [
           {
             id: "m5a",

@@ -608,6 +608,68 @@ svg {
   color: var(--text-muted);
 }
 
+/* Resume card and module end note (AJ-02) */
+.resume-card {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--primary-soft);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.resume-label {
+  margin: 0 0 var(--space-1);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.resume-screen {
+  margin: 0 0 var(--space-3);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.resume-note,
+.resume-forgotten {
+  margin: var(--space-3) 0 0;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.resume-forgotten {
+  margin: 0;
+}
+
+.module-end {
+  margin-bottom: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.module-end h2 {
+  margin-bottom: var(--space-1);
+  font-size: var(--fs-lg);
+}
+
+.module-end p {
+  margin: 0;
+}
+
+@media (max-width: 34em) {
+  .resume-actions .btn {
+    width: 100%;
+  }
+}
+
 .home-illustration {
   display: block;
   width: 100%;
