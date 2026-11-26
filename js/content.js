@@ -22,7 +22,7 @@ export const content = {
     footer: {
       support: "Recurso académico desarrollado para el curso de Aplicaciones Multimedia, Ingeniería Multimedia, UNAD.",
       creditsLink: "Créditos y referencias",
-      course: "Fase 2 · Versión beta",
+      course: "Versión 1.0 · Fase 5",
     },
     home: {
       eyebrow: "Recurso multimedia educativo",
@@ -1324,7 +1324,7 @@ export const content = {
     footer: {
       support: "Academic resource developed for the Multimedia Applications course, Multimedia Engineering, UNAD.",
       creditsLink: "Credits & references",
-      course: "Phase 2 · Beta version",
+      course: "Version 1.0 · Phase 5",
     },
     home: {
       eyebrow: "Educational multimedia resource",
