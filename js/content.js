@@ -16,13 +16,13 @@ export const content = {
       language: "Selección de idioma",
     },
     langSwitch: {
-      es: "Contenido en español",
-      en: "Cambiar a inglés",
+      es: "ES: contenido en español",
+      en: "EN: cambiar a inglés",
     },
     footer: {
       support: "Recurso académico desarrollado para el curso de Aplicaciones Multimedia, Ingeniería Multimedia, UNAD.",
       creditsLink: "Créditos y referencias",
-      course: "Fase 2 · Versión beta",
+      course: "Versión 1.0 · Fase 5",
     },
     home: {
       eyebrow: "Recurso multimedia educativo",
@@ -294,8 +294,8 @@ export const content = {
           ],
         },
         example: {
-          text: "Daniel se sienta a redactar un informe. Cada vez que recibe un mensaje, abre el chat, responde y luego mira las redes sociales unos minutos. Cuando vuelve al informe, necesita releer lo que había escrito para recordar dónde iba.",
-          note: "Identificar el patrón —interrumpir la tarea cada vez que llega un mensaje— es el primer paso para decidir, con calma, si quiere cambiar ese hábito o no.",
+          text: "Daniel empieza una lectura difícil para su clase del jueves. A los pocos minutos toma el teléfono «solo para mirar la hora» y termina en una red social. Durante una semana anota cuándo le pasa: casi siempre al empezar lecturas largas o cuando no entiende un tema.",
+          note: "Identificar el patrón —recurrir al teléfono cuando una tarea se vuelve difícil— es el primer paso para decidir, con calma, si quiere cambiar ese hábito o no.",
         },
         visual: {
           file: "m1b-awareness.svg",
@@ -767,7 +767,7 @@ export const content = {
           ],
         },
         example: {
-          text: "Andrés lleva un buen rato leyendo artículos y escribiendo. Se da cuenta de que está releyendo el mismo párrafo, apenas ha cambiado de postura y lleva mucho tiempo mirando el portátil sin descanso.",
+          text: "Andrés lleva un buen rato preparando una exposición para clase: lee artículos y prepara las diapositivas. Se da cuenta de que está releyendo el mismo párrafo, apenas ha cambiado de postura y lleva mucho tiempo mirando el portátil sin descanso.",
           note: "En lugar de obligarse a seguir igual, elige una pausa corta acorde con lo que está notando. La idea es la conciencia y la elección, no optimizar la productividad.",
         },
         visual: {
@@ -1149,7 +1149,7 @@ export const content = {
           ],
         },
         example: {
-          text: "Al empezar la semana, Tomás revisa sus tareas académicas. Durante los ratos de estudio reduce una distracción que ya conoce. Por la noche se fija en si la actividad digital se está alargando más de lo previsto. Hace pausas cortas cuando las necesita y revisa la configuración de privacidad y seguridad cuando toca.",
+          text: "Al empezar la semana, Tomás revisa sus tareas académicas y ve que el jueves tiene una entrega. Durante los ratos de estudio silencia las notificaciones del chat del grupo. Por la noche se fija en si la actividad digital se está alargando más de lo previsto. Hace pausas cortas cuando las necesita y, antes de subir las fotos de un trabajo en grupo a una red social, revisa quién puede verlas.",
           note: "La idea no es seguir una rutina perfecta cada día. La rutina es algo que se puede ajustar.",
         },
         visual: {
@@ -1318,13 +1318,13 @@ export const content = {
       language: "Language selection",
     },
     langSwitch: {
-      es: "Switch to Spanish",
-      en: "Content in English",
+      es: "ES: switch to Spanish",
+      en: "EN: content in English",
     },
     footer: {
       support: "Academic resource developed for the Multimedia Applications course, Multimedia Engineering, UNAD.",
       creditsLink: "Credits & references",
-      course: "Phase 2 · Beta version",
+      course: "Version 1.0 · Phase 5",
     },
     home: {
       eyebrow: "Educational multimedia resource",
@@ -1596,8 +1596,8 @@ export const content = {
           ],
         },
         example: {
-          text: "Daniel sits down to write a report. Each time a message arrives, he opens the chat, replies, and then looks at social media for a few minutes. When he goes back to the report, he has to reread what he had written to remember where he was.",
-          note: "Identifying the pattern —interrupting the task every time a message arrives— is the first step toward calmly deciding whether he wants to change that habit or not.",
+          text: "Daniel starts a difficult reading for his Thursday class. After a few minutes he picks up his phone “just to check the time” and ends up on a social network. Over one week he notes when this happens: almost always when he starts long readings or when he does not understand a topic.",
+          note: "Identifying the pattern —reaching for the phone when a task gets difficult— is the first step toward calmly deciding whether he wants to change that habit or not.",
         },
         visual: {
           file: "m1b-awareness.svg",
@@ -2069,7 +2069,7 @@ export const content = {
           ],
         },
         example: {
-          text: "Andrés has been reading articles and writing for quite a while. He notices that he is rereading the same paragraph, has barely changed position, and has been looking at the laptop for a long time without a break.",
+          text: "Andrés has been preparing a class presentation for quite a while: he reads articles and prepares the slides. He notices that he is rereading the same paragraph, has barely changed position, and has been looking at the laptop for a long time without a break.",
           note: "Instead of forcing himself to continue unchanged, he chooses a short break that matches what he is noticing. The idea is awareness and choice, not optimising productivity.",
         },
         visual: {
@@ -2451,7 +2451,7 @@ export const content = {
           ],
         },
         example: {
-          text: "At the start of the week, Tomás reviews his academic tasks. During study periods he reduces one distraction he already knows about. At night he notices whether digital activity is running later than planned. He takes short breaks when he needs them and reviews privacy and security settings when appropriate.",
+          text: "At the start of the week, Tomás reviews his academic tasks and sees that he has an assignment due on Thursday. During study periods he mutes the group chat notifications. At night he notices whether digital activity is running later than planned. He takes short breaks when he needs them and, before posting photos from a group project on a social network, checks who can see them.",
           note: "The point is not to follow a perfect routine every day. The routine is something that can be adjusted.",
         },
         visual: {

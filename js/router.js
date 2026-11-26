@@ -574,6 +574,8 @@ function updateDocTitle(routeId) {
   }
 }
 
+let hasRendered = false;
+
 export function renderCurrent({ keepScroll = false } = {}) {
   const scrollY = window.scrollY;
   const resume = keepScroll ? currentVideoState() : null;
@@ -583,8 +585,9 @@ export function renderCurrent({ keepScroll = false } = {}) {
   else if (routeId === "not-found") app.innerHTML = notFoundView();
   else app.innerHTML = screenView(routeId);
 
+  // Move focus to the title only when the user navigates, not on first load or language change
   const heading = app.querySelector("h1");
-  if (heading) {
+  if (heading && hasRendered && !keepScroll) {
     heading.setAttribute("tabindex", "-1");
     heading.focus({ preventScroll: true });
   }
@@ -594,6 +597,8 @@ export function renderCurrent({ keepScroll = false } = {}) {
   if (routeId === "home") mountResume();
   mountInteraction(routeId);
   mountVideo(resume);
+
+  hasRendered = true;
 
   // Scroll after the interaction is mounted so the page has its full height
   window.scrollTo(0, keepScroll ? scrollY : 0);
