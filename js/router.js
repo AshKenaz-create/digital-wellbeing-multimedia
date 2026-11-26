@@ -5,6 +5,7 @@ const app = document.getElementById("app");
 
 const SCREEN_IDS = ["m1a", "m1b", "m2a", "m2b", "m3a", "m3b", "m4a", "m4b", "m5a", "m5b"];
 const FLOW = ["home", ...SCREEN_IDS, "credits"];
+const LAST_SCREEN_KEY = "dw_last_screen";
 
 function currentRoute() {
   const raw = window.location.hash.replace(/^#\/?/, "").trim();
@@ -49,6 +50,65 @@ function pagerHtml(routeId) {
     </nav>`;
 }
 
+// Last visited screen: navigation only, not a sign of completed activities
+function resumeHtml() {
+  const info = screenInfo(storage.get(LAST_SCREEN_KEY));
+  if (!info) return "";
+  const r = dict().home.resume;
+  return `
+        <section class="resume-card" aria-labelledby="resume-label">
+          <p class="resume-label" id="resume-label">${r.label}</p>
+          <p class="resume-screen">${info.screen.code} · ${info.screen.title}</p>
+          <div class="resume-actions">
+            <a class="btn btn-primary" href="#/${info.screen.id}">${r.cta}</a>
+            <button type="button" class="btn btn-secondary" data-forget-last>${r.forget}</button>
+          </div>
+          <p class="resume-note">${r.note}</p>
+        </section>`;
+}
+
+// Removal counts only if the record is really gone afterwards
+function forgetLastScreen() {
+  try {
+    localStorage.removeItem(LAST_SCREEN_KEY);
+    return localStorage.getItem(LAST_SCREEN_KEY) === null;
+  } catch {
+    return false;
+  }
+}
+
+function mountResume() {
+  const card = app.querySelector(".resume-card");
+  const forget = card && card.querySelector("[data-forget-last]");
+  if (!forget) return;
+  forget.addEventListener("click", () => {
+    const r = dict().home.resume;
+    if (!forgetLastScreen()) {
+      let error = card.querySelector(".resume-error");
+      if (!error) {
+        error = document.createElement("p");
+        error.className = "resume-error";
+        error.setAttribute("role", "alert");
+        card.appendChild(error);
+      }
+      error.textContent = r.forgetError;
+      return;
+    }
+    card.innerHTML = `<p class="resume-forgotten" role="status" tabindex="-1">${r.forgotten}</p>`;
+    card.removeAttribute("aria-labelledby");
+    card.querySelector("p").focus();
+  });
+}
+
+function endNoteHtml(module, screen) {
+  if (!module.endNote || screen.id !== module.screens[module.screens.length - 1].id) return "";
+  return `
+      <aside class="module-end" aria-labelledby="module-end-title">
+        <h2 id="module-end-title">${dict().screen.endNoteTitle}</h2>
+        <p>${module.endNote}</p>
+      </aside>`;
+}
+
 function homeView() {
   const d = dict();
   const cards = d.modules
@@ -69,6 +129,7 @@ function homeView() {
         <p class="eyebrow">${d.home.eyebrow}</p>
         <h1>${d.home.title}</h1>
         <p class="home-lead">${d.home.lead}</p>
+        ${resumeHtml()}
         <a class="btn btn-primary" href="#/m1a">${d.home.startCta}</a>
         <p class="home-hint">${d.home.startHint}</p>
       </div>
@@ -472,6 +533,8 @@ function screenView(routeId) {
 
       <div class="screen-body">${blocks}</div>
 
+      ${endNoteHtml(module, screen)}
+
       ${pagerHtml(routeId)}
     </article>`;
 }
@@ -527,6 +590,8 @@ export function renderCurrent({ keepScroll = false } = {}) {
   }
   updateActiveNav(routeId);
   updateDocTitle(routeId);
+  if (SCREEN_IDS.includes(routeId)) storage.set(LAST_SCREEN_KEY, routeId);
+  if (routeId === "home") mountResume();
   mountInteraction(routeId);
   mountVideo(resume);
 

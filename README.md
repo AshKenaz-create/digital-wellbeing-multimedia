@@ -47,6 +47,14 @@ ubicada después de la ilustración y antes de la actividad interactiva.
   de la aplicación: el repositorio solo contiene el vídeo resultante, su póster y
   los subtítulos. La aplicación sigue usando únicamente HTML5, CSS3 y JavaScript.
 
+## Retomar el recorrido (AJ-02)
+
+La aplicación guarda en el navegador solo la última pantalla visitada (`dw_last_screen`).
+En Inicio aparece entonces una tarjeta para volver a ella, con la opción «Olvidar último
+punto», que borra únicamente ese registro y conserva las respuestas de las actividades.
+Es un dato de navegación: no indica actividades completadas. Las pantallas 1B, 2B, 3B, 4B y
+5B terminan con un mensaje neutral que presenta el siguiente tema.
+
 ## Ejecutar en local
 
 El proyecto usa módulos de JavaScript, por lo que debe abrirse a través de un
