@@ -630,6 +630,7 @@ function taskPlanner(container, data) {
       nameInput.value = task.name;
       priorityInput.value = task.priority;
       timeInput.value = task.time || "";
+      if (editing) tasks.push(editing);
       editing = task;
       tasks.splice(index, 1);
       save();
